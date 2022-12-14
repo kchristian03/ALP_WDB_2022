@@ -15,13 +15,14 @@ return new class extends Migration
     {
         Schema::create('transactions', function (Blueprint $table) {
             $table->id("transaction_id");
-            $table->bigInteger("user_id");
-            $table->timestamps("transaction_date");
+            $table->bigInteger("user_id")->unsigned();
+            $table->date("transaction_date");
             $table->string("transaction_status")->default('unconfirmed');
-            $table->bigInteger('alamat_id');
+            $table->bigInteger('adress_id')->unsigned();
             $table->string('no_resi');
             $table->string('bukti_pembayaran');
-            $table->bigInteger('pembayaran_id');
+            $table->bigInteger('payment_id')->unsigned();
+            $table->timestamps();
            
          
          

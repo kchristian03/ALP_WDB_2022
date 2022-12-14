@@ -24,7 +24,6 @@ class User extends Authenticatable
         'email',
         'password',
         'whatsapp_number',
-        'alamat_id',
         'umur',
         'status',
     ];

@@ -13,10 +13,10 @@ class Transaction extends Model
         "user_id",
         "transaction_date",
         "transaction_status",
-        "alamat_id",
+        "adress_id",
         "no_resi",
         "bukti_pembayaran",
-        "pembayaran_id"
+        "payment_id"
     ];
 
     public function transaction(): BelongsTo

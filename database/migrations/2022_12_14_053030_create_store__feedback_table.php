@@ -13,12 +13,13 @@ return new class extends Migration
      */
     public function up()
     {
-        Schema::create('store__feedback', function (Blueprint $table) {
+        Schema::create('store_feedback', function (Blueprint $table) {
             $table->id("feedback_id");
-            $table->bigInteger('user_id');
-            $table->timestamps("feedback_date");
+            $table->bigInteger('user_id')->unsigned();
+            $table->date("feedback_date");
             $table->enum('feedback_status', ['seen', 'unseen'])->default('unseen');
             $table->string('feedback');
+            $table->timestamps();
      
 
         });

@@ -10,10 +10,12 @@ class Transaction_Detail extends Model
 {
     use HasFactory;
     protected $fillable = [
+        "transaction_details_id",
         "transaction_id",
         "price",
         "total_items",
-        "total_harga"
+        "total_harga",
+        "product_size_id"
     ];
 
     public function transactiondetail(): BelongsTo

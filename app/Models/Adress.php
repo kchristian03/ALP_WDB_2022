@@ -10,6 +10,7 @@ class Adress extends Model
 {
     use HasFactory;
     protected $fillable = [
+        "adress_id",
         "user_id",
         "postal_code",
         "city",

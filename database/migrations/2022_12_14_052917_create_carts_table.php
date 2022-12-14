@@ -14,16 +14,11 @@ return new class extends Migration
     public function up()
     {
         Schema::create('carts', function (Blueprint $table) {
-            $table->id();
+            $table->id("cart_id");
+            $table->int('user_id');
+            $table->double('total_price');
             $table->timestamps();
-            $table->id();
-            $table->string('name');
-            $table->string('email')->unique();
-            $table->timestamp('email_verified_at')->nullable();
-            $table->string('password');
-            $table->enum('status', ['admin', 'member'])->default('member');
-            $table->rememberToken();
-            $table->timestamps();
+         
         });
     }
 

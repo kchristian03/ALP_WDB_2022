@@ -14,16 +14,12 @@ return new class extends Migration
     public function up()
     {
         Schema::create('transaction__details', function (Blueprint $table) {
-            $table->id();
-            $table->timestamps();
-            $table->id();
-            $table->string('name');
-            $table->string('email')->unique();
-            $table->timestamp('email_verified_at')->nullable();
-            $table->string('password');
-            $table->enum('status', ['admin', 'member'])->default('member');
-            $table->rememberToken();
-            $table->timestamps();
+            $table->id("transaction_details_id");
+            $table->int("transaction_id");
+            $table->double("price");
+            $table->int("total_items");
+            $table->int('total_harga');
+            $table->int('product_size_id');
         });
     }
 

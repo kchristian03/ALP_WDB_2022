@@ -14,16 +14,11 @@ return new class extends Migration
     public function up()
     {
         Schema::create('payments', function (Blueprint $table) {
-            $table->id();
-            $table->timestamps();
-            $table->id();
-            $table->string('name');
-            $table->string('email')->unique();
-            $table->timestamp('email_verified_at')->nullable();
-            $table->string('password');
-            $table->enum('status', ['admin', 'member'])->default('member');
-            $table->rememberToken();
-            $table->timestamps();
+            $table->id("payment_id");
+            $table->string("payment_name");
+            $table->string("payment_picture");
+            $table->string('payment_description');
+           
         });
     }
 

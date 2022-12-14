@@ -14,16 +14,17 @@ return new class extends Migration
     public function up()
     {
         Schema::create('transactions', function (Blueprint $table) {
-            $table->id();
-            $table->timestamps();
-            $table->id();
-            $table->string('name');
-            $table->string('email')->unique();
-            $table->timestamp('email_verified_at')->nullable();
-            $table->string('password');
-            $table->enum('status', ['admin', 'member'])->default('member');
-            $table->rememberToken();
-            $table->timestamps();
+            $table->id("transaction_id");
+            $table->int("user_id");
+            $table->timestamps("transaction_date");
+            $table->string("transaction_status")->default('unconfirmed');
+            $table->int('alamat_id');
+            $table->string('no_resi');
+            $table->string('bukti_pembayaran');
+            $table->int('pembayaran_id');
+           
+         
+         
         });
     }
 

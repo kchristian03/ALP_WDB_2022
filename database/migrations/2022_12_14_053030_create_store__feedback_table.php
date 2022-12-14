@@ -14,16 +14,13 @@ return new class extends Migration
     public function up()
     {
         Schema::create('store__feedback', function (Blueprint $table) {
-            $table->id();
-            $table->timestamps();
-            $table->id();
-            $table->string('name');
-            $table->string('email')->unique();
-            $table->timestamp('email_verified_at')->nullable();
-            $table->string('password');
-            $table->enum('status', ['admin', 'member'])->default('member');
-            $table->rememberToken();
-            $table->timestamps();
+            $table->id("feedback_id");
+            $table->int('user_id');
+            $table->timestamps("feedback_date");
+            $table->enum('feedback_status', ['seen', 'unseen'])->default('unseen');
+            $table->string('feedback');
+     
+
         });
     }
 

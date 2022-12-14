@@ -14,16 +14,16 @@ return new class extends Migration
     public function up()
     {
         Schema::create('product__reviews', function (Blueprint $table) {
-            $table->id();
+            $table->id("productreview_id");
+      
+            $table->int("user_id");
+            $table->int("product_id");
+            $table->int('rating');
+            $table->string('review');
+            $table->enum('status', ['hidden', 'shown'])->default('shown');
             $table->timestamps();
-            $table->id();
-            $table->string('name');
-            $table->string('email')->unique();
-            $table->timestamp('email_verified_at')->nullable();
-            $table->string('password');
-            $table->enum('status', ['admin', 'member'])->default('member');
-            $table->rememberToken();
-            $table->timestamps();
+
+       
         });
     }
 

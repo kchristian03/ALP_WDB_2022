@@ -14,14 +14,12 @@ return new class extends Migration
     public function up()
     {
         Schema::create('products', function (Blueprint $table) {
-            $table->id();
-            $table->string('name');
-            $table->string('email')->unique();
-            $table->timestamp('email_verified_at')->nullable();
-            $table->string('password');
-            $table->enum('status', ['admin', 'member'])->default('member');
-            $table->rememberToken();
+            $table->id("product_id");
+            $table->string('product_name');
+            $table->string('product_image');
+            $table->string('product_description');
             $table->timestamps();
+     
         });
     }
 

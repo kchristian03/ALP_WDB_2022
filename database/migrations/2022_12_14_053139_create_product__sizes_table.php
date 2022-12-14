@@ -14,16 +14,15 @@ return new class extends Migration
     public function up()
     {
         Schema::create('product__sizes', function (Blueprint $table) {
-            $table->id();
+            $table->id("product_id");
+            $table->int("size_id");
+            $table->string("product_size_description");
+            $table->double('product_size_price');
+            $table->int('product_size_stock');
             $table->timestamps();
-            $table->id();
-            $table->string('name');
-            $table->string('email')->unique();
-            $table->timestamp('email_verified_at')->nullable();
-            $table->string('password');
-            $table->enum('status', ['admin', 'member'])->default('member');
-            $table->rememberToken();
-            $table->timestamps();
+
+          
+
         });
     }
 

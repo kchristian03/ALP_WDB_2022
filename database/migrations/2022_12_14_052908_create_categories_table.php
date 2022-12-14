@@ -14,15 +14,9 @@ return new class extends Migration
     public function up()
     {
         Schema::create('categories', function (Blueprint $table) {
-            $table->id();
-            $table->timestamps();
-            $table->id();
-            $table->string('name');
-            $table->string('email')->unique();
-            $table->timestamp('email_verified_at')->nullable();
-            $table->string('password');
-            $table->enum('status', ['admin', 'member'])->default('member');
-            $table->rememberToken();
+            $table->id("category_id");
+            $table->string('category_name');
+            $table->string('category_description');
             $table->timestamps();
         });
     }

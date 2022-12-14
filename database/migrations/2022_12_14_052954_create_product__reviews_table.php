@@ -16,9 +16,9 @@ return new class extends Migration
         Schema::create('product__reviews', function (Blueprint $table) {
             $table->id("productreview_id");
       
-            $table->int("user_id");
-            $table->int("product_id");
-            $table->int('rating');
+            $table->bigInteger("user_id");
+            $table->bigInteger("product_id");
+            $table->bigInteger('rating');
             $table->string('review');
             $table->enum('status', ['hidden', 'shown'])->default('shown');
             $table->timestamps();

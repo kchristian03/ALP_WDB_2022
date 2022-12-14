@@ -15,11 +15,11 @@ return new class extends Migration
     {
         Schema::create('transaction__details', function (Blueprint $table) {
             $table->id("transaction_details_id");
-            $table->int("transaction_id");
+            $table->bigInteger("transaction_id");
             $table->double("price");
-            $table->int("total_items");
-            $table->int('total_harga');
-            $table->int('product_size_id');
+            $table->bigInteger("total_items");
+            $table->bigInteger('total_harga');
+            $table->bigInteger('product_size_id');
         });
     }
 

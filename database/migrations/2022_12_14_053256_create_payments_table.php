@@ -17,7 +17,7 @@ return new class extends Migration
             $table->id("payment_id");
             $table->string("payment_name");
             $table->string("payment_picture");
-            $table->string('payment_description');
+            $table->text('payment_description');
            
         });
     }

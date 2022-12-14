@@ -15,7 +15,7 @@ return new class extends Migration
     {
         Schema::create('store__feedback', function (Blueprint $table) {
             $table->id("feedback_id");
-            $table->int('user_id');
+            $table->bigInteger('user_id');
             $table->timestamps("feedback_date");
             $table->enum('feedback_status', ['seen', 'unseen'])->default('unseen');
             $table->string('feedback');

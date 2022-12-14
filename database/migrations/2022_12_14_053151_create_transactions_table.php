@@ -15,13 +15,13 @@ return new class extends Migration
     {
         Schema::create('transactions', function (Blueprint $table) {
             $table->id("transaction_id");
-            $table->int("user_id");
+            $table->bigInteger("user_id");
             $table->timestamps("transaction_date");
             $table->string("transaction_status")->default('unconfirmed');
-            $table->int('alamat_id');
+            $table->bigInteger('alamat_id');
             $table->string('no_resi');
             $table->string('bukti_pembayaran');
-            $table->int('pembayaran_id');
+            $table->bigInteger('pembayaran_id');
            
          
          

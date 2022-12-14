@@ -15,12 +15,12 @@ return new class extends Migration
     {
         Schema::create('adresses', function (Blueprint $table) {
             $table->id("adress_id");
-            $table->int("user_id");
+            $table->bigInteger("user_id");
             $table->string("postal_code");
             $table->string("city");
             $table->string("state");
-            $table->string("description");
-            $table->string("full_street_adress");
+            $table->text("description");
+            $table->text("full_street_adress");
 
         });
     }

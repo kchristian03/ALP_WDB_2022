@@ -10,10 +10,8 @@ class Size extends Model
 {
     use HasFactory;
     protected $fillable = [
-        "title",
-        "synopsis",
-        "coverphoto",
-        "writer_id"
+        "size_id",
+        "size"
     ];
 
     public function size(): BelongsTo

@@ -6,18 +6,20 @@ use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Relations\BelongsTo;
 
-class Product extends Model
+class Adress extends Model
 {
     use HasFactory;
     protected $fillable = [
-        "product_id",
-        "product_name",
-        "product_image",
-        "product_description"
+        "user_id",
+        "postal_code",
+        "city",
+        "state",
+        "description",
+        "full_street_adress"
     ];
 
-    public function product(): BelongsTo
+    public function adress(): BelongsTo
     {
-        return $this->belongsTo(Product::class);
+        return $this->belongsTo(Adress::class);
     }
 }

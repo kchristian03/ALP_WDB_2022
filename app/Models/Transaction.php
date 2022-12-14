@@ -9,10 +9,14 @@ class Transaction extends Model
 {
     use HasFactory;
     protected $fillable = [
-        "title",
-        "synopsis",
-        "coverphoto",
-        "writer_id"
+        "transaction_id",
+        "user_id",
+        "transaction_date",
+        "transaction_status",
+        "alamat_id",
+        "no_resi",
+        "bukti_pembayaran",
+        "pembayaran_id"
     ];
 
     public function transaction(): BelongsTo

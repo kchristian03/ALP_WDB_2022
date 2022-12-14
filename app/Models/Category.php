@@ -11,10 +11,10 @@ class Category extends Model
     use HasFactory;
 
     protected $fillable = [
-        "title",
-        "synopsis",
-        "coverphoto",
-        "writer_id"
+        "category_id",
+        "category_name",
+        "category_description",
+        
     ];
 
     public function category(): BelongsTo

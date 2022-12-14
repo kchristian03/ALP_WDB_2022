@@ -10,10 +10,11 @@ class Store_Feedback extends Model
 {
     use HasFactory;
     protected $fillable = [
-        "title",
-        "synopsis",
-        "coverphoto",
-        "writer_id"
+        "feedback_id",
+        "user_id",
+        "feedback_date",
+        "feedback_status",
+        "feedback"
     ];
 
     public function storefeedback(): BelongsTo

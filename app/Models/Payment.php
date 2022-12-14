@@ -10,10 +10,10 @@ class Payment extends Model
     use HasFactory;
     
     protected $fillable = [
-        "title",
-        "synopsis",
-        "coverphoto",
-        "writer_id"
+        "payment_id",
+        "payment_name",
+        "payment_picture",
+        "payment_description"
     ];
 
     public function payment(): BelongsTo

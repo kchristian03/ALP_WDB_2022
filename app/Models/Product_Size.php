@@ -9,10 +9,11 @@ class Product_Size extends Model
 {
     use HasFactory;
     protected $fillable = [
-        "title",
-        "synopsis",
-        "coverphoto",
-        "writer_id"
+        "product_id",
+        "size_id",
+        "product_size_description",
+        "product_size_price",
+        "product_size_stock"
     ];
 
     public function productsize(): BelongsTo

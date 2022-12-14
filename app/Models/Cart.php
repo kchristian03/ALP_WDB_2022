@@ -10,10 +10,11 @@ class Cart extends Model
 {
     use HasFactory;
     protected $fillable = [
+        "cart_id",
         "user_id",
-        "synopsis",
-        "coverphoto",
-        "writer_id"
+        "product_size_id",
+        "total_items",
+        "total_price"
     ];
 
     public function cart(): BelongsTo

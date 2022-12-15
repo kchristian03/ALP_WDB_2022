@@ -22,7 +22,7 @@
                 <!-- Single Cart Product Start -->
                 <div class="single-cart-product">
                     <div class="cart-product-thumb">
-                        <a href="/single-product"><img src="{{asset("assets/media/images/products/small-product/1.jpg")}}" alt="Cart Product"></a>
+                        <a href="/single-product"><img src="{{asset("assets.user/media/images/products/small-product/1.jpg")}}" alt="Cart Product"></a>
                     </div>
                     <div class="cart-product-content">
                         <h3 class="title"><a href="/single-product">Brother Hoddies in Grey</a></h3>
@@ -49,7 +49,7 @@
                 <!-- Single Cart Product Start -->
                 <div class="single-cart-product">
                     <div class="cart-product-thumb">
-                        <a href="/single-product"><img src="{{asset("assets/media/images/products/small-product/2.jpg")}}" alt="Cart Product"></a>
+                        <a href="/single-product"><img src="{{asset("assets.user/media/images/products/small-product/2.jpg")}}" alt="Cart Product"></a>
                     </div>
                     <div class="cart-product-content">
                         <h3 class="title"><a href="/single-product">Basic Jogging Shorts</a></h3>
@@ -76,7 +76,7 @@
                 <!-- Single Cart Product Start -->
                 <div class="single-cart-product">
                     <div class="cart-product-thumb">
-                        <a href="/single-product"><img src="{{asset("assets/media/images/products/small-product/3.jpg")}}" alt="Cart Product"></a>
+                        <a href="/single-product"><img src="{{asset("assets.user/media/images/products/small-product/3.jpg")}}" alt="Cart Product"></a>
                     </div>
                     <div class="cart-product-content">
                         <h3 class="title"><a href="/single-product">Enjoy The Rest T-Shirt</a></h3>

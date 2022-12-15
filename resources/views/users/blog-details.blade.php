@@ -38,7 +38,7 @@
 
                         <!-- Blog Details Image Start -->
                         <div class="image mb-6" data-aos="fade-up" data-aos-delay="300">
-                            <img class="fit-image" src="{{asset("assets/media/images/blog/blog-details/1.jpg")}}" alt="Blog">
+                            <img class="fit-image" src="{{asset("assets.user/media/images/blog/blog-details/1.jpg")}}" alt="Blog">
                         </div>
                         <!-- Blog Details Image End -->
 
@@ -76,10 +76,10 @@
                                 <p>There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration some form, by injected humour, or randomised words which don't look even slightly believable.</p>
                                 <div class="row mt-6">
                                     <div class="col-sm-6 col-12 mb-6" data-aos="fade-right" data-aos-delay="300">
-                                        <img class="fit-image" src="{{asset("assets/media/images/blog/blog-details/2.jpg")}}" alt="Blog">
+                                        <img class="fit-image" src="{{asset("assets.user/media/images/blog/blog-details/2.jpg")}}" alt="Blog">
                                     </div>
                                     <div class="col-sm-6 col-12 mb-6" data-aos="fade-left" data-aos-delay="300">
-                                        <img class="fit-image" src="{{asset("assets/media/images/blog/blog-details/3.jpg")}}" alt="Blog">
+                                        <img class="fit-image" src="{{asset("assets.user/media/images/blog/blog-details/3.jpg")}}" alt="Blog">
                                     </div>
                                 </div>
                                 <p>All the Lorem Ipsum generators on the Internet tend to repeat predefined chunks as necessary, making this the first true generator on the Internet. It uses a dictionary o first true generator on the
@@ -128,7 +128,7 @@
                         <!-- Single Comment Wrapper Start -->
                         <div class="single-comment-wrap mb-10">
                             <a class="author-thumb" href="#">
-                                <img src="{{asset("assets/media/images/blog/thumb/1.jpg")}}" alt="Author">
+                                <img src="{{asset("assets.user/media/images/blog/thumb/1.jpg")}}" alt="Author">
                             </a>
                             <div class="comments-info">
                                 <p class="mb-1">This book is a treatise on the theory of ethics, very popular during the Renaissance. The first line of Lorem Ipsum, "Lorem ipsum dolor sit amet</p>
@@ -143,7 +143,7 @@
                         <!-- Single Comment Wrapper Start -->
                         <div class="single-comment-wrap mb-10 comment-reply">
                             <a class="author-thumb" href="#">
-                                <img src="{{asset("assets/media/images/blog/thumb/2.jpg")}}" alt="Author">
+                                <img src="{{asset("assets.user/media/images/blog/thumb/2.jpg")}}" alt="Author">
                             </a>
                             <div class="comments-info">
                                 <p class="mb-1">Praesent bibendum risus pellentesque faucibus rhoncus. Etiam a mollis odio. Integer urna nisl, fermentum eu mollis et, gravida eu elit.</p>
@@ -158,7 +158,7 @@
                         <!-- Single Comment Wrapper Start -->
                         <div class="single-comment-wrap mb-10">
                             <a class="author-thumb" href="#">
-                                <img src="{{asset("assets/media/images/blog/thumb/3.jpg")}}" alt="Author">
+                                <img src="{{asset("assets.user/media/images/blog/thumb/3.jpg")}}" alt="Author">
                             </a>
                             <div class="comments-info">
                                 <p class="mb-1">Praesent bibendum risus pellentesque faucibus rhoncus. Etiam a mollis odio. Integer urna nisl, fermentum eu mollis et, gravida eu elit.</p>
@@ -173,7 +173,7 @@
                         <!-- Single Comment Wrapper Start -->
                         <div class="single-comment-wrap mb-10">
                             <a class="author-thumb" href="#">
-                                <img src="{{asset("assets/media/images/blog/thumb/4.jpg")}}" alt="Author">
+                                <img src="{{asset("assets.user/media/images/blog/thumb/4.jpg")}}" alt="Author">
                             </a>
                             <div class="comments-info">
                                 <p class="mb-1">This book is a treatise on the theory of ethics, very popular during the Renaissance. The first line of Lorem Ipsum, "Lorem ipsum dolor sit amet</p>
@@ -188,7 +188,7 @@
                         <!-- Single Comment Wrapper Start -->
                         <div class="single-comment-wrap comment-reply">
                             <a class="author-thumb" href="#">
-                                <img src="{{asset("assets/media/images/blog/thumb/2.jpg")}}" alt="Author">
+                                <img src="{{asset("assets.user/media/images/blog/thumb/2.jpg")}}" alt="Author">
                             </a>
                             <div class="comments-info">
                                 <p class="mb-1">Praesent bibendum risus pellentesque faucibus rhoncus. Etiam a mollis odio. Integer urna nisl, fermentum eu mollis et, gravida eu elit.</p>

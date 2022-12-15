@@ -38,7 +38,7 @@
                 </div>
                 <div class="col-lg-6 mb-6" data-aos="fade-left" data-aos-delay="600">
                     <div class="about_thumb">
-                        <img class="fit-image" src="{{asset("assets/media/images/about/1.jpg")}}" alt="About Image">
+                        <img class="fit-image" src="{{asset("assets.user/media/images/about/1.jpg")}}" alt="About Image">
                     </div>
                 </div>
             </div>
@@ -54,7 +54,7 @@
                 <div class="col-lg-3 col-md-6 mb-5" data-aos="fade-up" data-aos-delay="300">
                     <div class="feature flex-column text-center">
                         <div class="icon w-100 mb-4">
-                            <img src="{{asset("assets/media/images/icons/feature-icon-2.png")}}" alt="Feature Icon">
+                            <img src="{{asset("assets.user/media/images/icons/feature-icon-2.png")}}" alt="Feature Icon">
                         </div>
                         <div class="content ps-0 w-100">
                             <h5 class="title mb-2">Free Shipping</h5>
@@ -68,7 +68,7 @@
                 <div class="col-lg-3 col-md-6 mb-5" data-aos="fade-up" data-aos-delay="400">
                     <div class="feature flex-column text-center">
                         <div class="icon w-100 mb-4">
-                            <img src="{{asset("assets/media/images/icons/feature-icon-3.png")}}" alt="Feature Icon">
+                            <img src="{{asset("assets.user/media/images/icons/feature-icon-3.png")}}" alt="Feature Icon">
                         </div>
                         <div class="content ps-0 w-100">
                             <h5 class="title mb-2">Support 24/7</h5>
@@ -81,7 +81,7 @@
                 <div class="col-lg-3 col-md-6 mb-5" data-aos="fade-up" data-aos-delay="500">
                     <div class="feature flex-column text-center">
                         <div class="icon w-100 mb-4">
-                            <img src="{{asset("assets/media/images/icons/feature-icon-4.png")}}" alt="Feature Icon">
+                            <img src="{{asset("assets.user/media/images/icons/feature-icon-4.png")}}" alt="Feature Icon">
                         </div>
                         <div class="content ps-0 w-100">
                             <h5 class="title mb-2">Money Return</h5>
@@ -95,7 +95,7 @@
                 <div class="col-lg-3 col-md-6 mb-5" data-aos="fade-up" data-aos-delay="600">
                     <div class="feature flex-column text-center">
                         <div class="icon w-100 mb-4">
-                            <img src="{{asset("assets/media/images/icons/feature-icon-1.png")}}" alt="Feature Icon">
+                            <img src="{{asset("assets.user/media/images/icons/feature-icon-1.png")}}" alt="Feature Icon">
                         </div>
                         <div class="content ps-0 w-100">
                             <h5 class="title mb-2">Order Discount</h5>
@@ -155,31 +155,31 @@
 
                                     <!-- Single Brand Logo Start -->
                                     <div class="swiper-slide single-brand-logo" data-aos="fade-up" data-aos-delay="300">
-                                        <a href="#"><img src="{{asset("assets/media/images/brand-logo/1.png")}}" alt="Brand Logo"></a>
+                                        <a href="#"><img src="{{asset("assets.user/media/images/brand-logo/1.png")}}" alt="Brand Logo"></a>
                                     </div>
                                     <!-- Single Brand Logo End -->
 
                                     <!-- Single Brand Logo Start -->
                                     <div class="swiper-slide single-brand-logo" data-aos="fade-up" data-aos-delay="400">
-                                        <a href="#"><img src="{{asset("assets/media/images/brand-logo/2.png")}}" alt="Brand Logo"></a>
+                                        <a href="#"><img src="{{asset("assets.user/media/images/brand-logo/2.png")}}" alt="Brand Logo"></a>
                                     </div>
                                     <!-- Single Brand Logo End -->
 
                                     <!-- Single Brand Logo Start -->
                                     <div class="swiper-slide single-brand-logo" data-aos="fade-up" data-aos-delay="500">
-                                        <a href=""><img src="{{asset("assets/media/images/brand-logo/3.png")}}" alt="Brand Logo"></a>
+                                        <a href=""><img src="{{asset("assets.user/media/images/brand-logo/3.png")}}" alt="Brand Logo"></a>
                                     </div>
                                     <!-- Single Brand Logo End -->
 
                                     <!-- Single Brand Logo Start -->
                                     <div class="swiper-slide single-brand-logo" data-aos="fade-up" data-aos-delay="600">
-                                        <a href="#"><img src="{{asset("assets/media/images/brand-logo/4.png")}}" alt="Brand Logo"></a>
+                                        <a href="#"><img src="{{asset("assets.user/media/images/brand-logo/4.png")}}" alt="Brand Logo"></a>
                                     </div>
                                     <!-- Single Brand Logo End -->
 
                                     <!-- Single Brand Logo Start -->
                                     <div class="swiper-slide single-brand-logo" data-aos="fade-up" data-aos-delay="700">
-                                        <a href="#"><img src="{{asset("assets/media/images/brand-logo/5.png")}}" alt="Brand Logo"></a>
+                                        <a href="#"><img src="{{asset("assets.user/media/images/brand-logo/5.png")}}" alt="Brand Logo"></a>
                                     </div>
                                     <!-- Single Brand Logo End -->
 

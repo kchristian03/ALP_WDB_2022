@@ -169,8 +169,8 @@
                                     <div class="single-product-list product-hover mb-6">
                                         <div class="thumb">
                                             <a href="/single-product" class="image">
-                                                <img class="first-image" src="{{asset("assets/media/images/products/small-product/1.jpg")}}" alt="Product" />
-                                                <img class="second-image" src="{{asset("assets/media/images/products/small-product/5.jpg")}}" alt="Product" />
+                                                <img class="first-image" src="{{asset("assets.user/media/images/products/small-product/1.jpg")}}" alt="Product" />
+                                                <img class="second-image" src="{{asset("assets.user/media/images/products/small-product/5.jpg")}}" alt="Product" />
                                             </a>
                                         </div>
                                         <div class="content">
@@ -193,8 +193,8 @@
                                     <div class="single-product-list product-hover mb-6">
                                         <div class="thumb">
                                             <a href="/single-product" class="image">
-                                                <img class="first-image" src="{{asset("assets/media/images/products/small-product/2.jpg")}}" alt="Product" />
-                                                <img class="second-image" src="{{asset("assets/media/images/products/small-product/3.jpg")}}" alt="Product" />
+                                                <img class="first-image" src="{{asset("assets.user/media/images/products/small-product/2.jpg")}}" alt="Product" />
+                                                <img class="second-image" src="{{asset("assets.user/media/images/products/small-product/3.jpg")}}" alt="Product" />
                                             </a>
                                         </div>
                                         <div class="content">
@@ -217,8 +217,8 @@
                                     <div class="single-product-list product-hover mb-6">
                                         <div class="thumb">
                                             <a href="/single-product" class="image">
-                                                <img class="first-image" src="{{asset("assets/media/images/products/small-product/4.jpg")}}" alt="Product" />
-                                                <img class="second-image" src="{{asset("assets/media/images/products/small-product/10.jpg")}}" alt="Product" />
+                                                <img class="first-image" src="{{asset("assets.user/media/images/products/small-product/4.jpg")}}" alt="Product" />
+                                                <img class="second-image" src="{{asset("assets.user/media/images/products/small-product/10.jpg")}}" alt="Product" />
                                             </a>
                                         </div>
                                         <div class="content">

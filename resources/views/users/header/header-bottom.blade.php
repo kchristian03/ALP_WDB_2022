@@ -6,7 +6,7 @@
                 <!-- Header Logo Start -->
                 <div class="col-xl-2 col-6">
                     <div class="header-logo">
-                        <a href="/"><img src="{{asset("assets/media/images/logo/logo.png")}}" alt="Site Logo"/></a>
+                        <a href="/"><img src="{{asset("assets.user/media/images/logo/logo.png")}}" alt="Site Logo"/></a>
                     </div>
                 </div>
                 <!-- Header Logo End -->

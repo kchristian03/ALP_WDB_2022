@@ -36,7 +36,7 @@
                     <div class="blog-single-post-wrapper">
                         <div class="blog-thumb">
                             <a class="blog-overlay" href="/blog-details">
-                                <img src="{{asset("assets/media/images/blog/blog-post/1.jpg")}}" alt="Blog Post">
+                                <img src="{{asset("assets.user/media/images/blog/blog-post/1.jpg")}}" alt="Blog Post">
                             </a>
                         </div>
                         <div class="blog-content">
@@ -56,7 +56,7 @@
                     <div class="blog-single-post-wrapper">
                         <div class="blog-thumb">
                             <a class="blog-overlay" href="/blog-details">
-                                <img src="{{asset("assets/media/images/blog/blog-post/2.jpg")}}" alt="Blog Post">
+                                <img src="{{asset("assets.user/media/images/blog/blog-post/2.jpg")}}" alt="Blog Post">
                             </a>
                         </div>
                         <div class="blog-content">
@@ -76,7 +76,7 @@
                     <div class="blog-single-post-wrapper">
                         <div class="blog-thumb">
                             <a class="blog-overlay" href="/blog-details">
-                                <img src="{{asset("assets/media/images/blog/blog-post/3.jpg")}}" alt="Blog Post">
+                                <img src="{{asset("assets.user/media/images/blog/blog-post/3.jpg")}}" alt="Blog Post">
                             </a>
                         </div>
                         <div class="blog-content">
@@ -96,7 +96,7 @@
                     <div class="blog-single-post-wrapper">
                         <div class="blog-thumb">
                             <a class="blog-overlay" href="/blog-details">
-                                <img src="{{asset("assets/media/images/blog/blog-post/4.jpg")}}" alt="Blog Post">
+                                <img src="{{asset("assets.user/media/images/blog/blog-post/4.jpg")}}" alt="Blog Post">
                             </a>
                         </div>
                         <div class="blog-content">
@@ -116,7 +116,7 @@
                     <div class="blog-single-post-wrapper">
                         <div class="blog-thumb">
                             <a class="blog-overlay" href="/blog-details">
-                                <img src="{{asset("assets/media/images/blog/blog-post/5.jpg")}}" alt="Blog Post">
+                                <img src="{{asset("assets.user/media/images/blog/blog-post/5.jpg")}}" alt="Blog Post">
                             </a>
                         </div>
                         <div class="blog-content">
@@ -136,7 +136,7 @@
                     <div class="blog-single-post-wrapper">
                         <div class="blog-thumb">
                             <a class="blog-overlay" href="/blog-details">
-                                <img src="{{asset("assets/media/images/blog/blog-post/6.jpg")}}" alt="Blog Post">
+                                <img src="{{asset("assets.user/media/images/blog/blog-post/6.jpg")}}" alt="Blog Post">
                             </a>
                         </div>
                         <div class="blog-content">
@@ -156,7 +156,7 @@
                     <div class="blog-single-post-wrapper">
                         <div class="blog-thumb">
                             <a class="blog-overlay" href="/blog-details">
-                                <img src="{{asset("assets/media/images/blog/blog-post/7.jpg")}}" alt="Blog Post">
+                                <img src="{{asset("assets.user/media/images/blog/blog-post/7.jpg")}}" alt="Blog Post">
                             </a>
                         </div>
                         <div class="blog-content">
@@ -176,7 +176,7 @@
                     <div class="blog-single-post-wrapper">
                         <div class="blog-thumb">
                             <a class="blog-overlay" href="/blog-details">
-                                <img src="{{asset("assets/media/images/blog/blog-post/8.jpg")}}" alt="Blog Post">
+                                <img src="{{asset("assets.user/media/images/blog/blog-post/8.jpg")}}" alt="Blog Post">
                             </a>
                         </div>
                         <div class="blog-content">
@@ -196,7 +196,7 @@
                     <div class="blog-single-post-wrapper">
                         <div class="blog-thumb">
                             <a class="blog-overlay" href="/blog-details">
-                                <img src="{{asset("assets/media/images/blog/blog-post/9.jpg")}}" alt="Blog Post">
+                                <img src="{{asset("assets.user/media/images/blog/blog-post/9.jpg")}}" alt="Blog Post">
                             </a>
                         </div>
                         <div class="blog-content">

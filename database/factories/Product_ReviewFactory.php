@@ -5,9 +5,9 @@ namespace Database\Factories;
 use Illuminate\Database\Eloquent\Factories\Factory;
 
 /**
- * @extends \Illuminate\Database\Eloquent\Factories\Factory<\App\Models\Product_Size>
+ * @extends \Illuminate\Database\Eloquent\Factories\Factory<\App\Models\Product_Review>
  */
-class ProductSizeFactory extends Factory
+class Product_ReviewFactory extends Factory
 {
     /**
      * Define the model's default state.
@@ -17,7 +17,8 @@ class ProductSizeFactory extends Factory
     public function definition()
     {
         return [
-            //
+            "rating"=> rand(1,10),
+            "review"=> $this->faker->text,
         ];
     }
 }

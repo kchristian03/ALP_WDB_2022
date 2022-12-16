@@ -13,7 +13,7 @@ return new class extends Migration
      */
     public function up()
     {
-        Schema::create('store_feedback', function (Blueprint $table) {
+        Schema::create('store__feedback', function (Blueprint $table) {
             $table->id("feedback_id");
             $table->bigInteger('user_id')->unsigned();
             $table->date("feedback_date");

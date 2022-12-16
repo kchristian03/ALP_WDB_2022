@@ -26,6 +26,7 @@ class User extends Authenticatable
         'whatsapp_number',
         'umur',
         'status',
+        'profile_pic'
     ];
 
     /**

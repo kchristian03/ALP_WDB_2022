@@ -14,6 +14,7 @@ class Category extends Model
         "category_id",
         "category_name",
         "category_description",
+        "category_image"
         
     ];
 

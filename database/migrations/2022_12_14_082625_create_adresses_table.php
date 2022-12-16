@@ -21,6 +21,7 @@ return new class extends Migration
             $table->string("state");
             $table->text("description");
             $table->text("full_street_adress");
+            $table->timestamps();
 
         });
     }

@@ -17,7 +17,9 @@ class PaymentFactory extends Factory
     public function definition()
     {
         return [
-            //
+            "payment_name" => "BCA",
+            "payment_picture" => "bca.jpg",
+            "payment_description" => "Bayarnya pake bca ya"
         ];
     }
 }

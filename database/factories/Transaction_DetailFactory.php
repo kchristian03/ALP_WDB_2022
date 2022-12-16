@@ -7,7 +7,7 @@ use Illuminate\Database\Eloquent\Factories\Factory;
 /**
  * @extends \Illuminate\Database\Eloquent\Factories\Factory<\App\Models\Transaction_Detail>
  */
-class TransactionDetailFactory extends Factory
+class Transaction_DetailFactory extends Factory
 {
     /**
      * Define the model's default state.
@@ -17,7 +17,12 @@ class TransactionDetailFactory extends Factory
     public function definition()
     {
         return [
-            //
+          
+            "price"=>$this->faker->randomNumber(2),
+            "total_items"=> $this->faker->randomNumber(2),
+            "total_harga"=> $this->faker->randomNumber(2),
+
+      
         ];
     }
 }

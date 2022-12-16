@@ -25,6 +25,7 @@ return new class extends Migration
             $table->string('whatsapp_number');
             $table->string('umur');
             $table->enum('status', ['admin', 'user'])->default('user');
+            $table->string('profile_pic'); 
 
            
         });

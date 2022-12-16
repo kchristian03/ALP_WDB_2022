@@ -17,7 +17,7 @@ class CartFactory extends Factory
     public function definition()
     {
         return [
-            //
+            "total_price"=>$this->faker->randomNumber(3)
         ];
     }
 }

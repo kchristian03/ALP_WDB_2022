@@ -20,7 +20,7 @@ return new class extends Migration
             ->onUpdate('cascade');
 
             $table->foreign("product_size_id")
-            -> references("product_size_id")->on("product_sizes")
+            -> references("product_size_id")->on("product__sizes")
             -> onDelete('cascade')
             ->onUpdate('cascade');
         });

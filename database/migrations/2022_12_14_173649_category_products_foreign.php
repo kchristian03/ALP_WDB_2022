@@ -13,7 +13,7 @@ return new class extends Migration
      */
     public function up()
     {
-        Schema::table('category_products', function (Blueprint $table) {
+        Schema::table('category__products', function (Blueprint $table) {
             $table->foreign("product_id")
             -> references("product_id")->on("products")
             -> onDelete('cascade')
@@ -35,7 +35,7 @@ return new class extends Migration
      */
     public function down()
     {
-        Schema::table('category_products', function (Blueprint $table) {
+        Schema::table('category__products', function (Blueprint $table) {
             //
         });
     }

@@ -2,6 +2,7 @@
 
 namespace Database\Seeders;
 
+use App\Models\Transaction_Detail;
 use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
 
@@ -14,6 +15,14 @@ class TransactionDetailSeeder extends Seeder
      */
     public function run()
     {
-        //
+
+        Transaction_Detail::factory(5)->create(
+            [  
+            "transaction_id"=> 2,
+            "product_size_id"=> 3,
+    
+            ]
+            );
+
     }
 }

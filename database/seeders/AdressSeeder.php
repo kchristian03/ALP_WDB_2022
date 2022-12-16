@@ -2,6 +2,7 @@
 
 namespace Database\Seeders;
 
+use App\Models\Adress;
 use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
 
@@ -14,6 +15,8 @@ class AdressSeeder extends Seeder
      */
     public function run()
     {
-        //
+        Adress::factory(5)->create(
+            ['user_id' => '1']
+            );
     }
 }

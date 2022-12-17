@@ -10,16 +10,16 @@ class Store_Feedback extends Model
 {
     use HasFactory;
     protected $fillable = [
-        "feedback_id",
+       
         "user_id",
         "feedback_date",
         "feedback_status",
         "feedback"
     ];
 
-    public function storefeedback(): BelongsTo
+    public function user(): BelongsTo
     {
-        return $this->belongsTo(Store_Feedback::class);
+        return $this->belongsTo(User::class);
     }
 
 }

@@ -34,13 +34,13 @@
                     <div class="coupon-accordion">
 
                         <!-- Title Start -->
-                        <h3 class="title">Returning customer? <span id="showlogin">Click here to login</span></h3>
+                        {{-- <h3 class="title">Returning customer? <span id="showlogin">Click here to login</span></h3> --}}
                         <!-- Title End -->
 
                         <!-- Checkout Login Start -->
                         <div id="checkout-login" class="coupon-content">
                             <div class="coupon-info">
-                                <p class="coupon-text mb-2">Quisque gravida turpis sit amet nulla posuere lacinia. Cras sed est sit amet ipsum luctus.</p>
+                                {{-- <p class="coupon-text mb-2">Quisque gravida turpis sit amet nulla posuere lacinia. Cras sed est sit amet ipsum luctus.</p> --}}
 
                                 <!-- Form Start -->
                                 <form action="#">
@@ -77,7 +77,7 @@
                         <!-- Checkout Login End -->
 
                         <!-- Title Start -->
-                        <h3 class="title">Have a coupon? <span id="showcoupon">Click here to enter your code</span></h3>
+                        {{-- <h3 class="title">Have a coupon? <span id="showcoupon">Click here to enter your code</span></h3> --}}
                         <!-- Title End -->
 
                         <!-- Checkout Coupon Start -->

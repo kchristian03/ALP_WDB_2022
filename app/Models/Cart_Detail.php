@@ -11,7 +11,7 @@ class Cart_detail extends Model
     use HasFactory;
 
     protected $fillable = [
-        "cart_detail_id",
+    
     "cart_id",
     "price",
     "total_items",
@@ -19,9 +19,21 @@ class Cart_detail extends Model
     "product_size_id"
     ];
 
-    public function cartdetail(): BelongsTo
+    public function cart(): BelongsTo
     {
-        return $this->belongsTo(ModelsCart_detail::class);
+        return $this->belongsTo(Cart::class);
     }
-   
+
+    public function productsize(): BelongsTo
+    {
+        return 
+        $this->belongsTo(Product_Size::class);
+    }
+
+    // public function updatedetail($itemdetail, $qty, $price) {
+    //     $this->attributes['total_items'] = $itemdetail->qty + $qty;
+    //     $this->attributes['total_price'] = $itemdetail->subtotal + ($qty * ($price));
+    //     self::save();
+    // }
 }
+

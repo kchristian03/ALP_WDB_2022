@@ -31,7 +31,25 @@
 
             <div class="row">
                 <div class="col-12">
+    <!-- Cart Update Option Start -->
+    <div class="cart-update-option d-block d-md-flex justify-content-between">
 
+        <!-- Apply Coupon Wrapper Start -->
+        <div class="apply-coupon-wrapper">
+            <form action="#" method="post" class=" d-block ">
+                <a href="#" class="btn btn-light btn-hover-primary rounded-5 ">Continue Shopping</a>
+            </form>
+        </div>
+        <!-- Apply Coupon Wrapper End -->
+
+        <!-- Cart Update Start -->
+        {{-- <div class="cart-update mt-sm-16">
+            <a href="#" class="btn btn-dark btn-hover-primary rounded-0 ">Update Cart</a>
+        </div> --}}
+        <!-- Cart Update End -->
+
+    </div>
+    <!-- Cart Update Option End -->
                     <!-- Cart Table Start -->
                     <div class="cart-table table-responsive">
                         <table class="table table-bordered">
@@ -130,26 +148,7 @@
                     </div>
                     <!-- Cart Table End -->
 
-                    <!-- Cart Update Option Start -->
-                    <div class="cart-update-option d-block d-md-flex justify-content-between">
-
-                        <!-- Apply Coupon Wrapper Start -->
-                        <div class="apply-coupon-wrapper">
-                            <form action="#" method="post" class=" d-block d-md-flex">
-                                <input type="text" placeholder="Enter Your Coupon Code" required />
-                                <button class="btn btn-dark btn-hover-primary rounded-0">Apply Coupon</button>
-                            </form>
-                        </div>
-                        <!-- Apply Coupon Wrapper End -->
-
-                        <!-- Cart Update Start -->
-                        <div class="cart-update mt-sm-16">
-                            <a href="#" class="btn btn-dark btn-hover-primary rounded-0">Update Cart</a>
-                        </div>
-                        <!-- Cart Update End -->
-
-                    </div>
-                    <!-- Cart Update Option End -->
+                
 
                 </div>
             </div>
@@ -175,8 +174,8 @@
                                         <td>$230</td>
                                     </tr>
                                     <tr>
-                                        <td>Shipping</td>
-                                        <td>$70</td>
+                                        <td>Discount</td>
+                                        <td>-</td>
                                     </tr>
                                     <tr class="total">
                                         <td>Total</td>

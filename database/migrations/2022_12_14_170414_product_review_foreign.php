@@ -15,12 +15,12 @@ return new class extends Migration
     {
         Schema::table('product__reviews', function (Blueprint $table) {
             $table->foreign("user_id")
-            -> references("user_id")->on("users")
+            -> references("id")->on("users")
             -> onDelete('cascade')
             ->onUpdate('cascade');
 
             $table->foreign("product_id")
-            -> references("product_id")->on("products")
+            -> references("id")->on("products")
             -> onDelete('cascade')
             ->onUpdate('cascade');
         });

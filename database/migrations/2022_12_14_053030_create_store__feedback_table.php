@@ -14,7 +14,7 @@ return new class extends Migration
     public function up()
     {
         Schema::create('store__feedback', function (Blueprint $table) {
-            $table->id("feedback_id");
+            $table->id();
             $table->bigInteger('user_id')->unsigned();
             $table->date("feedback_date");
             $table->enum('feedback_status', ['seen', 'unseen'])->default('unseen');

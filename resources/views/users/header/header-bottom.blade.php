@@ -109,9 +109,9 @@
                         <!-- User Account Header Action Button End -->
 
                         <!-- Wishlist Header Action Button Start -->
-                        <a href="/wishlist"
+                        {{-- <a href="/wishlist"
                            class="header-action-btn header-action-btn-wishlist d-none d-md-block"><i class="pe-7s-like"></i>
-                        </a>
+                        </a> --}}
                         <!-- Wishlist Header Action Button End -->
 
                         <!-- Shopping Cart Header Action Button Start -->

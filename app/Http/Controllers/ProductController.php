@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Http\Requests\StoreProductRequest;
 use App\Http\Requests\UpdateProductRequest;
+use App\Models\Category;
 use App\Models\Product;
 
 class ProductController extends Controller
@@ -15,7 +16,29 @@ class ProductController extends Controller
      */
     public function index()
     {
-        //
+        return view('users.shop-left-sidebar' , [
+            'pagetitle' => 'Products',
+            'maintitle' => 'Products Page',
+            'products' => Product::all(),
+            'category' => Category::all(),
+        ]);
+    }
+
+    public function show(Product $product)
+    {
+
+        //menggunakan route model binding
+        // $writer->load('books');
+
+        //tanpa route model binding
+        // Writer::find(1)->with('books')->get();
+            // $product = Product::find($productid);
+        return view('users.single-product', [
+            "pagetitle" => "Product Details",
+            "maintitle" => "Product Details",
+            "product" => $product,
+            'products' => Product::all(),
+        ]);
     }
 
     /**
@@ -36,7 +59,7 @@ class ProductController extends Controller
      */
     public function store(StoreProductRequest $request)
     {
-        //
+     
     }
 
     /**
@@ -45,10 +68,15 @@ class ProductController extends Controller
      * @param  \App\Models\Product  $product
      * @return \Illuminate\Http\Response
      */
-    public function show(Product $product)
-    {
-        //
-    }
+    // public function show($id)
+    // {
+    //     $products = Product::find($id);
+    //     return view('products' , [
+    //         'pagetitle' => 'products',
+    //         'maintitle' => 'Products Page',
+    //         'products' => $products
+    //     ]);
+    // }
 
     /**
      * Show the form for editing the specified resource.

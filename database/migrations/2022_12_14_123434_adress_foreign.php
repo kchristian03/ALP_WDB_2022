@@ -15,7 +15,7 @@ return new class extends Migration
     {
         Schema::table('adresses', function (Blueprint $table) {
             $table->foreign("user_id")
-            -> references("user_id")->on("users")
+            -> references("id")->on("users")
             -> onDelete('cascade')
             ->onUpdate('cascade');
         });

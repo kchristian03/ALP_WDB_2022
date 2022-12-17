@@ -14,7 +14,7 @@ return new class extends Migration
     public function up()
     {
         Schema::create('transaction__details', function (Blueprint $table) {
-            $table->id("transaction_details_id");
+            $table->id();
             $table->bigInteger("transaction_id")->unsigned();
             $table->double("price",8,2);
             $table->timestamps();

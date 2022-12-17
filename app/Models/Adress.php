@@ -10,7 +10,7 @@ class Adress extends Model
 {
     use HasFactory;
     protected $fillable = [
-        "adress_id",
+     
         "user_id",
         "postal_code",
         "city",
@@ -19,8 +19,8 @@ class Adress extends Model
         "full_street_adress"
     ];
 
-    public function adress(): BelongsTo
+    public function user(): BelongsTo
     {
-        return $this->belongsTo(Adress::class);
+        return $this->belongsTo(User::class);
     }
 }

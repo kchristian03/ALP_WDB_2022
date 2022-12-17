@@ -1,5 +1,7 @@
 <?php
 
+use App\Http\Controllers\CartController;
+use App\Http\Controllers\ProductController;
 use App\Http\Controllers\ProfileController;
 use Illuminate\Support\Facades\Route;
 
@@ -34,9 +36,20 @@ require __DIR__.'/auth.php';
 
 
 //route dibawah ini digunakan selama proses development -- USER
+
+// Route::get('/shop-left-sidebar', function () {
+//     return view('users.shop-left-sidebar');
+// });
+Route::resource('cartdetail', CartController::class);
+Route::get('/shop-left-sidebar', [ProductController::class, 'index']);
+
 Route::get('/laravel', function () {
     return view('welcome');
 });
+
+Route::get('/single-product/{product}', [ProductController::class, 'show']);
+
+Route::get('/single-product' , [ProductController::class, 'index']);
 
 Route::get('/about', function () {
     return view('users.about');
@@ -98,9 +111,9 @@ Route::get('/shop-grid', function () {
     return view('users.shop-grid');
 });
 
-Route::get('/shop-left-sidebar', function () {
-    return view('users.shop-left-sidebar');
-});
+// Route::get('/shop-left-sidebar', function () {
+//     return view('users.shop-left-sidebar');
+// });
 
 Route::get('/shop-list-fullwidth', function () {
     return view('users.shop-list-fullwidth');
@@ -162,9 +175,7 @@ Route::get('/single-product-tab-style-right', function () {
     return view('users.single-product-tab-style-right');
 });
 
-Route::get('/single-product', function () {
-    return view('users.single-product');
-});
+
 
 Route::get('/wishlist', function () {
     return view('users.wishlist');

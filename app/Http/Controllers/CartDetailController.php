@@ -36,7 +36,7 @@ class CartDetailController extends Controller
      */
     public function store(StoreCart_detailRequest $request)
     {
-        //
+        return redirect('/cart');
     }
 
     /**

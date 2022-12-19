@@ -5,7 +5,8 @@
 @section('content')
     <!-- Breadcrumb Section Start -->
     <div class="section">
-
+   
+     
         <!-- Breadcrumb Area Start -->
         <div class="breadcrumb-area bg-light">
             <div class="container-fluid">
@@ -117,62 +118,34 @@
 
                         <!-- Description Start -->
                         <p class="desc-content mb-5">{{$product['product_description']}}</p>
-                        <!-- Description End -->
-
-                        <!-- Product Meta Start -->
-                        <div class="product-meta mb-3">
-                            <!-- Product Size Start -->
-                            <div class="product-size">
-                                <span>Size :</span>
-                                <a href=""><strong>S</strong></a>
-                                <a href=""><strong>M</strong></a>
-                                <a href=""><strong>L</strong></a>
-                                <a href=""><strong>XL</strong></a>
-                            </div>
-                            <!-- Product Size End -->
-                        </div>
-                        <!-- Product Meta End -->
-
-                        <!-- Product Color Variation Start -->
-                        {{-- <div class="product-color-variation mb-3">
-                            <button type="button" class="btn bg-danger"></button>
-                            <button type="button" class="btn bg-primary"></button>
-                            <button type="button" class="btn bg-dark"></button>
-                            <button type="button" class="btn bg-success"></button>
-                        </div> --}}
-                        <!-- Product Color Variation End -->
-
+                 
                         <!-- Product Meta Start -->
                         <div class="product-meta mb-5">
-                            <!-- Product Metarial Start -->
-                            {{-- <div class="product-metarial">
-                                <span>Metarial :</span>
-                                <a href=""><strong>Metal</strong></a>
-                                <a href=""><strong>Resin</strong></a>
-                                <a href=""><strong>Lather</strong></a>
-                                <a href=""><strong>Polymer</strong></a>
-                            </div> --}}
-                            <!-- Product Metarial End -->
-                        </div>
-                        <!-- Product Meta End -->
-
-                        <!-- Quantity Start -->
+                       
                         <div class="quantity mb-5">
+                            @if (Auth::check())
+                              
+                            <form action="{{route('cartdetail.store') }}" method="POST" enctype="multipart/form-data">
+                                @csrf
                             <div class="cart-plus-minus">
-                                <input class="cart-plus-minus-box" value="0" type="text">
+                                <input type="hidden" name="product_id" value={{$product->id}}>
+                                <input class="cart-plus-minus-box" name="product_qty" value="1" type="number" min="1">
                                 <div class="dec qtybutton"></div>
                                 <div class="inc qtybutton"></div>
                             </div>
+                            @endif
                         </div>
                         <!-- Quantity End -->
 
                         <!-- Cart & Wishlist Button Start -->
                         <div class="cart-wishlist-btn mb-4">
                             <div class="add-to_cart">
-                              <form action="{{route('cartdetail.store') }}" method="POST" enctype="multipart/form-data">
-                                                @csrf <input type="hidden" name="product_id" value={{$product->id}}>
+                                @if (Auth::check())
+                              
+                                 
                                             <button class="btn btn-sm btn-outline-dark btn-hover-primary" type="submit">Add To Cart</button>
-                                            </form>
+                                        </form>
+                                            @endif
                             </div>
                             {{-- <div class="add-to-wishlist">
                                 <a class="btn btn-outline-dark btn-hover-primary" href="wishlist.html">Add to Wishlist</a>

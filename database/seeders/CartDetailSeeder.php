@@ -19,7 +19,7 @@ class CartDetailSeeder extends Seeder
         Cart_detail::factory(5)->create(
             [  
             "cart_id"=> '1',
-            "product_size_id"=> '1']
+            "product_id"=> '1']
             );
       
     }

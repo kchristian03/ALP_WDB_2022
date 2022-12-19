@@ -4,8 +4,10 @@ namespace App\Http\Controllers;
 
 use App\Http\Requests\StoreProductRequest;
 use App\Http\Requests\UpdateProductRequest;
+use App\Models\Cart;
 use App\Models\Category;
 use App\Models\Product;
+use Illuminate\Support\Facades\Auth;
 
 class ProductController extends Controller
 {
@@ -16,17 +18,28 @@ class ProductController extends Controller
      */
     public function index()
     {
-        return view('users.shop-left-sidebar' , [
+        return view('users.products' , [
             'pagetitle' => 'Products',
             'maintitle' => 'Products Page',
             'products' => Product::all(),
             'category' => Category::all(),
+           
         ]);
     }
 
     public function show(Product $product)
     {
-
+        // if (Auth::check()){
+        // if (Cart::where('user_id', Auth::user()->id)->exists()) {
+               
+        //   }
+        //   else{
+        //    Cart::create([
+        //     'user_id' => Auth::user()->id,
+        //     'total_price' => 0
+        // ]);
+        //    }
+        // }
         //menggunakan route model binding
         // $writer->load('books');
 
@@ -38,6 +51,8 @@ class ProductController extends Controller
             "maintitle" => "Product Details",
             "product" => $product,
             'products' => Product::all(),
+         
+            
         ]);
     }
 

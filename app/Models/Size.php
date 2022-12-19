@@ -15,9 +15,9 @@ class Size extends Model
         "size"
     ];
 
-    public function productsize(): HasMany
-    {
-        return $this->hasMany(Product_Size::class);
-    }
+    // public function productsize(): HasMany
+    // {
+    //     return $this->hasMany(Product_Size::class);
+    // }
  
 }

@@ -20,7 +20,7 @@ return new class extends Migration
             $table->timestamps();
             $table->bigInteger("total_items");
             $table->bigInteger('total_harga');
-            $table->bigInteger('product_size_id')->unsigned();
+            $table->bigInteger('product_id')->unsigned();
         });
     }
 

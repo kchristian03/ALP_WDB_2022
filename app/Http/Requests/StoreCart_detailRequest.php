@@ -13,7 +13,7 @@ class StoreCart_detailRequest extends FormRequest
      */
     public function authorize()
     {
-        return false;
+        return true;
     }
 
     /**

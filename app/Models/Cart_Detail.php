@@ -16,7 +16,7 @@ class Cart_detail extends Model
     "price",
     "total_items",
     "total_price",
-    "product_size_id"
+    "product_id"
     ];
 
     public function cart(): BelongsTo
@@ -24,10 +24,10 @@ class Cart_detail extends Model
         return $this->belongsTo(Cart::class);
     }
 
-    public function productsize(): BelongsTo
+    public function product(): BelongsTo
     {
         return 
-        $this->belongsTo(Product_Size::class);
+        $this->belongsTo(Product::class);
     }
 
     // public function updatedetail($itemdetail, $qty, $price) {

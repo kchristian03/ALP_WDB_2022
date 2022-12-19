@@ -1,6 +1,6 @@
 @extends("users.layouts.users-layout")
 
-@section('pageTitle', 'Cart - Funcy Daisy')
+@section('pageTitle', 'Products')
 
 @section('content')
     <!-- Breadcrumb Section Start -->
@@ -10,12 +10,12 @@
         <div class="breadcrumb-area bg-light">
             <div class="container-fluid">
                 <div class="breadcrumb-content text-center">
-                    <h1 class="title">Shopping Cart</h1>
+                    <h1 class="title">{{$maintitle}}</h1>
                     <ul>
                         <li>
                             <a href="index.html">Home </a>
                         </li>
-                        <li class="active"> Shopping Cart</li>
+                        <li class="active"> Shop</li>
                     </ul>
                 </div>
             </div>
@@ -25,7 +25,13 @@
     </div>
     <!-- Breadcrumb Section End -->
 
-    <!-- Shopping Cart Section Start -->
-    @livewire('cart')
-    <!-- Shopping Cart Section End -->
+    <!-- Shop Section Start -->
+    @livewire('show-products')
+    <!-- Shop Section End -->
+
+
+
+
+
+    
 @endsection

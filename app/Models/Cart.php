@@ -12,7 +12,7 @@ class Cart extends Model
     use HasFactory;
     protected $fillable = [
       
-        "user,id",
+        "user_id",
         "total_price"
     ];
 
@@ -27,5 +27,17 @@ class Cart extends Model
     {
         return $this->hasMany(Cart_detail::class);
 
+    }
+
+    public function updatetotal($subtotal) {
+        $this->attributes['total_price'] += $subtotal;
+        // $this->attributes['total_items'] = $itemcart->total_items + $qty;
+        self::save();
+    }
+
+    public function mintotal($subtotal) {
+        $this->attributes['total_price'] -= $subtotal;
+        // $this->attributes['total_items'] = $itemcart->total_items + $qty;
+        self::save();
     }
 }

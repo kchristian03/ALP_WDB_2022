@@ -19,8 +19,8 @@ return new class extends Migration
             -> onDelete('cascade')
             ->onUpdate('cascade');
 
-            $table->foreign("product_size_id")
-            -> references("id")->on("product__sizes")
+            $table->foreign("product_id")
+            -> references("id")->on("products")
             -> onDelete('cascade')
             ->onUpdate('cascade');
         });

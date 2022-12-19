@@ -13,12 +13,12 @@ class Transaction extends Model
     protected $fillable = [
        
         "user_id",
-        "transaction_date",
         "transaction_status",
         "adress_id",
         "no_resi",
         "bukti_pembayaran",
-        "payment_id"
+        "payment_id",
+        "total_price"
     ];
 
     public function transactiondetails(): HasMany

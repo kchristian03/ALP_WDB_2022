@@ -19,23 +19,23 @@ class Product_Size extends Model
         "product_size_stock"
     ];
 
-    public function product(): BelongsTo
-    {
-        return $this->belongsTo(Product::class);
-    }
+    // public function product(): BelongsTo
+    // {
+    //     return $this->belongsTo(Product::class);
+    // }
 
-    public function size(): BelongsTo
-    {
-        return 
-                $this->belongsTo(Size::class);
-    }
+    // public function size(): BelongsTo
+    // {
+    //     return 
+    //             $this->belongsTo(Size::class);
+    // }
 
-    public function sizes(): HasMany
-    {
-        return 
-                $this->hasMany(Cart_detail::class);
+    // public function sizes(): HasMany
+    // {
+    //     return 
+    //             $this->hasMany(Cart_detail::class);
                
-    }
+    // }
 
  
    

@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Http\Requests\StoreCartRequest;
 use App\Http\Requests\UpdateCartRequest;
 use App\Models\Cart;
+use Illuminate\Http\Request;
 
 class CartController extends Controller
 {
@@ -13,9 +14,15 @@ class CartController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function index()
+    public function index(Request $request)
     {
-        //
+        $itemuser = $request->user();//ambil data user
+        $itemcart = Cart::where('user_id', $itemuser->id)
+                        ->where('status_cart', 'cart')
+                        ->first();
+        $data = array('title' => 'Shopping Cart',
+                    'itemcart' => $itemcart);
+        return view('cart.index', $data)->with('no', 1);
     }
 
     /**
@@ -83,4 +90,15 @@ class CartController extends Controller
     {
         //
     }
+
+
+    public function empty($id)
+    {
+      $itemcart = Cart::findOrFail($id);
+    $itemcart->detail()->delete();//hapus semua item di cart detail
+    $itemcart->updatetotal($itemcart, '-'.$itemcart->subtotal);
+    return back()->with('success', 'Cart berhasil dikosongkan');
+    }
+
+
 }

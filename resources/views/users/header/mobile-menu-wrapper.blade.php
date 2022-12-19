@@ -14,67 +14,13 @@
         <div class="mobile-navigation">
             <nav>
                 <ul class="mobile-menu">
-                    <li class="has-children">
-                        <a href="#">Home <i class="fa fa-angle-down"></i></a>
-                        <ul class="dropdown">
-                            <li><a href="/index">Home One</a></li>
-                            <li><a href="/index-2">Home Two</a></li>
-                        </ul>
-                    </li>
-                    <li class="has-children">
-                        <a href="#">Shop <i class="fa fa-angle-down" aria-hidden="true"></i></a>
-                        <ul class="dropdown">
-                            <li><a href="/shop-grid">Shop Grid</a></li>
-                            <li><a href="/shop-left-sidebar">Shop Left Sidebar</a></li>
-                            <li><a href="/shop-right-sidebar">Shop Right Sidebar</a></li>
-                            <li><a href="/shop-list-fullwidth">Shop List Fullwidth</a></li>
-                            <li><a href="/shop-list-left-sidebar">Shop List Left Sidebar</a></li>
-                            <li><a href="/shop-list-right-sidebar">Shop List Right Sidebar</a></li>
-                            <li><a href="/wishlist">Wishlist</a></li>
-                            <li><a href="/cart">Shopping Cart</a></li>
-                            <li><a href="/checkout">Checkout</a></li>
-                            <li><a href="/compare">Compare</a></li>
-                        </ul>
-                    </li>
-                    <li class="has-children">
-                        <a href="#">Product <i class="fa fa-angle-down" aria-hidden="true"></i></a>
-                        <ul class="dropdown">
-                            <li><a href="/single-product">Single Product</a></li>
-                            <li><a href="/single-product-sale">Single Product Sale</a></li>
-                            <li><a href="/single-product-group">Single Product Group</a></li>
-                            <li><a href="/single-product-normal">Single Product Normal</a></li>
-                            <li><a href="/single-product-affiliate">Single Product Affiliate</a></li>
-                            <li><a href="/single-product-slider">Single Product Slider</a></li>
-                            <li><a href="/single-product-gallery-left">Gallery Left</a></li>
-                            <li><a href="/single-product-gallery-right">Gallery Right</a></li>
-                            <li><a href="/single-product-tab-style-left">Tab Style Left</a></li>
-                            <li><a href="/single-product-tab-style-right">Tab Style Right</a></li>
-                            <li><a href="/single-product-sticky-left">Sticky Left</a></li>
-                            <li><a href="/single-product-sticky-right">Sticky Right</a></li>
-                        </ul>
-                    </li>
-                    <li class="has-children">
-                        <a href="#">Pages <i class="fa fa-angle-down" aria-hidden="true"></i></a>
-                        <ul class="dropdown">
-                            <li><a href="/about">About Us</a></li>
-                            <li><a href="/contact">Contact</a></li>
-                            <li><a href="/faq">Faq</a></li>
-                            <li><a href="/my-account">My Account</a></li>
-                            <li><a href="/login-register">Loging | Register</a></li>
-                        </ul>
-                    </li>
-                    <li class="has-children">
-                        <a href="#">Blog <i class="fa fa-angle-down" aria-hidden="true"></i></a>
-                        <ul class="dropdown">
-                            <li><a href="/blog">Blog</a></li>
-                            <li><a href="/blog-left-sidebar">Blog Left Sidebar</a></li>
-                            <li><a href="/blog-right-sidebar">Blog Right Sidebar</a></li>
-                            <li><a href="/blog-details">Blog Details</a></li>
-                            <li><a href="/blog-details-sidebar">Blog Details Sidebar</a></li>
-                        </ul>
-                    </li>
-                    <li><a href="/about">About</a></li>
-                    <li><a href="/contact">Contact</a></li>
+                    <ul>
+                        <li><a href="/"> <span>Home</span></a></li>
+                        <li><a href="/products"> <span>Products</span></a></li>
+                        <li><a href="/categories"> <span>Category</span></a></li>
+                        <li><a href="/about"> <span>About Us</span></a></li>
+                        <li><a href="/contact"> <span>Contact</span></a></li>
+                    </ul>
                 </ul>
             </nav>
         </div>

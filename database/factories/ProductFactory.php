@@ -21,6 +21,7 @@ class ProductFactory extends Factory
             "product_image" => "Jiwon Top.jpg",
             "product_description" =>$this->faker->text,
             "product_price" => 150000,
+            "product_stock" => 10,
             
         ];
         

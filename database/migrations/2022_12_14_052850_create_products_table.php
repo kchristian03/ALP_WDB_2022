@@ -19,6 +19,7 @@ return new class extends Migration
             $table->string('product_image');
             $table->string('product_description');
             $table->double('product_price');
+            $table->double('product_stock');
             $table->timestamps();
      
         });

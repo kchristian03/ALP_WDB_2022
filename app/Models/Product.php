@@ -15,11 +15,26 @@ class Product extends Model
         "product_name",
         "product_image",
         "product_description",
-        "product_price"
+        "product_price",
+        "product_stock"
     ];
 
     public function categoryproduct(): HasMany
     {
         return $this->hasMany(Category_Product::class);
+    }
+
+    public function cartdetail(): HasMany
+    {
+        return 
+                $this->hasMany(Cart_detail::class);
+               
+    }
+
+    public function transactiondetail(): HasMany
+    {
+        return 
+                $this->hasMany(Transaction_detail::class);
+               
     }
 }

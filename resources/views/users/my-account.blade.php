@@ -38,12 +38,18 @@
                         <div class="row">
                             <div class="col-lg-3 col-md-4">
                                 <div class="myaccount-tab-menu nav" role="tablist">
-                                    <a href="#dashboad" class="active" data-bs-toggle="tab"><i class="fa fa-dashboard"></i>
+                                    <a href="#dashboard" class="active" data-bs-toggle="tab"><i class="fa fa-dashboard"></i>
                                         Dashboard</a>
                                     <a href="#orders" data-bs-toggle="tab"><i class="fa fa-cart-arrow-down"></i> Orders</a>
-                                    <a href="#download" data-bs-toggle="tab"><i class="fa fa-cloud-download"></i> Download</a>
+                                    @if (Auth::check() && Auth::user()->status == 'admin')
+                                    <a href="#download" data-bs-toggle="tab"><i class="fa fa-cloud-download"></i> Users</a>
+                                    @endif
+                                    @if (Auth::check() && Auth::user()->status == 'admin')
                                     <a href="#payment-method" data-bs-toggle="tab"><i class="fa fa-credit-card"></i> Payment Method</a>
+                                    @else
+                                    @endif
                                     <a href="#address-edit" data-bs-toggle="tab"><i class="fa fa-map-marker"></i> address</a>
+                                    <a href="#feedbacks" data-bs-toggle="tab"><i class="fa fa-chat"></i> Feedbacks</a>
                                     <a href="#account-info" data-bs-toggle="tab"><i class="fa fa-user"></i> Account Details</a>
                                     <a href="login-register.html"><i class="fa fa-sign-out"></i> Logout</a>
                                 </div>
@@ -54,7 +60,7 @@
                             <div class="col-lg-9 col-md-8">
                                 <div class="tab-content" id="myaccountContent">
                                     <!-- Single Tab Content Start -->
-                                    <div class="tab-pane fade show active" id="dashboad" role="tabpanel">
+                                    <div class="tab-pane fade show active" id="dashboard" role="tabpanel">
                                         <div class="myaccount-content">
                                             <h3 class="title">Dashboard</h3>
                                             <div class="welcome">
@@ -108,6 +114,50 @@
                                         </div>
                                     </div>
                                     <!-- Single Tab Content End -->
+
+                                          <!-- Single Tab Content Start -->
+                                          <div class="tab-pane fade" id="feedbacks" role="tabpanel">
+                                            <div class="myaccount-content">
+                                                <h3 class="title">Orders</h3>
+                                                <div class="myaccount-table table-responsive text-center">
+                                                    <table class="table table-bordered">
+                                                        <thead class="thead-light">
+                                                        <tr>
+                                                            <th>Feedback</th>
+                                                            <th>Date</th>
+                                                            <th>Status</th>
+                                                            <th>Total</th>
+                                                            <th>Action</th>
+                                                        </tr>
+                                                        </thead>
+                                                        <tbody>
+                                                        <tr>
+                                                            <td>1</td>
+                                                            <td>Aug 22, 2018</td>
+                                                            <td>Pending</td>
+                                                            <td>$3000</td>
+                                                            <td><a href="cart.html" class="btn btn btn-dark btn-hover-primary btn-sm rounded-0">View</a></td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>2</td>
+                                                            <td>July 22, 2018</td>
+                                                            <td>Approved</td>
+                                                            <td>$200</td>
+                                                            <td><a href="cart.html" class="btn btn btn-dark btn-hover-primary btn-sm rounded-0">View</a></td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>3</td>
+                                                            <td>June 12, 2019</td>
+                                                            <td>On Hold</td>
+                                                            <td>$990</td>
+                                                            <td><a href="cart.html" class="btn btn btn-dark btn-hover-primary btn-sm rounded-0">View</a></td>
+                                                        </tr>
+                                                        </tbody>
+                                                    </table>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <!-- Single Tab Content End -->
 
                                     <!-- Single Tab Content Start -->
                                     <div class="tab-pane fade" id="download" role="tabpanel">

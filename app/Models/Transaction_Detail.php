@@ -14,12 +14,18 @@ class Transaction_Detail extends Model
         "price",
         "total_items",
         "total_harga",
-        "product_size_id"
+        "product_id"
     ];
 
     public function transaction(): BelongsTo
     {
         return $this->belongsTo(Transaction::class);
+    }
+
+    public function product(): BelongsTo
+    {
+        return 
+        $this->belongsTo(Product::class);
     }
 
 }

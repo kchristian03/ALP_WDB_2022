@@ -8,55 +8,61 @@
         <div class="hero-slider">
             <div class="swiper-container">
                 <div class="swiper-wrapper">
+                    <!-- Single Hero Slider Item Start -->
+                    <div class="hero-slide-item-two swiper-slide">
 
-                    <!-- Hero Slider Item Start -->
-                    <div class="hero-slide-item swiper-slide">
-                        <!-- Hero Slider Bg Image Start -->
+                        <!-- Hero Slider Background Image Start-->
                         <div class="hero-slide-bg">
-                            <img src="assets/images/slider/slide-1.jpg" alt="Slider Image" />
+                            <img src="assets/images/slider/slide-2.jpg" alt="" />
                         </div>
-                        <!-- Hero Slider Bg image End -->
+                        <!-- Hero Slider Background Image End-->
 
-                        <!-- Hero Slider Content Start -->
+                        <!-- Hero Slider Container Start -->
                         <div class="container">
-                            <div class="hero-slide-content">
-                                <h2 class="title">
-                                    Women New <br />
-                                    Collection
-                                </h2>
-                                <p>Up to 70% off selected Product</p>
-                                <a href="shop-grid.html" class="btn btn-lg btn-primary btn-hover-dark">Shop Now</a>
+
+                            <div class="row">
+                                <div class="hero-slide-content col-lg-8 col-xl-6 col-12 text-lg-center text-left">
+                                    <h2 class="title">
+                                        Fashion New <br />
+                                        Collection
+                                    </h2>
+                                    <p>Up to 70% off selected Product</p>
+                                    <a href="shop-grid.html" class="btn btn-lg btn-primary btn-hover-dark">Shop Now</a>
+                                </div>
                             </div>
-                        </div>
-                        <!-- Hero Slider Content End -->
-                    </div>
-                    <!-- Hero Slider Item End -->
 
-                    <!-- Hero Slider Item Start -->
-                    <div class="hero-slide-item swiper-slide">
-
-                        <!-- Hero Slider Bg Image Start -->
-                        <div class="hero-slide-bg">
-                            <img src="assets/images/slider/slide-1-2.jpg" alt="Slider Image" />
                         </div>
-                        <!-- Hero Slider Bg Image End -->
-
-                        <!-- Hero Slider Content Start -->
-                        <div class="container">
-                            <div class="hero-slide-content">
-                                <h2 class="title">
-                                    Trend Fashion<br />
-                                    Collection
-                                </h2>
-                                <p>Up to 40% off selected Product</p>
-                                <a href="shop-grid.html" class="btn btn-lg btn-primary btn-hover-dark">Shop Now</a>
-                            </div>
-                        </div>
-                        <!-- Hero Slider Content End -->
+                        <!-- Hero Slider Container End -->
 
                     </div>
-                    <!-- Hero Slider Item End -->
+                    <!-- Single Hero Slider Item End -->
 
+                    <!-- Single Hero Slider Item Start -->
+                    <div class="hero-slide-item-two swiper-slide">
+
+                        <!-- Hero Slider Background Image Start -->
+                        <div class="hero-slide-bg">
+                            <img src="assets/images/slider/slide-2-2.jpg" alt="" />
+                        </div>
+                        <!-- Hero Slider Background Image End -->
+
+                        <!-- Hero Slider Container Start -->
+                        <div class="container">
+                            <div class="row">
+                                <div class="hero-slide-content col-lg-8 col-xl-6 col-12 text-lg-center text-left">
+                                    <h2 class="title">
+                                        Trend Fashion <br />
+                                        Collection
+                                    </h2>
+                                    <p>Up to 30% off selected Product</p>
+                                    <a href="shop-grid.html" class="btn btn-lg btn-primary btn-hover-dark">Shop Now</a>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Hero Slider Container End -->
+
+                    </div>
+                    <!-- Single Hero Slider Item End -->
                 </div>
 
                 <!-- Swiper Pagination Start -->
@@ -73,71 +79,8 @@
     </div>
     <!-- Hero/Intro Slider End -->
 
-    <!-- Banner Section Start -->
-    <div class="section section-margin">
-        <div class="container">
-
-            <!-- Banners Start -->
-            <div class="row mb-n6">
-                <!-- Banner Start -->
-                <div class="col-lg-4 col-md-6 col-12 mb-6">
-                    <div class="banner" data-aos="fade-up" data-aos-delay="300">
-                        <div class="banner-image">
-                            <a href=""><img src="assets/images/banner/banner-1.jpg" alt=""></a>
-                        </div>
-                        <div class="info">
-                            <div class="small-banner-content">
-                                <h4 class="sub-title">Sun Hat</h4>
-                                <h3 class="title">Get Offer <br />For Summer</h3>
-                                <a href="shop-grid.html" class="btn btn-dark btn-sm">Shop Now</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <!-- Banner End -->
-
-                <!-- Banner Start -->
-                <div class="col-lg-4 col-md-6 col-12 mb-6">
-                    <div class="banner" data-aos="fade-up" data-aos-delay="500">
-                        <div class="banner-image">
-                            <a href=""><img src="assets/images/banner/banner-2.jpg" alt=""></a>
-                        </div>
-                        <div class="info">
-                            <div class="small-banner-content">
-                                <h4 class="sub-title">Ladies Bag</h4>
-                                <h3 class="title">Buy One <br />Get One Free</h3>
-                                <a href="shop-grid.html" class="btn btn-dark btn-sm">Shop Now</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <!-- Banner End -->
-
-                <!-- Banner Start -->
-                <div class="col-lg-4 col-md-6 col-12 mb-6">
-                    <div class="banner" data-aos="fade-up" data-aos-delay="700">
-                        <div class="banner-image">
-                            <a href=""><img src="assets/images/banner/banner-3.jpg" alt=""></a>
-                        </div>
-                        <div class="info">
-                            <div class="small-banner-content">
-                                <h4 class="sub-title">Smart Watch</h4>
-                                <h3 class="title">20% Off <br />Smart Watch</h3>
-                                <a href="shop-grid.html" class="btn btn-dark btn-sm">Shop Now</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <!-- Banner End -->
-
-            </div>
-            <!-- Banners End -->
-        </div>
-    </div>
-    <!-- Banner Section End -->
-
     <!-- Feature Section Start -->
-    <div class="section">
+    <div class="section section-margin">
         <div class="container">
             <div class="feature-wrap">
                 <div class="row row-cols-lg-4 row-cols-xl-auto row-cols-sm-2 row-cols-1 justify-content-between mb-n5">
@@ -201,6 +144,52 @@
     </div>
     <!-- Feature Section End -->
 
+    <!-- Banner Section Start -->
+    <div class="section">
+        <div class="container">
+
+            <!-- Banners Start -->
+            <div class="row mb-n6 overflow-hidden">
+                <!-- Banner Start -->
+                <div class="col-md-6 col-12 mb-6">
+                    <div class="banner" data-aos="fade-right" data-aos-delay="300">
+                        <div class="banner-image">
+                            <a href="shop-grid.html"><img src="assets/images/banner/banner-4.jpg" alt="Banner Image"></a>
+                        </div>
+                        <div class="info">
+                            <div class="small-banner-content">
+                                <h4 class="sub-title">Up to <span>50%</span> Off</h4>
+                                <h3 class="title">Office Dress</h3>
+                                <a href="shop-grid.html" class="btn btn-primary btn-hover-dark btn-sm">Shop Now</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Banner End -->
+
+                <!-- Banner Start -->
+                <div class="col-md-6 col-12 mb-6">
+                    <div class="banner" data-aos="fade-left" data-aos-delay="500">
+                        <div class="banner-image">
+                            <a href="shop-grid.html"><img src="assets/images/banner/banner-5.jpg" alt="Banner Image"></a>
+                        </div>
+                        <div class="info">
+                            <div class="small-banner-content">
+                                <h4 class="sub-title">Up to <span>40%</span> Off</h4>
+                                <h3 class="title">All Products</h3>
+                                <a href="shop-grid.html" class="btn btn-primary btn-hover-dark btn-sm">Shop Now</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Banner End -->
+
+            </div>
+            <!-- Banners End -->
+        </div>
+    </div>
+    <!-- Banner Section End -->
+
     <!-- Product Section Start -->
     <div class="section section-padding mt-0">
         <div class="container">
@@ -225,7 +214,7 @@
                         <div class="tab-pane fade show active" id="tab-product-all">
                             <div class="product-carousel">
                                 <div class="swiper-container">
-                                    <div class="swiper-wrapper mb-n10">
+                                    <div class="swiper-wrapper">
 
                                         <!-- Product Start -->
                                         <div class="swiper-slide product-wrapper">
@@ -262,7 +251,7 @@
                                             <!-- Single Product End -->
 
                                             <!-- Single Product Start -->
-                                            <div class="product product-border-left mb-10" data-aos="fade-up" data-aos-delay="400">
+                                            <div class="product product-border-left" data-aos="fade-up" data-aos-delay="400">
                                                 <div class="thumb">
                                                     <a href="single-product.html" class="image">
                                                         <img class="first-image" src="assets/images/products/medium-size/2.jpg" alt="Product" />
@@ -333,7 +322,7 @@
                                             <!-- Single Product End -->
 
                                             <!-- Single Product Start -->
-                                            <div class="product product-border-left mb-10" data-aos="fade-up" data-aos-delay="500">
+                                            <div class="product product-border-left" data-aos="fade-up" data-aos-delay="500">
                                                 <div class="thumb">
                                                     <a href="single-product.html" class="image">
                                                         <img class="first-image" src="assets/images/products/medium-size/5.jpg" alt="Product" />
@@ -403,7 +392,7 @@
                                             <!-- Single Product End -->
 
                                             <!-- Single Product Start -->
-                                            <div class="product product-border-left mb-10" data-aos="fade-up" data-aos-delay="600">
+                                            <div class="product product-border-left" data-aos="fade-up" data-aos-delay="600">
                                                 <div class="thumb">
                                                     <a href="single-product.html" class="image">
                                                         <img class="first-image" src="assets/images/products/medium-size/10.jpg" alt="Product" />
@@ -471,7 +460,7 @@
                                             <!-- Single Product End -->
 
                                             <!-- Single Product Start -->
-                                            <div class="product product-border-left mb-10" data-aos="fade-up" data-aos-delay="700">
+                                            <div class="product product-border-left" data-aos="fade-up" data-aos-delay="700">
                                                 <div class="thumb">
                                                     <a href="single-product.html" class="image">
                                                         <img class="first-image" src="assets/images/products/medium-size/3.jpg" alt="Product" />
@@ -537,7 +526,7 @@
                                             <!-- Single Product End -->
 
                                             <!-- Single Product Start -->
-                                            <div class="product product-border-left mb-10" data-aos="fade-up" data-aos-delay="800">
+                                            <div class="product product-border-left" data-aos="fade-up" data-aos-delay="800">
                                                 <div class="thumb">
                                                     <a href="single-product.html" class="image">
                                                         <img class="first-image" src="assets/images/products/medium-size/10.jpg" alt="Product" />
@@ -586,7 +575,7 @@
                         <div class="tab-pane fade" id="tab-product-clothings">
                             <div class="product-carousel">
                                 <div class="swiper-container">
-                                    <div class="swiper-wrapper mb-n10">
+                                    <div class="swiper-wrapper">
 
                                         <!-- Product Start -->
                                         <div class="swiper-slide product-wrapper">
@@ -623,7 +612,7 @@
                                             <!-- Single Product End -->
 
                                             <!-- Single Product Start -->
-                                            <div class="product product-border-left mb-10">
+                                            <div class="product product-border-left">
                                                 <div class="thumb">
                                                     <a href="single-product.html" class="image">
                                                         <img class="first-image" src="assets/images/products/medium-size/1.jpg" alt="Product" />
@@ -691,7 +680,7 @@
                                             <!-- Single Product End -->
 
                                             <!-- Single Product Start -->
-                                            <div class="product product-border-left mb-10">
+                                            <div class="product product-border-left">
                                                 <div class="thumb">
                                                     <a href="single-product.html" class="image">
                                                         <img class="first-image" src="assets/images/products/medium-size/3.jpg" alt="Product" />
@@ -761,7 +750,7 @@
                                             <!-- Single Product End -->
 
                                             <!-- Single Product Start -->
-                                            <div class="product product-border-left mb-10">
+                                            <div class="product product-border-left">
                                                 <div class="thumb">
                                                     <a href="single-product.html" class="image">
                                                         <img class="first-image" src="assets/images/products/medium-size/5.jpg" alt="Product" />
@@ -831,7 +820,7 @@
                                             <!-- Single Product End -->
 
                                             <!-- Single Product Start -->
-                                            <div class="product product-border-left mb-10">
+                                            <div class="product product-border-left">
                                                 <div class="thumb">
                                                     <a href="single-product.html" class="image">
                                                         <img class="first-image" src="assets/images/products/medium-size/10.jpg" alt="Product" />
@@ -900,302 +889,6 @@
         </div>
     </div>
     <!-- Banner Fullwidth End -->
-
-    <!-- Product Deal Section Start -->
-    <div class="section section-padding mt-0 overflow-hidden">
-        <div class="container">
-            <!-- Section Title & Tab Start -->
-            <div class="row">
-                <!-- Tab Start -->
-                <div class="col-12">
-                    <div class="section-title-produt-tab-wrapper">
-                        <div class="section-title m-0" data-aos="fade-right" data-aos-delay="300">
-                            <h1 class="title">Daily Deals</h1>
-                        </div>
-                        <ul class="product-tab-nav nav mt-n3" data-aos="fade-left" data-aos-delay="300">
-                            <li class="nav-item"><a class="nav-link active mt-3" data-bs-toggle="tab" href="#product-deal-all">New Arrivals</a></li>
-                            <li class="nav-item"><a class="nav-link mt-3" data-bs-toggle="tab" href="#product-deal-clothings">Best Sellers</a></li>
-                            <li class="nav-item"><a class="nav-link mt-3" data-bs-toggle="tab" href="#product-deal-all">Sale Items</a></li>
-                        </ul>
-                    </div>
-                </div>
-                <!-- Tab End -->
-            </div>
-            <!-- Section Title & Tab End -->
-
-            <!-- Products Tab Start -->
-            <div class="row">
-                <div class="col">
-                    <div class="tab-content position-relative">
-                        <div class="tab-pane fade show active" id="product-deal-all">
-                            <div class="product-deal-carousel">
-                                <div class="swiper-container">
-                                    <div class="swiper-wrapper">
-                                        <!-- Product Start -->
-                                        <div class="swiper-slide product-wrapper" data-aos="fade-right" data-aos-delay="600">
-
-                                            <!-- Single Product Deal Start -->
-                                            <div class="product single-deal-product product-border-left">
-                                                <div class="thumb">
-                                                    <a href="single-product-sale.html" class="image">
-                                                        <img src="assets/images/products/medium-size/1.jpg" alt="Product" />
-                                                    </a>
-                                                    <span class="badges">
-															<span class="sale">-30%</span>
-                                                    </span>
-                                                </div>
-                                                <div class="content">
-                                                    <p class="inner-desc">Hurry Up! Offer Ends In:</p>
-                                                    <div class="countdown-area">
-                                                        <div class="countdown-wrapper d-flex" data-countdown="2022/12/24"></div>
-                                                    </div>
-                                                    <h4 class="sub-title"><a href="single-product-sale.html">Studio Design</a></h4>
-                                                    <h5 class="title"><a href="single-product-sale.html">Enjoy The Rest T-Shirt</a></h5>
-                                                    <span class="ratings">
-															<span class="rating-wrap">
-																<span class="star" style="width: 100%"></span>
-                                                    </span>
-                                                    <span class="rating-num">(4)</span>
-                                                    </span>
-                                                    <span class="price">
-															<span class="new">$38.00</span>
-                                                    <span class="old">$42.05</span>
-                                                    </span>
-                                                    <button class="btn btn-sm btn-outline-dark btn-hover-primary">Add To Cart</button>
-                                                </div>
-                                            </div>
-                                            <!-- Single Product Deal End -->
-
-                                        </div>
-                                        <!-- Product End -->
-
-                                        <!-- Product Start -->
-                                        <div class="swiper-slide product-wrapper" data-aos="fade-left" data-aos-delay="600">
-
-                                            <!-- Single Product Deal Start -->
-                                            <div class="product single-deal-product product-border-left">
-                                                <div class="thumb">
-                                                    <a href="single-product-sale.html" class="image">
-                                                        <img src="assets/images/products/medium-size/8.jpg" alt="Product" />
-                                                    </a>
-                                                </div>
-                                                <div class="content">
-                                                    <p class="inner-desc">Hurry Up! Offer Ends In:</p>
-                                                    <div class="countdown-area">
-                                                        <div class="countdown-wrapper d-flex" data-countdown="2022/12/24"></div>
-                                                    </div>
-                                                    <h4 class="sub-title"><a href="single-product-sale.html">Studio Design</a></h4>
-                                                    <h5 class="title"><a href="single-product-sale.html">Classic Trucker Hat</a></h5>
-                                                    <span class="ratings">
-															<span class="rating-wrap">
-																<span class="star" style="width: 65%"></span>
-                                                    </span>
-                                                    <span class="rating-num">(3)</span>
-                                                    </span>
-                                                    <span class="price">
-															<span class="new">$07.00</span>
-                                                    <span class="old">$08.40</span>
-                                                    </span>
-                                                    <button class="btn btn-sm btn-outline-dark btn-hover-primary">Add To Cart</button>
-                                                </div>
-                                            </div>
-                                            <!-- Single Product Deal End -->
-
-                                        </div>
-                                        <!-- Product End -->
-
-                                        <!-- Product Start -->
-                                        <div class="swiper-slide product-wrapper">
-
-                                            <!-- Single Product Deal Start -->
-                                            <div class="product single-deal-product product-border-left">
-                                                <div class="thumb">
-                                                    <a href="single-product-sale.html" class="image">
-                                                        <img src="assets/images/products/medium-size/9.jpg" alt="Product" />
-                                                    </a>
-                                                </div>
-                                                <div class="content">
-                                                    <p class="inner-desc">Hurry Up! Offer Ends In:</p>
-                                                    <div class="countdown-area">
-                                                        <div class="countdown-wrapper d-flex" data-countdown="2022/12/24"></div>
-                                                    </div>
-                                                    <h4 class="sub-title"><a href="single-product-sale.html">Studio Design</a></h4>
-                                                    <h5 class="title"><a href="single-product-sale.html">Basic Lather Sneaker</a></h5>
-                                                    <span class="ratings">
-															<span class="rating-wrap">
-																<span class="star" style="width: 80%"></span>
-                                                    </span>
-                                                    <span class="rating-num">(2)</span>
-                                                    </span>
-                                                    <span class="price">
-															<span class="new">$88.00</span>
-                                                    <span class="old">$92.50</span>
-                                                    </span>
-                                                    <button class="btn btn-sm btn-outline-dark btn-hover-primary">Add To Cart</button>
-                                                </div>
-                                            </div>
-                                            <!-- Single Product Deal End -->
-
-                                        </div>
-                                        <!-- Product End -->
-
-                                    </div>
-
-                                    <!-- Swiper Pagination Start -->
-                                    <div class="swiper-pagination d-md-none"></div>
-                                    <!-- Swiper Pagination End -->
-
-                                    <!-- Next Previous Button Start -->
-                                    <div class="swiper-product-deal-next swiper-button-next swiper-button-white d-md-flex d-none"><i class="pe-7s-angle-right"></i></div>
-                                    <div class="swiper-product-deal-prev swiper-button-prev swiper-button-white d-md-flex d-none"><i class="pe-7s-angle-left"></i></div>
-                                    <!-- Next Previous Button End -->
-                                </div>
-                            </div>
-                        </div>
-                        <div class="tab-pane fade" id="product-deal-clothings">
-                            <div class="product-deal-carousel">
-                                <div class="swiper-container">
-                                    <div class="swiper-wrapper">
-
-                                        <!-- Product Start -->
-                                        <div class="swiper-slide product-wrapper mb-n10">
-
-                                            <!-- Single Product Deal Start -->
-                                            <div class="product single-deal-product product-border-left mb-10">
-                                                <div class="thumb">
-                                                    <a href="single-product-sale.html" class="image">
-                                                        <img src="assets/images/products/medium-size/9.jpg" alt="Product" />
-                                                    </a>
-                                                </div>
-                                                <div class="content">
-                                                    <p class="inner-desc">Hurry Up! Offer Ends In:</p>
-                                                    <div class="countdown-area">
-                                                        <div class="countdown-wrapper d-flex" data-countdown="2022/12/24"></div>
-                                                    </div>
-                                                    <h4 class="sub-title"><a href="single-product-sale.html">Studio Design</a></h4>
-                                                    <h5 class="title"><a href="single-product-sale.html">Basic Lather Sneaker</a></h5>
-                                                    <span class="ratings">
-															<span class="rating-wrap">
-																<span class="star" style="width: 80%"></span>
-                                                    </span>
-                                                    <span class="rating-num">(2)</span>
-                                                    </span>
-                                                    <span class="price">
-															<span class="new">$88.00</span>
-                                                    <span class="old">$92.50</span>
-                                                    </span>
-                                                    <button class="btn btn-sm btn-outline-dark btn-hover-primary">Add To Cart</button>
-                                                </div>
-                                            </div>
-                                            <!-- Single Product Deal End -->
-
-                                        </div>
-                                        <!-- Product End -->
-
-                                        <!-- Product Start -->
-                                        <div class="swiper-slide product-wrapper mb-n10">
-
-                                            <!-- Single Product Deal Start -->
-                                            <div class="product single-deal-product product-border-left mb-10">
-                                                <div class="thumb">
-                                                    <a href="single-product-sale.html" class="image">
-                                                        <img src="assets/images/products/medium-size/1.jpg" alt="Product" />
-                                                    </a>
-                                                    <span class="badges">
-															<span class="sale">-30%</span>
-                                                    </span>
-                                                </div>
-                                                <div class="content">
-                                                    <p class="inner-desc">Hurry Up! Offer Ends In:</p>
-                                                    <div class="countdown-area">
-                                                        <div class="countdown-wrapper d-flex" data-countdown="2022/12/24"></div>
-                                                    </div>
-                                                    <h4 class="sub-title"><a href="single-product-sale.html">Studio Design</a></h4>
-                                                    <h5 class="title"><a href="single-product-sale.html">Enjoy The Rest T-Shirt</a></h5>
-                                                    <span class="ratings">
-															<span class="rating-wrap">
-																<span class="star" style="width: 100%"></span>
-                                                    </span>
-                                                    <span class="rating-num">(4)</span>
-                                                    </span>
-                                                    <span class="price">
-															<span class="new">$38.00</span>
-                                                    <span class="old">$42.05</span>
-                                                    </span>
-                                                    <button class="btn btn-sm btn-outline-dark btn-hover-primary">Add To Cart</button>
-                                                </div>
-                                            </div>
-                                            <!-- Single Product Deal End -->
-
-                                        </div>
-                                        <!-- Product End -->
-
-                                    </div>
-
-                                    <!-- Swiper Pagination Start -->
-                                    <div class="swiper-pagination d-md-none"></div>
-                                    <!-- Swiper Pagination End -->
-
-                                    <!-- Next Previous Button Start -->
-                                    <div class="swiper-product-deal-next swiper-button-next swiper-button-white d-md-flex d-none"><i class="pe-7s-angle-right"></i></div>
-                                    <div class="swiper-product-deal-prev swiper-button-prev swiper-button-white d-md-flex d-none"><i class="pe-7s-angle-left"></i></div>
-                                    <!-- Next Previous Button End -->
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <!-- Products Tab End -->
-        </div>
-    </div>
-    <!-- Product Deal Section End -->
-
-    <!-- Banner Section Start -->
-    <div class="section">
-        <div class="container">
-
-            <!-- Banners Start -->
-            <div class="row mb-n6 overflow-hidden">
-                <!-- Banner Start -->
-                <div class="col-md-6 col-12 mb-6" data-aos="fade-right" data-aos-delay="300">
-                    <div class="banner">
-                        <div class="banner-image">
-                            <a href="shop-grid.html"><img src="assets/images/banner/banner-4.jpg" alt="Banner Image"></a>
-                        </div>
-                        <div class="info">
-                            <div class="small-banner-content">
-                                <h4 class="sub-title">Up to <span>50%</span> Off</h4>
-                                <h3 class="title">Office Dress</h3>
-                                <a href="shop-grid.html" class="btn btn-primary btn-hover-dark btn-sm">Shop Now</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <!-- Banner End -->
-
-                <!-- Banner Start -->
-                <div class="col-md-6 col-12 mb-6" data-aos="fade-left" data-aos-delay="300">
-                    <div class="banner">
-                        <div class="banner-image">
-                            <a href="shop-grid.html"><img src="assets/images/banner/banner-5.jpg" alt="Banner Image"></a>
-                        </div>
-                        <div class="info">
-                            <div class="small-banner-content">
-                                <h4 class="sub-title">Up to <span>40%</span> Off</h4>
-                                <h3 class="title">All Products</h3>
-                                <a href="shop-grid.html" class="btn btn-primary btn-hover-dark btn-sm">Shop Now</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <!-- Banner End -->
-
-            </div>
-            <!-- Banners End -->
-        </div>
-    </div>
-    <!-- Banner Section End -->
 
     <!-- Product List Start -->
     <div class="section section-padding">
@@ -1755,60 +1448,455 @@
     </div>
     <!-- Product List End -->
 
-    <!-- Brand Logo Start -->
+    <!-- Banner Section Start -->
     <div class="section">
         <div class="container">
-            <div class="border-top">
-                <div class="row">
-                    <div class="col-12">
-                        <!-- Brand Logo Wrapper Start -->
-                        <div class="brand-logo-carousel">
-                            <div class="swiper-container">
-                                <div class="swiper-wrapper">
 
-                                    <!-- Single Brand Logo Start -->
-                                    <div class="swiper-slide single-brand-logo" data-aos="fade-up" data-aos-delay="300">
-                                        <a href="#"><img src="assets/images/brand-logo/1.png" alt="Brand Logo"></a>
+            <!-- Banners Start -->
+            <div class="row mb-n6">
+                <!-- Banner Start -->
+                <div class="col-lg-4 col-md-6 col-12 mb-6">
+                    <div class="banner" data-aos="fade-up" data-aos-delay="300">
+                        <div class="banner-image">
+                            <a href="shop-grid.html"><img src="assets/images/banner/banner-1.jpg" alt=""></a>
+                        </div>
+                        <div class="info">
+                            <div class="small-banner-content">
+                                <h4 class="sub-title">Sun Hat</h4>
+                                <h3 class="title">Get Offer <br />For Summer</h3>
+                                <a href="shop-grid.html" class="btn btn-dark btn-sm">Shop Now</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Banner End -->
+
+                <!-- Banner Start -->
+                <div class="col-lg-4 col-md-6 col-12 mb-6">
+                    <div class="banner" data-aos="fade-up" data-aos-delay="500">
+                        <div class="banner-image">
+                            <a href="shop-grid.html"><img src="assets/images/banner/banner-2.jpg" alt=""></a>
+                        </div>
+                        <div class="info">
+                            <div class="small-banner-content">
+                                <h4 class="sub-title">Ladies Bag</h4>
+                                <h3 class="title">Buy One <br />Get One Free</h3>
+                                <a href="shop-grid.html" class="btn btn-dark btn-sm">Shop Now</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Banner End -->
+
+                <!-- Banner Start -->
+                <div class="col-lg-4 col-md-6 col-12 mb-6">
+                    <div class="banner" data-aos="fade-up" data-aos-delay="700">
+                        <div class="banner-image">
+                            <a href="shop-grid.html"><img src="assets/images/banner/banner-3.jpg" alt=""></a>
+                        </div>
+                        <div class="info">
+                            <div class="small-banner-content">
+                                <h4 class="sub-title">Smart Watch</h4>
+                                <h3 class="title">20% Off <br />Smart Watch</h3>
+                                <a href="shop-grid.html" class="btn btn-dark btn-sm">Shop Now</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Banner End -->
+
+            </div>
+            <!-- Banners End -->
+        </div>
+    </div>
+    <!-- Banner Section End -->
+
+    <!-- Product Deal Section Start -->
+    <div class="section section-padding mt-0 overflow-hidden">
+        <div class="container">
+
+            <!-- Section Title & Tab Start -->
+            <div class="row">
+                <!-- Tab Start -->
+                <div class="col-12">
+                    <div class="section-title-produt-tab-wrapper">
+                        <div class="section-title m-0" data-aos="fade-right" data-aos-delay="300">
+                            <h1 class="title">Daily Deals</h1>
+                        </div>
+                        <ul class="product-tab-nav nav mt-n3" data-aos="fade-left" data-aos-delay="300">
+                            <li class="nav-item"><a class="nav-link active mt-3" data-bs-toggle="tab" href="#product-deal-all">New Arrivals</a></li>
+                            <li class="nav-item"><a class="nav-link mt-3" data-bs-toggle="tab" href="#product-deal-clothings">Best Sellers</a></li>
+                            <li class="nav-item"><a class="nav-link mt-3" data-bs-toggle="tab" href="#product-deal-all">Sale Items</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <!-- Tab End -->
+            </div>
+            <!-- Section Title & Tab End -->
+
+            <!-- Products Tab Start -->
+            <div class="row">
+                <div class="col">
+                    <div class="tab-content position-relative">
+                        <div class="tab-pane fade show active" id="product-deal-all">
+                            <div class="product-deal-carousel">
+                                <div class="swiper-container">
+                                    <div class="swiper-wrapper">
+                                        <!-- Product Start -->
+                                        <div class="swiper-slide product-wrapper" data-aos="fade-right" data-aos-delay="600">
+
+                                            <!-- Single Product Deal Start -->
+                                            <div class="product single-deal-product product-border-left">
+                                                <div class="thumb">
+                                                    <a href="single-product-sale.html" class="image">
+                                                        <img src="assets/images/products/medium-size/1.jpg" alt="Product" />
+                                                    </a>
+                                                    <span class="badges">
+															<span class="sale">-30%</span>
+                                                    </span>
+                                                </div>
+                                                <div class="content">
+                                                    <p class="inner-desc">Hurry Up! Offer Ends In:</p>
+                                                    <div class="countdown-area">
+                                                        <div class="countdown-wrapper d-flex" data-countdown="2022/12/24"></div>
+                                                    </div>
+                                                    <h4 class="sub-title"><a href="single-product-sale.html">Studio Design</a></h4>
+                                                    <h5 class="title"><a href="single-product-sale.html">Enjoy The Rest T-Shirt</a></h5>
+                                                    <span class="ratings">
+															<span class="rating-wrap">
+																<span class="star" style="width: 100%"></span>
+                                                    </span>
+                                                    <span class="rating-num">(4)</span>
+                                                    </span>
+                                                    <span class="price">
+															<span class="new">$38.00</span>
+                                                    <span class="old">$42.05</span>
+                                                    </span>
+                                                    <button class="btn btn-sm btn-outline-dark btn-hover-primary">Add To Cart</button>
+                                                </div>
+                                            </div>
+                                            <!-- Single Product Deal End -->
+
+                                        </div>
+                                        <!-- Product End -->
+
+                                        <!-- Product Start -->
+                                        <div class="swiper-slide product-wrapper" data-aos="fade-left" data-aos-delay="600">
+
+                                            <!-- Single Product Deal Start -->
+                                            <div class="product single-deal-product product-border-left">
+                                                <div class="thumb">
+                                                    <a href="single-product-sale.html" class="image">
+                                                        <img src="assets/images/products/medium-size/8.jpg" alt="Product" />
+                                                    </a>
+                                                </div>
+                                                <div class="content">
+                                                    <p class="inner-desc">Hurry Up! Offer Ends In:</p>
+                                                    <div class="countdown-area">
+                                                        <div class="countdown-wrapper d-flex" data-countdown="2022/12/24"></div>
+                                                    </div>
+                                                    <h4 class="sub-title"><a href="single-product-sale.html">Studio Design</a></h4>
+                                                    <h5 class="title"><a href="single-product-sale.html">Classic Trucker Hat</a></h5>
+                                                    <span class="ratings">
+															<span class="rating-wrap">
+																<span class="star" style="width: 65%"></span>
+                                                    </span>
+                                                    <span class="rating-num">(3)</span>
+                                                    </span>
+                                                    <span class="price">
+															<span class="new">$07.00</span>
+                                                    <span class="old">$08.40</span>
+                                                    </span>
+                                                    <button class="btn btn-sm btn-outline-dark btn-hover-primary">Add To Cart</button>
+                                                </div>
+                                            </div>
+                                            <!-- Single Product Deal End -->
+
+                                        </div>
+                                        <!-- Product End -->
+
+                                        <!-- Product Start -->
+                                        <div class="swiper-slide product-wrapper">
+
+                                            <!-- Single Product Deal Start -->
+                                            <div class="product single-deal-product product-border-left">
+                                                <div class="thumb">
+                                                    <a href="single-product-sale.html" class="image">
+                                                        <img src="assets/images/products/medium-size/9.jpg" alt="Product" />
+                                                    </a>
+                                                </div>
+                                                <div class="content">
+                                                    <p class="inner-desc">Hurry Up! Offer Ends In:</p>
+                                                    <div class="countdown-area">
+                                                        <div class="countdown-wrapper d-flex" data-countdown="2022/12/24"></div>
+                                                    </div>
+                                                    <h4 class="sub-title"><a href="single-product-sale.html">Studio Design</a></h4>
+                                                    <h5 class="title"><a href="single-product-sale.html">Basic Lather Sneaker</a></h5>
+                                                    <span class="ratings">
+															<span class="rating-wrap">
+																<span class="star" style="width: 80%"></span>
+                                                    </span>
+                                                    <span class="rating-num">(2)</span>
+                                                    </span>
+                                                    <span class="price">
+															<span class="new">$88.00</span>
+                                                    <span class="old">$92.50</span>
+                                                    </span>
+                                                    <button class="btn btn-sm btn-outline-dark btn-hover-primary">Add To Cart</button>
+                                                </div>
+                                            </div>
+                                            <!-- Single Product Deal End -->
+
+                                        </div>
+                                        <!-- Product End -->
+
                                     </div>
-                                    <!-- Single Brand Logo End -->
 
-                                    <!-- Single Brand Logo Start -->
-                                    <div class="swiper-slide single-brand-logo" data-aos="fade-up" data-aos-delay="400">
-                                        <a href="#"><img src="assets/images/brand-logo/2.png" alt="Brand Logo"></a>
-                                    </div>
-                                    <!-- Single Brand Logo End -->
+                                    <!-- Swiper Pagination Start -->
+                                    <div class="swiper-pagination d-md-none"></div>
+                                    <!-- Swiper Pagination End -->
 
-                                    <!-- Single Brand Logo Start -->
-                                    <div class="swiper-slide single-brand-logo" data-aos="fade-up" data-aos-delay="500">
-                                        <a href=""><img src="assets/images/brand-logo/3.png" alt="Brand Logo"></a>
-                                    </div>
-                                    <!-- Single Brand Logo End -->
-
-                                    <!-- Single Brand Logo Start -->
-                                    <div class="swiper-slide single-brand-logo" data-aos="fade-up" data-aos-delay="600">
-                                        <a href="#"><img src="assets/images/brand-logo/4.png" alt="Brand Logo"></a>
-                                    </div>
-                                    <!-- Single Brand Logo End -->
-
-                                    <!-- Single Brand Logo Start -->
-                                    <div class="swiper-slide single-brand-logo" data-aos="fade-up" data-aos-delay="700">
-                                        <a href="#"><img src="assets/images/brand-logo/5.png" alt="Brand Logo"></a>
-                                    </div>
-                                    <!-- Single Brand Logo End -->
-
+                                    <!-- Next Previous Button Start -->
+                                    <div class="swiper-product-deal-next swiper-button-next swiper-button-white d-md-flex d-none"><i class="pe-7s-angle-right"></i></div>
+                                    <div class="swiper-product-deal-prev swiper-button-prev swiper-button-white d-md-flex d-none"><i class="pe-7s-angle-left"></i></div>
+                                    <!-- Next Previous Button End -->
                                 </div>
                             </div>
                         </div>
-                        <!-- Brand Logo Wrapper End -->
+                        <div class="tab-pane fade" id="product-deal-clothings">
+                            <div class="product-deal-carousel">
+                                <div class="swiper-container">
+                                    <div class="swiper-wrapper">
+
+                                        <!-- Product Start -->
+                                        <div class="swiper-slide product-wrapper mb-n10">
+
+                                            <!-- Single Product Deal Start -->
+                                            <div class="product single-deal-product product-border-left mb-10">
+                                                <div class="thumb">
+                                                    <a href="single-product-sale.html" class="image">
+                                                        <img src="assets/images/products/medium-size/9.jpg" alt="Product" />
+                                                    </a>
+                                                </div>
+                                                <div class="content">
+                                                    <p class="inner-desc">Hurry Up! Offer Ends In:</p>
+                                                    <div class="countdown-area">
+                                                        <div class="countdown-wrapper d-flex" data-countdown="2022/12/24"></div>
+                                                    </div>
+                                                    <h4 class="sub-title"><a href="single-product-sale.html">Studio Design</a></h4>
+                                                    <h5 class="title"><a href="single-product-sale.html">Basic Lather Sneaker</a></h5>
+                                                    <span class="ratings">
+															<span class="rating-wrap">
+																<span class="star" style="width: 80%"></span>
+                                                    </span>
+                                                    <span class="rating-num">(2)</span>
+                                                    </span>
+                                                    <span class="price">
+															<span class="new">$88.00</span>
+                                                    <span class="old">$92.50</span>
+                                                    </span>
+                                                    <button class="btn btn-sm btn-outline-dark btn-hover-primary">Add To Cart</button>
+                                                </div>
+                                            </div>
+                                            <!-- Single Product Deal End -->
+
+                                        </div>
+                                        <!-- Product End -->
+
+                                        <!-- Product Start -->
+                                        <div class="swiper-slide product-wrapper mb-n10">
+
+                                            <!-- Single Product Deal Start -->
+                                            <div class="product single-deal-product product-border-left mb-10">
+                                                <div class="thumb">
+                                                    <a href="single-product-sale.html" class="image">
+                                                        <img src="assets/images/products/medium-size/1.jpg" alt="Product" />
+                                                    </a>
+                                                    <span class="badges">
+															<span class="sale">-30%</span>
+                                                    </span>
+                                                </div>
+                                                <div class="content">
+                                                    <p class="inner-desc">Hurry Up! Offer Ends In:</p>
+                                                    <div class="countdown-area">
+                                                        <div class="countdown-wrapper d-flex" data-countdown="2022/12/24"></div>
+                                                    </div>
+                                                    <h4 class="sub-title"><a href="single-product-sale.html">Studio Design</a></h4>
+                                                    <h5 class="title"><a href="single-product-sale.html">Enjoy The Rest T-Shirt</a></h5>
+                                                    <span class="ratings">
+															<span class="rating-wrap">
+																<span class="star" style="width: 100%"></span>
+                                                    </span>
+                                                    <span class="rating-num">(4)</span>
+                                                    </span>
+                                                    <span class="price">
+															<span class="new">$38.00</span>
+                                                    <span class="old">$42.05</span>
+                                                    </span>
+                                                    <button class="btn btn-sm btn-outline-dark btn-hover-primary">Add To Cart</button>
+                                                </div>
+                                            </div>
+                                            <!-- Single Product Deal End -->
+
+                                        </div>
+                                        <!-- Product End -->
+
+                                    </div>
+
+                                    <!-- Swiper Pagination Start -->
+                                    <div class="swiper-pagination d-md-none"></div>
+                                    <!-- Swiper Pagination End -->
+
+                                    <!-- Next Previous Button Start -->
+                                    <div class="swiper-product-deal-next swiper-button-next swiper-button-white d-md-flex d-none"><i class="pe-7s-angle-right"></i></div>
+                                    <div class="swiper-product-deal-prev swiper-button-prev swiper-button-white d-md-flex d-none"><i class="pe-7s-angle-left"></i></div>
+                                    <!-- Next Previous Button End -->
+                                </div>
+                            </div>
+                        </div>
                     </div>
+                </div>
+            </div>
+            <!-- Products Tab End -->
+
+        </div>
+    </div>
+    <!-- Product Deal Section End -->
+
+    <!-- Brand Logo Start -->
+    <div class="section">
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <!-- Brand Logo Wrapper Start -->
+                    <div class="brand-logo-carousel p-0">
+                        <div class="swiper-container">
+                            <div class="swiper-wrapper">
+
+                                <!-- Single Brand Logo Start -->
+                                <div class="swiper-slide single-brand-logo" data-aos="fade-up" data-aos-delay="300">
+                                    <a href="#"><img src="assets/images/brand-logo/1.png" alt="Brand Logo"></a>
+                                </div>
+                                <!-- Single Brand Logo End -->
+
+                                <!-- Single Brand Logo Start -->
+                                <div class="swiper-slide single-brand-logo" data-aos="fade-up" data-aos-delay="400">
+                                    <a href="#"><img src="assets/images/brand-logo/2.png" alt="Brand Logo"></a>
+                                </div>
+                                <!-- Single Brand Logo End -->
+
+                                <!-- Single Brand Logo Start -->
+                                <div class="swiper-slide single-brand-logo" data-aos="fade-up" data-aos-delay="500">
+                                    <a href=""><img src="assets/images/brand-logo/3.png" alt="Brand Logo"></a>
+                                </div>
+                                <!-- Single Brand Logo End -->
+
+                                <!-- Single Brand Logo Start -->
+                                <div class="swiper-slide single-brand-logo" data-aos="fade-up" data-aos-delay="600">
+                                    <a href="#"><img src="assets/images/brand-logo/4.png" alt="Brand Logo"></a>
+                                </div>
+                                <!-- Single Brand Logo End -->
+
+                                <!-- Single Brand Logo Start -->
+                                <div class="swiper-slide single-brand-logo" data-aos="fade-up" data-aos-delay="700">
+                                    <a href="#"><img src="assets/images/brand-logo/5.png" alt="Brand Logo"></a>
+                                </div>
+                                <!-- Single Brand Logo End -->
+
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Brand Logo Wrapper End -->
                 </div>
             </div>
         </div>
     </div>
     <!-- Brand Logo End -->
 
+    <!-- Blog Section Start -->
+    <div class="section section-padding">
+        <div class="container">
+            <div class="row">
+                <div class="section-title" data-aos="fade-up" data-aos-delay="300">
+                    <h2 class="title pb-3">Latest Blog</h2>
+                    <div class="title-border-bottom"></div>
+                </div>
+            </div>
+            <div class="row mb-n6">
 
+                <div class="col-lg-4 col-md-6 col-12 mb-6" data-aos="fade-up" data-aos-delay="300">
 
+                    <!-- Blog Single Post Start -->
+                    <div class="blog-single-post-wrapper">
+                        <div class="blog-thumb">
+                            <a class="blog-overlay" href="blog-details.html">
+                                <img class="fit-image" src="assets/images/blog/blog-post/1.jpg" alt="Blog Post">
+                            </a>
+                        </div>
+                        <div class="blog-content">
+                            <div class="post-meta">
+                                <span>By : <a href="#">Admin</a></span>
+                                <span>14 Jul 2021</span>
+                            </div>
+                            <h3 class="title"><a href="blog-details.html">Some Winter Collections</a></h3>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipisici elit, sed do eiusmod tempo</p>
+                            <a href="blog-details.html" class="btn btn-dark btn-hover-primary text-uppercase">Read More</a>
+                        </div>
+                    </div>
+                    <!-- Blog Single Post End -->
+
+                </div>
+
+                <div class="col-lg-4 col-md-6 col-12 mb-6" data-aos="fade-up" data-aos-delay="500">
+
+                    <!-- Blog Single Post Start -->
+                    <div class="blog-single-post-wrapper">
+                        <div class="blog-thumb">
+                            <a class="blog-overlay" href="blog-details.html">
+                                <img class="fit-image" src="assets/images/blog/blog-post/2.jpg" alt="Blog Post">
+                            </a>
+                        </div>
+                        <div class="blog-content">
+                            <div class="post-meta">
+                                <span>By : <a href="#">Admin</a></span>
+                                <span>14 Jul 2021</span>
+                            </div>
+                            <h3 class="title"><a href="blog-details.html">My Perty Fashion</a></h3>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipisici elit, sed do eiusmod tempo</p>
+                            <a href="blog-details.html" class="btn btn-dark btn-hover-primary text-uppercase">Read More</a>
+                        </div>
+                    </div>
+                    <!-- Blog Single Post End -->
+
+                </div>
+
+                <div class="col-lg-4 col-md-6 col-12 mb-6" data-aos="fade-up" data-aos-delay="700">
+
+                    <!-- Blog Single Post Start -->
+                    <div class="blog-single-post-wrapper">
+                        <div class="blog-thumb">
+                            <a class="blog-overlay" href="blog-details.html">
+                                <img class="fit-image" src="assets/images/blog/blog-post/3.jpg" alt="Blog Post">
+                            </a>
+                        </div>
+                        <div class="blog-content">
+                            <div class="post-meta">
+                                <span>By : <a href="#">Admin</a></span>
+                                <span>14 Jul 2021</span>
+                            </div>
+                            <h3 class="title"><a href="blog-details.html">Perfect Fashion House</a></h3>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipisici elit, sed do eiusmod tempo</p>
+                            <a href="blog-details.html" class="btn btn-dark btn-hover-primary text-uppercase">Read More</a>
+                        </div>
+                    </div>
+                    <!-- Blog Single Post End -->
+
+                </div>
+
+            </div>
+        </div>
+    </div>
+    <!-- Blog Section End -->
 
 
     <!-- Modal Start  -->

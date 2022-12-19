@@ -20,7 +20,7 @@ return new class extends Migration
             $table->double("price");
             $table->bigInteger("total_items");
             $table->double("total_price");
-            $table->bigInteger("product_size_id")->unsigned();
+            $table->bigInteger("product_id")->unsigned();
         });
     }
 

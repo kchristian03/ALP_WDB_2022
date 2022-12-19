@@ -19,7 +19,7 @@ class TransactionDetailSeeder extends Seeder
         Transaction_Detail::factory(5)->create(
             [  
             "transaction_id"=> 2,
-            "product_size_id"=> 3,
+            "product_id"=> 3,
     
             ]
             );

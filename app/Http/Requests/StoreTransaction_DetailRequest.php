@@ -13,7 +13,7 @@ class StoreTransaction_DetailRequest extends FormRequest
      */
     public function authorize()
     {
-        return false;
+        return true;
     }
 
     /**

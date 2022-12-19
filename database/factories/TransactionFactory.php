@@ -17,10 +17,9 @@ class TransactionFactory extends Factory
     public function definition()
     {
         return [
-            "transaction_date"=>$this->faker->date('Y-m-d','now'),
             "no_resi"=>$this->faker->postcode,
             "bukti_pembayaran"=>"gambarpembayaran.jpg",
-           
+            "total_price"=>0,
         ];
     }
 }

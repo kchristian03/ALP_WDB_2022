@@ -57,7 +57,7 @@ class TransactionResource extends Resource
                     ->dateTime(),
                 Tables\Columns\TextColumn::make('updated_at')
                     ->dateTime(),
-                 
+
             ])
 
             ->filters([
@@ -65,6 +65,7 @@ class TransactionResource extends Resource
             ])
             ->actions([
                 Tables\Actions\EditAction::make(),
+                Tables\Actions\ViewAction::make()->url('/single-product/{1}'),
             ])
             ->bulkActions([
                 Tables\Actions\DeleteBulkAction::make(),
@@ -75,17 +76,17 @@ class TransactionResource extends Resource
     {
         return [
             Card::make('user_id', 'adress_id'),
-         
+
         ];
     }
-    
+
     public static function getRelations(): array
     {
         return [
             //
         ];
     }
-    
+
     public static function getPages(): array
     {
         return [
@@ -93,5 +94,5 @@ class TransactionResource extends Resource
             'create' => Pages\CreateTransaction::route('/create'),
             'edit' => Pages\EditTransaction::route('/{record}/edit'),
         ];
-    }    
+    }
 }

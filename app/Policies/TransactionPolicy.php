@@ -18,7 +18,7 @@ class TransactionPolicy
      */
     public function viewAny(User $user)
     {
-        //
+        return true;
     }
 
     /**
@@ -30,7 +30,7 @@ class TransactionPolicy
      */
     public function view(User $user, Transaction $transaction)
     {
-        //
+        return true;
     }
 
     /**
@@ -41,7 +41,7 @@ class TransactionPolicy
      */
     public function create(User $user)
     {
-        //
+        return true;
     }
 
     /**
@@ -53,7 +53,7 @@ class TransactionPolicy
      */
     public function update(User $user, Transaction $transaction)
     {
-        //
+        return true;
     }
 
     /**
@@ -65,7 +65,7 @@ class TransactionPolicy
      */
     public function delete(User $user, Transaction $transaction)
     {
-        //
+        return true;
     }
 
     /**
@@ -77,7 +77,7 @@ class TransactionPolicy
      */
     public function restore(User $user, Transaction $transaction)
     {
-        //
+        return true;
     }
 
     /**
@@ -89,6 +89,6 @@ class TransactionPolicy
      */
     public function forceDelete(User $user, Transaction $transaction)
     {
-        //
+        return true;
     }
 }

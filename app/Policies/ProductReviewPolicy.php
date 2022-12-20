@@ -18,7 +18,8 @@ class ProductReviewPolicy
      */
     public function viewAny(User $user)
     {
-        //
+        return true;
+
     }
 
     /**
@@ -30,7 +31,8 @@ class ProductReviewPolicy
      */
     public function view(User $user, Product_Review $productReview)
     {
-        //
+        return true;
+
     }
 
     /**
@@ -41,7 +43,8 @@ class ProductReviewPolicy
      */
     public function create(User $user)
     {
-        //
+        return true;
+
     }
 
     /**
@@ -53,7 +56,8 @@ class ProductReviewPolicy
      */
     public function update(User $user, Product_Review $productReview)
     {
-        //
+        return true;
+
     }
 
     /**
@@ -65,7 +69,8 @@ class ProductReviewPolicy
      */
     public function delete(User $user, Product_Review $productReview)
     {
-        //
+        return true;
+
     }
 
     /**
@@ -77,7 +82,8 @@ class ProductReviewPolicy
      */
     public function restore(User $user, Product_Review $productReview)
     {
-        //
+        return true;
+
     }
 
     /**
@@ -89,6 +95,7 @@ class ProductReviewPolicy
      */
     public function forceDelete(User $user, Product_Review $productReview)
     {
-        //
+        return true;
+
     }
 }

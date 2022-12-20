@@ -26,9 +26,9 @@ class ProductResource extends Resource
                 Forms\Components\TextInput::make('product_name')
                     ->required()
                     ->maxLength(255),
-                Forms\Components\TextInput::make('product_image')
+                Forms\Components\FileUpload::make('product_image')
                     ->required()
-                    ->maxLength(255),
+                    ->image(),
                 Forms\Components\TextInput::make('product_description')
                     ->required()
                     ->maxLength(255),
@@ -36,7 +36,7 @@ class ProductResource extends Resource
                     ->required(),
                 Forms\Components\TextInput::make('product_stock')
                     ->required(),
-            ]);
+            ])->columns(1);
     }
 
     public static function table(Table $table): Table
@@ -44,7 +44,7 @@ class ProductResource extends Resource
         return $table
             ->columns([
                 Tables\Columns\TextColumn::make('product_name'),
-                Tables\Columns\TextColumn::make('product_image'),
+                Tables\Columns\ImageColumn::make('product_image'),
                 Tables\Columns\TextColumn::make('product_description'),
                 Tables\Columns\TextColumn::make('product_price'),
                 Tables\Columns\TextColumn::make('product_stock'),
@@ -63,14 +63,14 @@ class ProductResource extends Resource
                 Tables\Actions\DeleteBulkAction::make(),
             ]);
     }
-    
+
     public static function getRelations(): array
     {
         return [
             //
         ];
     }
-    
+
     public static function getPages(): array
     {
         return [
@@ -78,5 +78,5 @@ class ProductResource extends Resource
             'create' => Pages\CreateProduct::route('/create'),
             'edit' => Pages\EditProduct::route('/{record}/edit'),
         ];
-    }    
+    }
 }

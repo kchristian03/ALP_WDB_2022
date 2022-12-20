@@ -23,8 +23,8 @@
                         <div class="product-inner">
                             <div class="thumb">
                                 <p class="image">
-                                    <img class="first-image" src="storage/productphoto/Jiwon Top.jpg" alt="Product" />
-                                    <img class="second-image" src="../storage/productphoto/Jiwon Top.jpg" alt="Product" />
+                                    <img class="first-image" src="{{url("storage/" . $pr->product_image)}}" alt="Product" />
+                                    <img class="second-image" src="{{url("storage/" . $pr->product_image)}}" alt="Product" />
                                 </a>
                                 <div class="actions">
                                     {{-- <a href="wishlist.html" title="Wishlist" class="action wishlist"><i class="pe-7s-like"></i></a> --}}

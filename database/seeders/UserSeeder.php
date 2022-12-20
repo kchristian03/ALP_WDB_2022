@@ -17,19 +17,19 @@ class UserSeeder extends Seeder
     {
         User::create([
             'name' => 'Admin',
-            'email' => 'admin@localhost',
+            'email' => 'admin@funcydaisy.com',
             'password' => bcrypt('password'),
             'status' => 'admin',
         ]);
 
         User::create([
             'name' => 'Member',
-            'email' => 'member@localhost',
+            'email' => 'member@funcydaisy.com',
             'password' => bcrypt('password'),
             'status' => 'user',
-        ]); 
+        ]);
         User::factory(5)->create(
-    
+
         );
     }
 }

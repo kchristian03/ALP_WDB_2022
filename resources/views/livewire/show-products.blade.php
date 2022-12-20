@@ -31,7 +31,7 @@
                                 </div>
                             </div>
                             <div class="content">
-                                <h4 class="sub-title"><a href="single-product">Category Name</a></h4>
+                                <h4 class="sub-title"><a href="single-product">{{"Avaliable: ".$pr['product_stock']}}</a></h4>
                                 <h5 class="title"><a href="single-product/{{ $pr['id'] }}">{{$pr['product_name']}}</a></h5>
                                 {{-- <span class="ratings">
                                         <span class="rating-wrap">
@@ -65,27 +65,25 @@
                         <div class="widget-list mb-10">
                             <h3 class="widget-title mb-4">Search</h3>
                             <div class="search-box">
-                                <input type="text" class="form-control" placeholder="Search Products" wire:model="search" aria-label="Search Products">
+                                <input type="text" class="form-control" placeholder="Search Products" wire:model="categories">
                                 <button class="btn btn-dark btn-hover-primary" type="button">
                                     <i class="fa fa-search"></i>
                                 </button>
                             </div>
                         </div>
                         <div class="widget-list mb-10">
-                            <h3 class="widget-title mb-4">Menu Categories</h3>
+                            <h3 class="widget-title mb-4">Categories</h3>
                             <!-- Widget Menu Start -->
                             <nav>
                                 <ul class="category-menu mb-n3">
-                                    <li class="menu-item-has-children pb-4">
-                                        <a href="#">Women <i class="fa fa-angle-down"></i></a>
-                                        <ul class="dropdown">
-                                            <li><a href="#">Natural Cosmetic</a></li>
-                                            <li><a href="#">Woven Fashion Tops</a></li>
-                                            <li><a href="#">Knitted Fabrics</a></li>
-                                            <li><a href="#">Smart Watch</a></li>
-                                            <li><a href="#">Handmade Bag</a></li>
-                                        </ul>
-                                    </li>
+                                    @foreach($categories as $ct)
+                                    <li class="pb-4"><a wire:click="categorize({{$ct['id']}})" href="#">({{$ct['category_name']}})</a></li>
+                                    @endforeach
+                                
+                                
+
+                                           
+                                     
                                   
                                 </ul>
                             </nav>

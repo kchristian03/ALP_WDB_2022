@@ -112,7 +112,7 @@
 
                         <!-- SKU Start -->
                         <div class="sku mb-3">
-                            <span>SKU: 12345</span>
+                            <span>Description:</span>
                         </div>
                         <!-- SKU End -->
 
@@ -127,9 +127,10 @@
                               
                             <form action="{{route('cartdetail.store') }}" method="POST" enctype="multipart/form-data">
                                 @csrf
+                                <input type="text" name="product_id" value={{$product->id}}>
                             <div class="cart-plus-minus">
-                                <input type="hidden" name="product_id" value={{$product->id}}>
-                                <input class="cart-plus-minus-box" name="product_qty" value="1" type="number" min="1">
+                              
+                                <input class="cart-plus-minus-box" name="product_qty" value="1" type="number" min="1" max="{{$product['product_stock']}}">
                                 <div class="dec qtybutton"></div>
                                 <div class="inc qtybutton"></div>
                             </div>
@@ -147,6 +148,7 @@
                                         </form>
                                             @endif
                             </div>
+                        </form>
                             {{-- <div class="add-to-wishlist">
                                 <a class="btn btn-outline-dark btn-hover-primary" href="wishlist.html">Add to Wishlist</a>
                             </div> --}}

@@ -30,10 +30,22 @@ class Cart_detail extends Model
         $this->belongsTo(Product::class);
     }
 
-    // public function updatedetail($itemdetail, $qty, $price) {
-    //     $this->attributes['total_items'] = $itemdetail->qty + $qty;
-    //     $this->attributes['total_price'] = $itemdetail->subtotal + ($qty * ($price));
-    //     self::save();
-    // }
+    public function updatedetail($itemdetail, $qty, $price) {
+        $this->attributes['total_items'] = $this->attributes['total_items'] + $qty;
+        $this->attributes['total_price'] = $this->attributes['total_price'] + ($qty * ($price));
+        self::save();
+    }
+
+    public function decrementdetail($price) {
+        $this->attributes['total_price'] = $this->attributes['total_price'] - ($price);
+        self::save();
+        $this->cart->mintotal($price);
+    }
+
+    public function incrementdetail($price) {
+        $this->attributes['total_price'] = $this->attributes['total_price'] + ($price);
+        self::save();
+        $this->cart->updatetotal($price);
+    }
 }
 

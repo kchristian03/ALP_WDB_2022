@@ -45,19 +45,28 @@
                                 @foreach ($cart_details as $cds)
                             <tr>
                               
-                                <td class="pro-thumbnail"><a href="#"><img class="img-fluid" src=  "{{ asset('storage/productphoto/' .$products[$cds->product_size_id]['product_image']) }}" alt="Product" /></a></td>
-                                <td class="pro-title"><a href="#">{{$products[$cds->product_size_id]['product_name']}}<br> {{"Size: ".$sizes[$cds->product_size_id]['size']}}</a></td>
-                                <td class="pro-price"><span>{{"Rp. ".$products[$cds->product_size_id]['product_name']}}</span></td>
+                                <td class="pro-thumbnail"><a href="#"><img class="img-fluid" src=  "{{ asset('storage/productphoto/' .$products[$cds->product_id]['product_image']) }}" alt="Product" /></a></td>
+                                <td class="pro-title"><a href="#">{{$products[$cds->product_id]['product_name']}}<br> {{"Stock: ".$products[$cds->product_id]['product_stock']}}</a></td>
+                                <td class="pro-price"><span>{{"Rp. ".$products[$cds->product_id]['product_price']}}</span></td>
                                 <td>
                                     <div class="col-md-2 col-4 my-auto">
-                                        <div class="">
+                    
                                         <div class="input-group">        
-                                            <button type="button" class="btn qtybutton" wire.loading.attr="disabled" wire:click="decrementQuantity({{$cds->id}})"><i class="fa fa-minus"></i></button>
+                                            <button type="button" class="btn" wire.loading.attr="disabled" wire:click="decrementQuantity({{$cds->id}})"><i class="fa fa-minus"></i></button>
                                             <input class="" value="{{$cds->total_items}}" type="text" disabled>
-                                            <button type="button" class="btn qtybutton" wire.loading.attr="disabled" wire:click="incrementQuantity({{$cds->id}})"><i class="fa fa-plus"></i></button>
+                                            <button type="button" class="btn " wire.loading.attr="disabled" wire:click="incrementQuantity({{$cds->id}})"><i class="fa fa-plus"></i></button>
                                         </div>
-                                    </div>
-                                    </div>
+                                        </div>
+                              
+
+
+                                            {{-- <div class="cart-plus-minus">
+                              
+                                                <input class="cart-plus-minus-box" name="product_qty" value="1" type="number" min="1">
+                                                <div class="dec qtybutton" wire.loading.attr="disabled" wire:click="decrementQuantity({{$cds->id}})"></div>
+                                                <div class="inc qtybutton wire.loading.attr="disabled" wire:click="incrementQuantity({{$cds->id}})""></div>
+                                            </div> --}}
+                                    
                                 </td>
                                 <td class="pro-subtotal"><span>{{"Rp. ".$cds->total_price}}</span></td>
                                 <td class="pro-remove"><a href="#"><i wire:click="deletecartitem({{$cds->id}})" class="pe-7s-trash"></i></a></td>

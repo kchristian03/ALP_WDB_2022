@@ -21,7 +21,7 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('/', function () {
     return view('users.index');
-    return view('development.development');
+    // return view('development.development');
 });
 
 Route::get('/dashboard', function () {
@@ -44,12 +44,17 @@ require __DIR__.'/auth.php';
 // Route::get('/shop-left-sidebar', function () {
 //     return view('users.shop-left-sidebar');
 // });
+
+
 Route::resource('cartdetail', CartDetailController::class)->middleware('user');
 Route::resource('transactions', TransactionController::class)->middleware('user');
 Route::get('/products', [ProductController::class, 'index']);
 
 Route::get('/laravel', function () {
-    return view('welcome');
+    return view('index');
+});
+Route::get('/adress',function(){
+    return view ('users.adress');
 });
 
 Route::get('/single-product/{product}', [ProductController::class, 'show']);

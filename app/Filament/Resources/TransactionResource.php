@@ -57,7 +57,9 @@ class TransactionResource extends Resource
                     ->dateTime(),
                 Tables\Columns\TextColumn::make('updated_at')
                     ->dateTime(),
+                 
             ])
+
             ->filters([
                 //
             ])
@@ -67,6 +69,14 @@ class TransactionResource extends Resource
             ->bulkActions([
                 Tables\Actions\DeleteBulkAction::make(),
             ]);
+    }
+
+    public static function getCards(): array
+    {
+        return [
+            Card::make('user_id', 'adress_id'),
+         
+        ];
     }
     
     public static function getRelations(): array

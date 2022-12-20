@@ -120,13 +120,13 @@
                         <!-- Cart Calculate Items End -->
 
                         <!-- Cart Checktout Button Start -->
-                        <form action="{{route('transactions.store') }}" method="POST" enctype="multipart/form-data">
+                        {{-- <form action="/checkout" method="GET" enctype="multipart/form-data">
                             @csrf
-                        <div >
-                            {{-- <input type="hidden" name="cart_id" value={{$cart->id}}> --}}
-                        <button class="btn btn-dark btn-hover-primary rounded-0 w-100" type="submit">Proceed To Checkout</button>
+                        <div > --}}
+                            {{-- <input type="hidden" name="cart_id" value={{$cart->id}}> --}}<a class="light"href="/checkout">
+                        <button class="btn btn-dark btn-hover-primary rounded-0 w-100" type="submit">Proceed To Checkout</button></a>
                        
-                        </form>
+                        {{-- </form> --}}
                     </div>
                     <!-- Cart Calculation Area End -->
 

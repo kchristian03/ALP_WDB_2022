@@ -212,7 +212,7 @@
                                                     Lorem Ipsum, ## 12345</p>
                                                 <p>Mobile: (123) 123-456789</p>
                                             </address>
-                                            <a href="#" class="btn btn btn-dark btn-hover-primary rounded-0"><i class="fa fa-edit me-2"></i>Edit Address</a>
+                                            <a href="/dashboard" class="btn btn btn-dark btn-hover-primary rounded-0"><i class="fa fa-edit me-2"></i>Edit Address</a>
                                         </div>
                                     </div>
                                     <!-- Single Tab Content End -->

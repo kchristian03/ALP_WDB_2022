@@ -3,7 +3,7 @@
         <div class="row flex-row-reverse">
             <div class="col-lg-9 col-12 col-custom">
 
-        
+
                 <div class="shop_toolbar_wrapper flex-column flex-md-row mb-10">
 
 
@@ -12,12 +12,12 @@
                             <span>Showing Prodcuts</span>
                         </div>
                     </div>
-           
+
 
                 </div>
-         
+
                 <div class="row shop_wrapper grid_3">
-             
+
                     @foreach ($products as $pr)
                     <div class="col-lg-4 col-md-4 col-sm-6 product" >
                         <div class="product-inner">
@@ -56,7 +56,7 @@
 
                     {{$products->links()}}
                 </div>
-           
+
             </div>
             <div class="col-lg-3 col-12 col-custom">
                 <!-- Sidebar Widget Start -->
@@ -79,17 +79,11 @@
                                     @foreach($categories as $ct)
                                     <li class="pb-4"><a wire:click="categorize({{$ct['id']}})" href="#">({{$ct['category_name']}})</a></li>
                                     @endforeach
-                                
-                                
-
-                                           
-                                     
-                                  
                                 </ul>
                             </nav>
                             <!-- Widget Menu End -->
                         </div>
-                      
+
                             </div>
                         </div>
                     </div>
@@ -97,7 +91,7 @@
                 <!-- Sidebar Widget End -->
             </div>
         </div>
-    
+
     </div>
-  
+
 </div>

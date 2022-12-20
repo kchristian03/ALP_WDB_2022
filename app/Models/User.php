@@ -20,7 +20,7 @@ class User extends Authenticatable
      * @var array<int, string>
      */
     protected $fillable = [
-   
+
         'name',
         'username',
         'email',
@@ -53,8 +53,8 @@ class User extends Authenticatable
     public function adresses(): HasMany
     {
         return $this->hasMany(Adress::class);
-  
-              
+
+
     }
 
     public function carts(): HasMany

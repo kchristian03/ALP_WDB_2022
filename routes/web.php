@@ -1,10 +1,6 @@
 <?php
 
-use App\Http\Controllers\CartController;
-use App\Http\Controllers\CartDetailController;
-use App\Http\Controllers\ProductController;
 use App\Http\Controllers\ProfileController;
-use App\Http\Controllers\TransactionController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -19,7 +15,7 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('users.index');
+    return view('development.development');
 });
 
 Route::get('/dashboard', function () {
@@ -38,26 +34,13 @@ require __DIR__.'/auth.php';
 
 
 //route dibawah ini digunakan selama proses development -- USER
-
-// Route::get('/shop-left-sidebar', function () {
-//     return view('users.shop-left-sidebar');
-// });
-Route::resource('cartdetail', CartDetailController::class)->middleware('user');
-Route::resource('transactions', TransactionController::class)->middleware('user');
-Route::get('/products', [ProductController::class, 'index']);
-
 Route::get('/laravel', function () {
     return view('welcome');
 });
 
-Route::get('/single-product/{product}', [ProductController::class, 'show']);
-
-Route::get('/single-product' , [ProductController::class, 'index']);
-
 Route::get('/about', function () {
     return view('users.about');
 });
-
 
 Route::get('/cart', function () {
     return view('users.cart');
@@ -67,14 +50,9 @@ Route::get('/checkout', function () {
     return view('users.checkout');
 });
 
-
-
 Route::get('/contact', function () {
     return view('users.contact');
 });
-
-
-
 
 Route::get('/index', function () {
     return view('users.index');
@@ -84,8 +62,12 @@ Route::get('/my-account', function () {
     return view('users.my-account');
 });
 
-Route::get('/categories', function () {
+Route::get('/shop-grid', function () {
     return view('users.shop-grid');
+});
+
+Route::get('/single-product', function () {
+    return view('users.single-product');
 });
 
 Route::get('/wishlist', function () {

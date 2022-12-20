@@ -60,6 +60,10 @@ Route::get('/about', function () {
     return view('users.about');
 });
 
+Route::get('/checkout', function () {
+    return view('users.checkout');
+});
+
 Route::get('/cart', function () {
     return view('users.cart');
 });
@@ -76,4 +80,8 @@ Route::get('/single-product', function () {
 
 Route::get('/wishlist', function () {
     return view('users.wishlist');
+});
+
+Route::get('/my-account', function () {
+    return view('users.my-account');
 });

@@ -17,7 +17,7 @@ class ProductResource extends Resource
 {
     protected static ?string $model = Product::class;
 
-    protected static ?string $navigationIcon = 'heroicon-o-collection';
+    protected static ?string $navigationIcon = 'heroicon-o-shopping-bag';
 
     public static function form(Form $form): Form
     {
@@ -43,7 +43,7 @@ class ProductResource extends Resource
     {
         return $table
             ->columns([
-                Tables\Columns\TextColumn::make('product_name'),
+                Tables\Columns\TextColumn::make('product_name')->sortable()->searchable(),
                 Tables\Columns\ImageColumn::make('product_image'),
                 Tables\Columns\TextColumn::make('product_description'),
                 Tables\Columns\TextColumn::make('product_price'),

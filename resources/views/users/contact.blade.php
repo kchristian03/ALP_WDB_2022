@@ -40,7 +40,8 @@
                     <!-- Contact Form Wrapper Start -->
                     <div class="contact-form-wrapper contact-form">
                      
-                        <form action="assets/php/destry.php" id="contact-form" method="post">
+                        <form action="{{ route('feedbacks.store') }}" method="POST" enctype="multipart/form-data">
+                            @csrf
                             <h4 class="title pb-3" data-aos="fade-up">Store Feedback</h4>
                             <div class="row">
                                 <div class="col-12">
@@ -57,16 +58,16 @@
                                         </div> --}}
                                         <div class="col-12" data-aos="fade-up" data-aos-delay="300">
                                             <div class="input-item mb-4">
-                                                <input class="input-item" type="text" placeholder="Subject *" name="subject">
+                                                <input class="" type="text" placeholder="Subject *" name="subject">
                                             </div>
                                         </div>
                                         <div class="col-12" data-aos="fade-up" data-aos-delay="400">
                                             <div class="input-item mb-8">
-                                                <textarea class="textarea-item" name="message" placeholder="Message"></textarea>
+                                                <textarea class="textarea-item" name="feedback" placeholder="Feedback"></textarea>
                                             </div>
                                         </div>
                                         <div class="col-12" data-aos="fade-up" data-aos-delay="500">
-                                            <button type="submit" id="submit" name="submit" class="btn btn-dark btn-hover-primary rounded-0">Send A Message</button>
+                                            <button type="submit" id="submit" name="submit" class="btn btn-dark btn-hover-primary rounded-0">Send Feedback</button>
                                         </div>
                                         <p class="col-8 form-message mb-0"></p>
                                     </div>

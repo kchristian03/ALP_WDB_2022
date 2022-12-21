@@ -6,12 +6,12 @@ use App\Models\Cart_detail as ModelsCart_detail;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Relations\BelongsTo;
-class Cart_detail extends Model
+class Cart_Detail extends Model
 {
     use HasFactory;
 
     protected $fillable = [
-    
+
     "cart_id",
     "price",
     "total_items",
@@ -26,7 +26,7 @@ class Cart_detail extends Model
 
     public function product(): BelongsTo
     {
-        return 
+        return
         $this->belongsTo(Product::class);
     }
 

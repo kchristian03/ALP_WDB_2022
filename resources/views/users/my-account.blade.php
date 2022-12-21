@@ -13,7 +13,7 @@
                     <h1 class="title">My Account</h1>
                     <ul>
                         <li>
-                            <a href="index.html">Home </a>
+                            <a href="/">Home </a>
                         </li>
                         <li class="active"> My Account</li>
                     </ul>

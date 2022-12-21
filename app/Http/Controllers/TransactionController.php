@@ -73,6 +73,7 @@ class TransactionController extends Controller
             // "bukti_pembayaran" => "",
             "payment_id" => 1,
             "total_price" => $cart->total_price,
+            "transaction_status" => "Menunggu Konfirmasi",
         ]);
 
         foreach($cartitems as $ct){

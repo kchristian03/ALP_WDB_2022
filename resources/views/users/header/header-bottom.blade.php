@@ -54,10 +54,10 @@
                             <i class="pe-7s-shopbag"></i>
                             {{-- <span class="header-action-num">3</span> --}}
                         </a>
-                        <a href="javascript:void(0)" class="header-action-btn ">
+                        {{-- <a href="javascript:void(0)" class="header-action-btn ">
                             <i class="pe-7s-like"></i>
-                            {{-- <span class="header-action-num"></span> --}}
-                        </a>
+                            <span class="header-action-num"></span>
+                        </a> --}}
                         @endif
                         <!-- Shopping Cart Header Action Button End -->
 

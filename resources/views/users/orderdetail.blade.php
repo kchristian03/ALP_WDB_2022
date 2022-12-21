@@ -4,18 +4,18 @@
 
 @section('content')
     <!-- Breadcrumb Section Start -->
-    <div class="section">
+    <div class="section section-margin">
 
         <!-- Breadcrumb Area Start -->
         <div class="breadcrumb-area bg-light">
             <div class="container-fluid">
                 <div class="breadcrumb-content text-center">
-                    <h1 class="title">Checkout</h1>
+                    <h1 class="title">Order Detail</h1>
                     <ul>
                         <li>
                             <a href="index.html">Home </a>
                         </li>
-                        <li class="active"> Checkout</li>
+                        <li class="active"> order</li>
                     </ul>
                 </div>
             </div>
@@ -24,8 +24,70 @@
 
     </div>
     <!-- Breadcrumb Section End -->
-
+    
+    <!-- Cart Table End -->
     <!-- Checkout Section Start -->
+    {{-- <div class="section section-margin"> --}}
+        <div class="container">
+            <h3 class="title mb-2">Order Details</h3>
+            <div class="row mt-3">
+                <div class="col-12">
+                    
+            <table class="table table-bordered mt-2">
+             
+                <!-- Table Head Start -->
+                <thead>
+                <tr>
+                    <th class="pro-thumbnail">Image</th>
+                    <th class="pro-title">Product</th>
+                    <th class="pro-price">Price</th>
+                    <th class="pro-quantity">Quantity</th>
+                    <th class="pro-subtotal">Total</th>
+                    {{-- <th class="pro-remove">Remove</th> --}}
+                </tr>
+                </thead>
+                <!-- Table Head End -->
+    
+                <!-- Table Body Start -->
+                <tbody>
+                    @foreach ($orderdetails as $cds)
+                <tr>
+                  
+                    <td class="pro-thumbnail"><a href="#"><img class="img-fluid" src=  "{{ asset('storage/productphoto/' .$cds->product->product_image) }}" alt="Product" /></a></td>
+                    <td class="pro-title"><a href="#">{{$cds->product->product_name}}<br></a></td>
+                    <td class="pro-price"><span>{{"Rp. ".$cds->product->product_price}}</span></td>
+                    <td>
+                        <div class="col-md-2 col-4 my-auto">
+        
+                            <div class="input-group">        
+                                <span>{{$cds->total_items}}</span>
+                              
+                            </div>
+                            </div>
+                  
+    
+    
+                                {{-- <div class="cart-plus-minus">
+                  
+                                    <input class="cart-plus-minus-box" name="product_qty" value="1" type="number" min="1">
+                                    <div class="dec qtybutton" wire.loading.attr="disabled" wire:click="decrementQuantity({{$cds->id}})"></div>
+                                    <div class="inc qtybutton wire.loading.attr="disabled" wire:click="incrementQuantity({{$cds->id}})""></div>
+                                </div> --}}
+                        
+                    </td>
+                    <td class="pro-subtotal"><span>{{"Rp. ".$cds->total_harga}}</span></td>
+                    {{-- <td class="pro-remove"><a href="#"><i wire:click="deletecartitem({{$cds->id}})" class="pe-7s-trash"></i></a></td> --}}
+                </tr>
+                @endforeach
+                </tbody>
+                <!-- Table Body End -->
+    
+            </table>
+        {{-- </div> --}}
+            </div>
+            </div>
+            </div>
+
     <div class="section section-margin">
         <div class="container">
             <div class="row">
@@ -53,37 +115,15 @@
                             <div class="row">
 
                                 <!-- Select Country Name Start -->
-                                <div class="col-md-12 mb-6">
-                                    <div class="country-select">
-                                        <label>Adresses <span class="required"></span></label>
-                                        <select name="adressname" id="adressname" class="myniceselect nice-select wide rounded-0">
-                                            {{-- @foreach ($adresses as $ad)
-                                                 <option data-display="{{$ad->city}}" value="{{$ad->id}}">{{$ad->city}}</option>  
-                                            @endforeach
-                                          --}}
-                                        </select>
-                                    </div>
-                                    <br>    
-                                    <a href="#">  See my Adress</a>
-                                </div>
+                            
                                 <!-- Select Country Name End -->
 
                                 <!-- First Name Input Start -->
-                                <div class="col-md-6">
-                                    <div class="checkout-form-list">
-                                        <label>First Name <span class="required"></span></label>
-                                        <input placeholder="" type="text" disabled>
-                                    </div>
-                                </div>
+                             
                                 <!-- First Name Input End -->
 
                                 <!-- Last Name Input Start -->
-                                <div class="col-md-6">
-                                    <div class="checkout-form-list">
-                                        <label>Last Name <span class="required"></span></label>
-                                        <input placeholder="" type="text" disabled>
-                                    </div>
-                                </div>
+                             
                                 <!-- Last Name Input End -->
                                 <div class="col-md-12">
                                     <div class="checkout-form-list">
@@ -124,7 +164,7 @@
                                 <!-- State or Country Input Start -->
                                 <div class="col-md-6">
                                     <div class="checkout-form-list">
-                                        <label>Province <span class="required"></span></label>
+                                        <label>Provinsi <span class="required"></span></label>
                                         <input placeholder="" type="text" disabled>
                                     </div>
                                 </div>
@@ -137,15 +177,7 @@
                                         <input placeholder="" type="text" disabled>
                                     </div>
                                 </div>
-                                <div class="col-md-12">
-                                    <div class="checkout-form-list">
-                                        <label>Bukti Pembayaran <span class="required"></span></label>
-                                        <input type="file" name="bukti_pembayaran" class="form-control">
-                                        @if ($errors->has('bukti_pembayaran'))
-                                            <p class="text-danger">{{ $errors->first('coverphoto') }}</p>
-                                        @endif
-                                    </div>
-                                </div>
+                             
                              
                                 <!-- Postcode or Zip Input End -->
 
@@ -183,7 +215,7 @@
                                 <!-- Table Head Start -->
                                 <thead>
                                 <tr class="cart-product-head">
-                                    <th class="cart-product-name text-start">Product</th>
+                                    <th class="cart-product-name text-start">Produk</th>
                                     <th class="cart-product-total text-end">Total</th>
                                 </tr>
                                 </thead>
@@ -196,7 +228,7 @@
                                  
                                 <tr class="cart_item">
                                     <td class="cart-product-name text-start ps-0"> {{$cds->product->product_name}}<strong class="product-quantity"> × {{$cds->total_items}}</strong></td>
-                                    <td class="cart-product-total text-end pe-0"><span class="amount">{{"Rp. ".$cds->total_price}}</span></td>
+                                    <td class="cart-product-total text-end pe-0"><span class="amount">{{"Rp. ".$cds->total_harga}}</span></td>
                                 </tr>
                                 @endforeach
                                 </tbody>
@@ -205,7 +237,7 @@
                                 <!-- Table Footer Start -->
                                 <tfoot>
                                 <tr class="cart-subtotal">
-                                    <th class="text-start ps-0">Cart Subtotal</th>
+                                    <th class="text-start ps-0">Subtotal Barang</th>
                                     <td class="text-end pe-0"><span class="amount">{{"Rp. ".$order->total_price}}</span></td>
                                 </tr>
                                 <tr class="order-total">
@@ -235,27 +267,37 @@
                                     </div>
                                 </div>
                             </div>
-                            <div class="order-button-payment">
+                            {{-- <div class="order-button-payment">
                                 <button class="btn btn-dark btn-hover-primary rounded-0 w-100">Place Order</button>
-                            </div>
+                            </div> --}}
                         </div>
                     </form>
                         <!-- Payment Accordion Order Button End -->
-                        
+                        <h5 class="m-5">  Status Pesanan: {{$order->transaction_status}} </h5>
+                        @if($order->transaction_status == "Dikirim")
+                        <h5 class="m-5">  No Resi: {{$order->no_resi}} </h5>
+                        @endif
                     </div>
                     <!-- Your Order Area End -->
-                  <h5 class="m-5">  Status Pesanan: {{$order->transaction_status}} </h2>
-                  <button class="btn btn-danger btn-hover-primary rounded-0 w-100"> Selesaikan Pesanan</button>
+                    <h5 class="m-5">  </h5>
+                    @if($order->transaction_status == "Proses Pengiriman")
+                <a href="#">  <button class="btn btn-danger btn-hover-primary rounded-4 w-100"> Konfirmasi Penerimaan</button></a>
+                  @elseif($order->transaction_status == "Selesai")
+               <a href="#">   <button class="btn btn-danger btn-hover-primary rounded-4 w-100"> Review Product</button></a>
+                  @endif
                 </div>
             </div>
         </div>
     </div>
+
+    
+   
     <!-- Checkout Section End -->
-    <script>
+    {{-- <script>
 $('#adressname').on('change', function(){
     const selectedPackage = $('#adressname').val();
     $('#adressdescription').text(adressname);
   });
 
-    </script>
+    </script> --}}
 @endsection

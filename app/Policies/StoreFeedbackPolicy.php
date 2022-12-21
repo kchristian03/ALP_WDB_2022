@@ -18,7 +18,7 @@ class StoreFeedbackPolicy
      */
     public function viewAny(User $user)
     {
-        //
+        return true;
     }
 
     /**
@@ -30,7 +30,7 @@ class StoreFeedbackPolicy
      */
     public function view(User $user, Store_Feedback $storeFeedback)
     {
-        //
+        return true;
     }
 
     /**
@@ -41,7 +41,7 @@ class StoreFeedbackPolicy
      */
     public function create(User $user)
     {
-        //
+        return true;
     }
 
     /**
@@ -53,7 +53,7 @@ class StoreFeedbackPolicy
      */
     public function update(User $user, Store_Feedback $storeFeedback)
     {
-        //
+        return true;
     }
 
     /**
@@ -77,7 +77,7 @@ class StoreFeedbackPolicy
      */
     public function restore(User $user, Store_Feedback $storeFeedback)
     {
-        //
+        return true;
     }
 
     /**
@@ -89,6 +89,6 @@ class StoreFeedbackPolicy
      */
     public function forceDelete(User $user, Store_Feedback $storeFeedback)
     {
-        //
+        return true;
     }
 }

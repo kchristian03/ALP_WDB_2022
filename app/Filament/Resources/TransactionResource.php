@@ -29,9 +29,15 @@ class TransactionResource extends Resource
                     ->required(),
                 Forms\Components\TextInput::make('payment_id')
                     ->required(),
-                Forms\Components\TextInput::make('transaction_status')
-                    ->required()
-                    ->maxLength(255),
+                    Forms\Components\Select::make('transaction_status')
+                    ->options([
+                        'Belum Terkonfirmasi' => 'Belum Terkonfirmasi',
+                        'Diproses' => 'Diproses',
+                        'Proses Pengiriman' => 'Proses Pengiriman',
+                        'Selesai' => 'Selesai',
+                    ])
+                    ->default('Belum Terkonfirmasi')
+                    ->disablePlaceholderSelection(),
                 Forms\Components\TextInput::make('no_resi')
                     ->required()
                     ->maxLength(255),

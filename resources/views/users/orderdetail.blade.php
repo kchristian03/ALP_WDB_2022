@@ -38,11 +38,11 @@
                 <!-- Table Head Start -->
                 <thead>
                 <tr>
-                    <th class="pro-thumbnail">Image</th>
-                    <th class="pro-title">Product</th>
-                    <th class="pro-price">Price</th>
-                    <th class="pro-quantity">Quantity</th>
-                    <th class="pro-subtotal">Total</th>
+                    <th class="">Image</th>
+                    <th class="">Product</th>
+                    <th class="">Price</th>
+                    <th class="">Quantity</th>
+                    <th class="">Total</th>
                     {{-- <th class="pro-remove">Remove</th> --}}
                 </tr>
                 </thead>
@@ -53,9 +53,9 @@
                     @foreach ($orderdetails as $cds)
                 <tr>
                   
-                    <td class="pro-thumbnail"><a href="#"><img class="img-fluid" src=  "{{ asset('storage/productphoto/' .$cds->product->product_image) }}" alt="Product" /></a></td>
-                    <td class="pro-title"><a href="#">{{$cds->product->product_name}}<br></a></td>
-                    <td class="pro-price"><span>{{"Rp. ".$cds->product->product_price}}</span></td>
+                    <td class="text-center"><img class="img-fluid" style="width:100px" src=  "{{ asset('storage/productphoto/' .$cds->product->product_image) }}" alt="Product" /></td>
+                    <td class=""><a href="#">{{$cds->product->product_name}}<br></a></td>
+                    <td class=""><span>{{"Rp. ".$cds->product->product_price}}</span></td>
                     <td>
                         <div class="col-md-2 col-4 my-auto">
         
@@ -224,12 +224,13 @@
                                 <!-- Table Body Start -->
                                 <tbody>
                                     @foreach ($orderdetails as $cds)
-                                        
+                                      
                                  
                                 <tr class="cart_item">
                                     <td class="cart-product-name text-start ps-0"> {{$cds->product->product_name}}<strong class="product-quantity"> × {{$cds->total_items}}</strong></td>
                                     <td class="cart-product-total text-end pe-0"><span class="amount">{{"Rp. ".$cds->total_harga}}</span></td>
                                 </tr>
+                                @php$cdss= $cds @endphp
                                 @endforeach
                                 </tbody>
                                 <!-- Table Body End -->
@@ -262,7 +263,7 @@
                                     </h5>
                                     <div class="collapse" id="collapseExample-3">
                                         <div class="card card-body rounded-0">
-                                            <a class="btn btn-hover-primary">Gambar</a>
+                                            <img class="image" src="{{url("storage/" . $order->bukti_pembayaran)}}" alt="Product" />
                                         </div>
                                     </div>
                                 </div>
@@ -281,9 +282,14 @@
                     <!-- Your Order Area End -->
                     <h5 class="m-5">  </h5>
                     @if($order->transaction_status == "Proses Pengiriman")
-                <a href="#">  <button class="btn btn-danger btn-hover-primary rounded-4 w-100"> Konfirmasi Penerimaan</button></a>
+                    <form action="{{ route('transactions.update',$order->id) }}" method="POST" enctype="multipart/form-data">
+                        @csrf
+                        <input type="hidden" name="_method" value="PATCH">
+                        <input type="hidden" name="orderid" value="{{$order->id}}">
+               <button type="submit" class="btn btn-danger btn-hover-primary rounded-4 w-100"> Konfirmasi Penerimaan</button>
+                    </form>
                   @elseif($order->transaction_status == "Selesai")
-               <a href="#">   <button class="btn btn-danger btn-hover-primary rounded-4 w-100"> Review Product</button></a>
+               <a href="../single-product/{{ $cdss->product_id }}">   <button class="btn btn-danger btn-hover-primary rounded-4 w-100"> Review Product</button></a>
                   @endif
                 </div>
             </div>

@@ -37,6 +37,11 @@ class TransactionController extends Controller
         ]);
     }
 
+    public function selesai(StoreTransactionRequest $request)
+    {
+       
+    }
+
     /**
      * Show the form for creating a new resource.
      *
@@ -116,7 +121,7 @@ class TransactionController extends Controller
      */
     public function edit(Transaction $transaction)
     {
-        //
+        
     }
 
     /**
@@ -128,7 +133,12 @@ class TransactionController extends Controller
      */
     public function update(UpdateTransactionRequest $request, Transaction $transaction)
     {
-        //
+        $this->validate($request, [
+            "orderid" => 'required|int'
+        ]);
+    Transaction::where('id',$request->orderid)->transaction_status = "Selesai";
+        // $transaction->transaction_status = "Selesai";
+        return redirect('/my-account');
     }
 
     /**

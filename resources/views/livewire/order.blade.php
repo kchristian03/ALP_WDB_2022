@@ -21,7 +21,6 @@
                     <td>{{$or->created_at}}</td>
                     <td>{{$or->transaction_status}}</td>
                     <td>{{"Rp. ".$or->total_price}}</td>
-                   
                     <td><a href="orderdetail/{{ $or['id'] }}" class="btn btn btn-dark btn-hover-primary btn-sm rounded-0">View</a></td>
                 </tr>
                 @endforeach

@@ -12,7 +12,7 @@ class Store_Feedback extends Model
     protected $fillable = [
        
         "user_id",
-        "feedback_date",
+        "subject",
         "feedback_status",
         "feedback"
     ];

@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Http\Requests\StoreStore_FeedbackRequest;
 use App\Http\Requests\UpdateStore_FeedbackRequest;
 use App\Models\Store_Feedback;
+use Illuminate\Support\Facades\Auth;
 
 class StoreFeedbackController extends Controller
 {
@@ -36,8 +37,23 @@ class StoreFeedbackController extends Controller
      */
     public function store(StoreStore_FeedbackRequest $request)
     {
-        //
+        $this->validate($request, [
+            "subject" => 'required',
+            "feedback" => 'required'
+        ]);
+
+        Store_Feedback::create([
+       
+            "feedback_status" => "Unseen",
+            "feedback" => $request->feedback,
+            "user_id" => Auth::user()->id,
+            "subject" => $request->subject,
+        ]);
+
+        return redirect('/contact')->with('Success', 'Feedback Sent');
+        
     }
+    
 
     /**
      * Display the specified resource.

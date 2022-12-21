@@ -13,7 +13,7 @@ class StoreStore_FeedbackRequest extends FormRequest
      */
     public function authorize()
     {
-        return false;
+        return true;
     }
 
     /**

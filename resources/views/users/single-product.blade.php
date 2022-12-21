@@ -102,11 +102,11 @@
                         <!-- Price Box End -->
 
                         <!-- Rating Start -->
-                        <span class="ratings justify-content-start">
+                        {{-- <span class="ratings justify-content-start">
                                 <span class="rating-wrap">
                                     <span class="star" style="width: 100%"></span>
-                        </span>
-                        <span class="rating-num">(4)</span>
+                        </span> --}}
+                        <span class="rating-num">{{"Stok: ".$product['product_stock']}}</span>
                         </span>
                         <!-- Rating End -->
 

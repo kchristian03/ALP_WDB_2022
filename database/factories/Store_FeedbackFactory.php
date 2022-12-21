@@ -17,7 +17,7 @@ class Store_FeedbackFactory extends Factory
     public function definition()
     {
         return [
-            "feedback_date"=>$this->faker->date('Y-m-d','now'),
+            "subject"=>$this->faker->name,
             "feedback"=>$this->faker->text
         ];
     }

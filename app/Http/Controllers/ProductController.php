@@ -7,6 +7,7 @@ use App\Http\Requests\UpdateProductRequest;
 use App\Models\Cart;
 use App\Models\Category;
 use App\Models\Product;
+use App\Models\Product_Review;
 use Illuminate\Support\Facades\Auth;
 
 class ProductController extends Controller
@@ -46,6 +47,19 @@ class ProductController extends Controller
         //tanpa route model binding
         // Writer::find(1)->with('books')->get();
             // $product = Product::find($productid);
+        return view('users.single-product', [
+            "pagetitle" => "Product Details",
+            "maintitle" => "Product Details",
+            "product" => $product,
+            'products' => Product::all(),
+            'review' => Product_Review::where('product_id',$product->id)->get()
+         
+            
+        ]);
+    }
+
+    public function categorized(Product $product)
+    {
         return view('users.single-product', [
             "pagetitle" => "Product Details",
             "maintitle" => "Product Details",

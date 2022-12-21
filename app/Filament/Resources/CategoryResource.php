@@ -4,6 +4,7 @@ namespace App\Filament\Resources;
 
 use App\Filament\Resources\CategoryResource\Pages;
 use App\Filament\Resources\CategoryResource\RelationManagers;
+use App\Filament\Resources\CategoryResource\RelationManagers\ProductsRelationManager;
 use App\Models\Category;
 use Filament\Forms;
 use Filament\Resources\Form;
@@ -29,9 +30,11 @@ class CategoryResource extends Resource
                 Forms\Components\TextInput::make('category_description')
                     ->required()
                     ->maxLength(255),
-                Forms\Components\TextInput::make('category_image')
+                    Forms\Components\FileUpload::make('category_image')
                     ->required()
-                    ->maxLength(255),
+                    ->directory('category_image')
+                    ->image(),
+                 
             ]);
     }
 
@@ -41,7 +44,7 @@ class CategoryResource extends Resource
             ->columns([
                 Tables\Columns\TextColumn::make('category_name'),
                 Tables\Columns\TextColumn::make('category_description'),
-                Tables\Columns\TextColumn::make('category_image'),
+                Tables\Columns\ImageColumn::make('category_image'),
                 Tables\Columns\TextColumn::make('created_at')
                     ->dateTime(),
                 Tables\Columns\TextColumn::make('updated_at')
@@ -61,7 +64,7 @@ class CategoryResource extends Resource
     public static function getRelations(): array
     {
         return [
-            //
+            RelationManagers\ProductsRelationManager::class,
         ];
     }
     

@@ -15,19 +15,19 @@ class UserSeeder extends Seeder
      */
     public function run()
     {
-        User::create([
-            'name' => 'Admin',
-            'email' => 'admin@funcydaisy.com',
-            'password' => bcrypt('password'),
-            'status' => 'admin',
-        ]);
+        // User::create([
+        //     'name' => 'Admin',
+        //     'email' => 'admin@funcydaisy.com',
+        //     'password' => bcrypt('password'),
+        //     'status' => 'admin',
+        // ]);
 
-        User::create([
-            'name' => 'Member',
-            'email' => 'member@funcydaisy.com',
-            'password' => bcrypt('password'),
-            'status' => 'user',
-        ]);
+        // User::create([
+        //     'name' => 'Member',
+        //     'email' => 'member@funcydaisy.com',
+        //     'password' => bcrypt('password'),
+        //     'status' => 'user',
+        // ]);
         User::factory(5)->create(
 
         );

@@ -37,6 +37,7 @@ class ProductResource extends Resource
                     ->required(),
                 Forms\Components\TextInput::make('product_stock')
                     ->required(),
+                    Forms\Components\TextInput::make('category_id'),
             ])->columns(1);
     }
 
@@ -46,6 +47,7 @@ class ProductResource extends Resource
             ->columns([
                 Tables\Columns\TextColumn::make('product_name')->sortable()->searchable(),
                 Tables\Columns\ImageColumn::make('product_image'),
+                Tables\Columns\TextColumn::make('category_id'),
                 Tables\Columns\TextColumn::make('product_description'),
                 Tables\Columns\TextColumn::make('product_price'),
                 Tables\Columns\TextColumn::make('product_stock'),

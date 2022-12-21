@@ -23,6 +23,13 @@ return new class extends Migration
             $table->string('bukti_pembayaran');
             $table->bigInteger('payment_id')->unsigned();
             $table->timestamps();
+            
+            $table->string("adress_name")->nullable();
+            $table->string("postal_code")->nullable();
+            $table->string("city")->nullable();
+            $table->string("state")->nullable();
+            $table->text("description")->nullable();
+            $table->text("full_street_adress")->nullable();
            
          
          

@@ -50,9 +50,13 @@
 
                         <!-- Shopping Cart Header Action Button Start -->
                         @if (Auth::check() && Auth::user()->status == 'user')
-                        <a href="javascript:void(0)" class="header-action-btn header-action-btn-cart">
+                        <a href="/cart" class="header-action-btn">
                             <i class="pe-7s-shopbag"></i>
-                            <span class="header-action-num">3</span>
+                            {{-- <span class="header-action-num">3</span> --}}
+                        </a>
+                        <a href="javascript:void(0)" class="header-action-btn ">
+                            <i class="pe-7s-like"></i>
+                            {{-- <span class="header-action-num"></span> --}}
                         </a>
                         @endif
                         <!-- Shopping Cart Header Action Button End -->

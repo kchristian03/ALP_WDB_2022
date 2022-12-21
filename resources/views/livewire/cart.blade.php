@@ -45,9 +45,9 @@
                                 @foreach ($cart_details as $cds)
                             <tr>
                               
-                                <td class="pro-thumbnail"><a href="#"><img class="img-fluid" src=  "{{ asset('storage/productphoto/' .$products[$cds->product_id]['product_image']) }}" alt="Product" /></a></td>
-                                <td class="pro-title"><a href="#">{{$products[$cds->product_id]['product_name']}}<br> {{"Stock: ".$products[$cds->product_id]['product_stock']}}</a></td>
-                                <td class="pro-price"><span>{{"Rp. ".$products[$cds->product_id]['product_price']}}</span></td>
+                                <td class="pro-thumbnail"><a href="#"><img class="img-fluid" src=  "{{ asset('storage/productphoto/' .$cds->product->product_image) }}" alt="Product" /></a></td>
+                                <td class="pro-title"><a href="#">{{$cds->product->product_name}}<br> {{"Stock: ".$cds->product->product_stock}}</a></td>
+                                <td class="pro-price"><span>{{"Rp. ".$cds->product->product_price}}</span></td>
                                 <td>
                                     <div class="col-md-2 col-4 my-auto">
                     

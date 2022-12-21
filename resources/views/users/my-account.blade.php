@@ -73,52 +73,14 @@
 
                                     <!-- Single Tab Content Start -->
                                     <div class="tab-pane fade" id="orders" role="tabpanel">
-                                        <div class="myaccount-content">
-                                            <h3 class="title">Orders</h3>
-                                            <div class="myaccount-table table-responsive text-center">
-                                                <table class="table table-bordered">
-                                                    <thead class="thead-light">
-                                                    <tr>
-                                                        <th>Order</th>
-                                                        <th>Date</th>
-                                                        <th>Status</th>
-                                                        <th>Total</th>
-                                                        <th>Action</th>
-                                                    </tr>
-                                                    </thead>
-                                                    <tbody>
-                                                    <tr>
-                                                        <td>1</td>
-                                                        <td>Aug 22, 2018</td>
-                                                        <td>Pending</td>
-                                                        <td>$3000</td>
-                                                        <td><a href="cart.html" class="btn btn btn-dark btn-hover-primary btn-sm rounded-0">View</a></td>
-                                                    </tr>
-                                                    <tr>
-                                                        <td>2</td>
-                                                        <td>July 22, 2018</td>
-                                                        <td>Approved</td>
-                                                        <td>$200</td>
-                                                        <td><a href="cart.html" class="btn btn btn-dark btn-hover-primary btn-sm rounded-0">View</a></td>
-                                                    </tr>
-                                                    <tr>
-                                                        <td>3</td>
-                                                        <td>June 12, 2019</td>
-                                                        <td>On Hold</td>
-                                                        <td>$990</td>
-                                                        <td><a href="cart.html" class="btn btn btn-dark btn-hover-primary btn-sm rounded-0">View</a></td>
-                                                    </tr>
-                                                    </tbody>
-                                                </table>
-                                            </div>
-                                        </div>
+                                        @livewire('order')
                                     </div>
                                     <!-- Single Tab Content End -->
 
                                           <!-- Single Tab Content Start -->
                                           <div class="tab-pane fade" id="feedbacks" role="tabpanel">
                                             <div class="myaccount-content">
-                                                <h3 class="title">Orders</h3>
+                                                <h3 class="title">Feedback</h3>
                                                 <div class="myaccount-table table-responsive text-center">
                                                     <table class="table table-bordered">
                                                         <thead class="thead-light">
@@ -205,14 +167,38 @@
                                     <!-- Single Tab Content Start -->
                                     <div class="tab-pane fade" id="address-edit" role="tabpanel">
                                         <div class="myaccount-content">
-                                            <h3 class="title">Billing Address</h3>
-                                            <address>
-                                                <p><strong>Alex Aya</strong></p>
-                                                <p>1234 Market ##, Suite 900 <br>
-                                                    Lorem Ipsum, ## 12345</p>
-                                                <p>Mobile: (123) 123-456789</p>
-                                            </address>
-                                            <a href="/dashboard" class="btn btn btn-dark btn-hover-primary rounded-0"><i class="fa fa-edit me-2"></i>Edit Address</a>
+                                            <h3 class="title"> Address</h3>
+                                            <div class="myaccount-table table-responsive text-center">
+                                                <table class="table table-bordered">
+                                                    <thead class="thead-light">
+                                                    <tr>
+                                                        <th>Name</th>
+                                                        <th>Adress</th>
+                                                        <th>State</th>
+                                                        <th>City</th>
+                                                        <th>Postal Code</th>
+                                                        <th>Description</th>
+                                                        <th>Edit</th>
+                                                    </tr>
+                                                    </thead>
+                                                    <tbody>
+                                                        @foreach ($adress as $ad)
+                                                            
+                                                       
+                                                    <tr>
+                                                        <td>{{$ad['adress_name']}}</td>
+                                                        <td>{{$ad['full_street_adress']}}</td>
+                                                        <td>{{$ad['state']}}</td>
+                                                        <td>{{$ad['city']}}</td>
+                                                        <td>{{$ad['postal_code']}}</td>
+                                                        <td>{{$ad['description']}}</td>
+                                                        <td><a href="/adress" class="btn btn btn-dark btn-hover-primary btn-sm rounded-0">Edit</a></td>
+                                                    </tr>
+                                                    @endforeach
+                                                    </tbody>
+                                                </table>
+                                            </div>
+                                            <a href="/adress" class="btn btn btn-dark btn-hover-primary rounded-0"><i class="fa fa-edit me-2"></i>New Address</a>
                                         </div>
                                     </div>
                                     <!-- Single Tab Content End -->

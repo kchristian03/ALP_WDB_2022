@@ -15,8 +15,16 @@ class CategoryController extends Controller
      */
     public function index()
     {
-        //
+
+        
+        return view('users.categories' , [
+            'pagetitle' => 'Categories',
+            'maintitle' => 'Categories Page',
+            'category' => Category::all(),
+           
+        ]);
     }
+    
 
     /**
      * Show the form for creating a new resource.

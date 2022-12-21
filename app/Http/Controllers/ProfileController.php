@@ -3,6 +3,9 @@
 namespace App\Http\Controllers;
 
 use App\Http\Requests\ProfileUpdateRequest;
+use App\Models\Adress;
+use App\Models\Cart;
+use App\Models\Transaction;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Redirect;
@@ -64,4 +67,29 @@ class ProfileController extends Controller
 
         return Redirect::to('/');
     }
+
+    public function accountdash(){
+
+
+        if(Auth::check()){
+        $cart = Cart::where('user_id',Auth::user()->id)->get();
+        $adress = Adress::where('user_id',Auth::user()->id)->get();
+        $transaction = Transaction::where('user_id',Auth::user()->id)->get();
+
+        return view('users.my-account' , [
+            'pagetitle' => 'Profile',
+            'maintitle' => 'Profile Page',
+            'cart' => $cart,
+            'adress' => $adress,
+            'transaction' => $transaction,
+
+            
+           
+        ]);
+    }
+else{
+    return redirect('/login');
+}
+
+}
 }

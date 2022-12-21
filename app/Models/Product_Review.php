@@ -9,12 +9,11 @@ class Product_Review extends Model
 {
     use HasFactory;
     protected $fillable = [
-     
         "user_id",
         "product_id",
         "rating",
         "review",
-        "review_status"
+        "status"
     ];
 
     public function user(): BelongsTo

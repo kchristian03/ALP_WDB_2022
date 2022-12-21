@@ -17,12 +17,14 @@ class Product extends Model
         "product_image",
         "product_description",
         "product_price",
-        "product_stock"
+        "product_stock",
+        "category_id"
+
     ];
 
-    public function categoryproduct(): HasMany
+    public function category(): HasMany
     {
-        return $this->hasMany(Category_Product::class);
+        return $this->hasMany(Category::class);
     }
 
     public function cartdetail(): HasMany
@@ -38,4 +40,13 @@ class Product extends Model
                 $this->hasMany(Transaction_detail::class);
                
     }
+
+
+    public function  minstock($number)
+    {
+        $this->attributes['product_stock'] = $this->attributes['product_stock']-  $number;
+        self::save();
+               
+    }
+  
 }

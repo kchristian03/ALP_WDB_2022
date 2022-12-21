@@ -14,11 +14,11 @@ class ShowProducts extends Component
     use WithPagination; 
     protected $paginationTheme='bootstrap';
 
-    public function categorize($category)
-    {
-        $category= Category::where('category_id',$category)->first() ;
-       $categoried=  Product::where('product_name','like','%'.$this->search.'%')->paginate(6);
-    }
+    // public function categorize($category)
+    // {
+    //     $category= Category::where('category_id',$category)->first() ;
+    //    $categoried=  Product::where('product_name','like','%'.$this->search.'%')->paginate(6);
+    // }
 
 
     public function render()

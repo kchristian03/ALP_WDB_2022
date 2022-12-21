@@ -18,7 +18,13 @@ class Transaction extends Model
         "no_resi",
         "bukti_pembayaran",
         "payment_id",
-        "total_price"
+        "total_price",
+        "adress_name",
+        "postal_code",
+        "city",
+        "state",
+        "description",
+        "full_street_adress"
     ];
 
     public function transactiondetails(): HasMany

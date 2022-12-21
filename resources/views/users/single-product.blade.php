@@ -203,59 +203,61 @@
                                 <p>Et harum quidem rerum facilis est et expedita distinctio. Nam libero tempore, cum soluta nobis est eligendi optio cumque nihil impedit quo minus id quod maxime placeat facere possimus, omnis voluptas assumenda est, omnis dolor repellendus. Temporibus autem quibusdam et aut officiis debitis aut rerum necessitatibus saepe eveniet ut et voluptates repudiandae sint et molestiae non recusandae. Itaque earum rerum hic tenetur a sapiente delectus, ut aut reiciendis voluptatibus maiores alias consequatur aut perferendis doloribus asperiores repellat.</p>
                             </div>
                         </div>
+                    
                         <div class="tab-pane fade" id="connect-2" role="tabpanel" aria-labelledby="profile-tab">
+                         
                             <!-- Start Single Content -->
                             <div class="product_tab_content  border p-3">
                                 <!-- Start Single Review -->
+                                @foreach ($review as $rv)
+                                @if($rv->status=='shown')
+                                    
+                           
                                 <div class="single-review d-flex mb-4">
-
+                                
                                     <!-- Review Thumb Start -->
-                                    <div class="review_thumb">
-                                        <img alt="review images" src="assets/images/review/1.jpg">
-                                    </div>
+                                  
                                     <!-- Review Thumb End -->
 
                                     <!-- Review Details Start -->
                                     <div class="review_details">
+                                      
                                         <div class="review_info mb-2">
 
                                             <!-- Rating Start -->
-                                            <span class="ratings justify-content-start mb-3">
+                                            {{-- <span class="ratings justify-content-start mb-3">
                                                     <span class="rating-wrap">
                                                         <span class="star" style="width: 100%"></span>
-                                            </span>
-                                            <span class="rating-num">(1)</span>
-                                            </span>
+                                            </span> --}}
+                                        
                                             <!-- Rating End -->
 
                                             <!-- Review Title & Date Start -->
+                                         
+                                                
+                                           
                                             <div class="review-title-date d-flex">
-                                                <h5 class="title">Admin - </h5><span> January 19, 2021</span>
+                                                <h5 class="title">{{$rv->user->name}} </h5><span class="ml-3"> {{"  -  ".$rv->created_at}}</span>
                                             </div>
                                             <!-- Review Title & Date End -->
-
+                                            <span class="rating-num">Rating: {{$rv->rating}}</span>
+                                        </span>
                                         </div>
-                                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin in viverra ex, vitae vestibulum arcu. Duis sollicitudin metus sed lorem commodo, eu dapibus libero interdum. Morbi convallis viverra erat, et aliquet orci congue vel. Integer in odio enim. Pellentesque in dignissim leo. Vivamus varius ex sit amet quam tincidunt iaculis.</p>
+                                        <p>{{$rv->review}}</p>
                                     </div>
+                                  
                                     <!-- Review Details End -->
 
                                 </div>
+                                @endif
+                                @endforeach
                                 <!-- End Single Review -->
-
+                                @if(Auth::check())
+                                    
+                            
                                 <!-- Rating Wrap Start -->
                                 <div class="rating_wrap">
                                     <h5 class="rating-title mb-2">Add a review </h5>
-                                    <p class="mb-2">Your email address will not be published. Required fields are marked *</p>
-                                    <h6 class="rating-sub-title mb-2">Your Rating</h6>
-
-                                    <!-- Rating Start -->
-                                    <span class="ratings justify-content-start mb-3">
-                                            <span class="rating-wrap">
-                                                <span class="star" style="width: 100%"></span>
-                                    </span>
-                                    <span class="rating-num">(2)</span>
-                                    </span>
-                                    <!-- Rating End -->
 
                                 </div>
                                 <!-- Rating Wrap End -->
@@ -266,34 +268,25 @@
                                         <div class="col-lg-12 col-custom">
 
                                             <!-- Comment form Start -->
-                                            <form action="#" class="comment-form-area">
-                                                <div class="row comment-input">
-
-                                                    <!-- Input Name Start -->
-                                                    <div class="col-md-6 col-custom comment-form-author mb-3">
-                                                        <label>Name <span class="required">*</span></label>
-                                                        <input type="text" required="required" name="Name">
-                                                    </div>
-                                                    <!-- Input Name End -->
-
-                                                    <!-- Input Email Start -->
-                                                    <div class="col-md-6 col-custom comment-form-emai mb-3">
-                                                        <label>Email <span class="required">*</span></label>
-                                                        <input type="text" required="required" name="email">
-                                                    </div>
-                                                    <!-- Input Email End -->
-
-                                                </div>
+                                          
+                                            <form action=" {{ route('productreview.store') }}" method="POST" class="comment-form-area">
+                                                @csrf
+                                                <input type="hidden" name="productid" value={{$product->id}}>
                                                 <!-- Comment Texarea Start -->
                                                 <div class="comment-form-comment mb-3">
-                                                    <label>Comment</label>
-                                                    <textarea class="comment-notes" required="required"></textarea>
+                                               
+                                                        <label for="slider">Give This Product Rating:</label><br>
+                                                        <input type="range" id="slider" name="rating" min="0" max="10" value="10" step="0.5">
+                                                        <p id="value">10</p>
+                                              
+                                                      
+                                                    <textarea name="review" class="comment-notes" required="required"></textarea>
                                                 </div>
                                                 <!-- Comment Texarea End -->
 
                                                 <!-- Comment Submit Button Start -->
                                                 <div class="comment-form-submit">
-                                                    <button class="btn btn-dark btn-hover-primary">Submit</button>
+                                                    <button class="btn btn-dark btn-hover-primary" type="submit">Submit</button>
                                                 </div>
                                                 <!-- Comment Submit Button End -->
 
@@ -303,8 +296,11 @@
                                         </div>
                                     </div>
                                 </div>
-                                <!-- Comments ans Replay End -->
+                                @else
+                                <h5 class="rating-title mb-2">Log In to give Product Review </h5>
 
+                                @endif
+                                <!-- Comments ans Replay End -->
                             </div>
                             <!-- End Single Content -->
                         </div>
@@ -643,5 +639,16 @@
             </div>
         </div>
     </div>
+
+  
+      <script>
+        const slider = document.getElementById('slider');
+        const value = document.getElementById('value');
+      
+        slider.addEventListener('input', function() {
+          value.innerHTML = this.value;
+        });
+      </script>
+      
     <!-- Modal End  -->
 @endsection

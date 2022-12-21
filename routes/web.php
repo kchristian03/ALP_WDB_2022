@@ -1,9 +1,12 @@
 
 <?php
 
+use App\Http\Controllers\AdressController;
 use App\Http\Controllers\CartController;
 use App\Http\Controllers\CartDetailController;
+use App\Http\Controllers\CategoryController;
 use App\Http\Controllers\ProductController;
+use App\Http\Controllers\ProductReviewController;
 use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\TransactionController;
 use Illuminate\Support\Facades\Route;
@@ -45,19 +48,31 @@ require __DIR__.'/auth.php';
 //     return view('users.shop-left-sidebar');
 // });
 
-
+Route::group(['middleware' => ['user']], function() {
+    Route::resource('adress', AdressController::class);
+  });
 Route::resource('cartdetail', CartDetailController::class)->middleware('user');
+
+Route::resource('productreview', ProductReviewController::class)->middleware('auth');
+
+
+
 Route::resource('transactions', TransactionController::class)->middleware('user');
 Route::get('/products', [ProductController::class, 'index']);
 
 Route::get('/laravel', function () {
     return view('index');
 });
+
 Route::get('/adress',function(){
     return view ('users.adress');
 });
 
 Route::get('/single-product/{product}', [ProductController::class, 'show']);
+
+Route::get('/orderdetail/{transaction}', [TransactionController::class, 'showorderdetail']);
+
+Route::get('/single-product/{category}', [ProductController::class, 'categorized']);
 
 Route::get('/single-product' , [ProductController::class, 'index']);
 
@@ -65,18 +80,14 @@ Route::get('/about', function () {
     return view('users.about');
 });
 
-Route::get('/checkout', function () {
-    return view('users.checkout');
-});
+Route::get('/checkout', [TransactionController::class, 'seecheckout']);
 
 Route::get('/cart', function () {
     return view('users.cart');
 });
 
 
-Route::get('/categories', function () {
-    return view('users.shop-grid');
-});
+Route::get('/categories', [CategoryController::class, 'index']);
 
 
 Route::get('/single-product', function () {
@@ -87,6 +98,8 @@ Route::get('/wishlist', function () {
     return view('users.wishlist');
 });
 
-Route::get('/my-account', function () {
-    return view('users.my-account');
+Route::get('/my-account', [ProfileController::class, 'accountdash']);
+
+Route::get('/contact', function () {
+    return view('users.contact');
 });

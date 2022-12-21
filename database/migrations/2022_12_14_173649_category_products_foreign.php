@@ -13,13 +13,7 @@ return new class extends Migration
      */
     public function up()
     {
-        Schema::table('category__products', function (Blueprint $table) {
-            $table->foreign("product_id")
-            -> references("id")->on("products")
-            -> onDelete('cascade')
-            ->onUpdate('cascade');
-
-
+        Schema::table('products', function (Blueprint $table) {
             $table->foreign("category_id")
             -> references("id")->on("categories")
             -> onDelete('cascade')

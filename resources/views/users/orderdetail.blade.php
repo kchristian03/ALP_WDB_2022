@@ -33,21 +33,7 @@
                     <!-- Coupon Accordion Start -->
                     <div class="coupon-accordion">
 
-                        <!-- Title Start -->
-                        {{-- <h3 class="title">Returning customer? <span id="showlogin">Click here to login</span></h3> --}}
-                        <!-- Title End -->
-
-                        <!-- Checkout Login Start -->
-                     
-                        <!-- Checkout Login End -->
-
-                        <!-- Title Start -->
-                        {{-- <h3 class="title">Have a coupon? <span id="showcoupon">Click here to enter your code</span></h3> --}}
-                        <!-- Title End -->
-
-                        <!-- Checkout Coupon Start -->
-                    
-                        <!-- Checkout Coupon End -->
+                        
 
                     </div>
                     <!-- Coupon Accordion End -->
@@ -57,7 +43,7 @@
                 <div class="col-lg-6 col-12 mb-4">
 
                     <!-- Checkbox Form Start -->
-                    <form action="{{ route('transactions.store') }}" method="POST" enctype="multipart/form-data">
+                    <form action="{{ route('transactions.store') }}" method="POST">
                         @csrf
                         <div class="checkbox-form">
                             <!-- Checkbox Form Title Start -->
@@ -71,10 +57,10 @@
                                     <div class="country-select">
                                         <label>Adresses <span class="required"></span></label>
                                         <select name="adressname" id="adressname" class="myniceselect nice-select wide rounded-0">
-                                            @foreach ($adresses as $ad)
-                                                 <option value="{{$ad->id}}">{{$ad->city}}</option>  
+                                            {{-- @foreach ($adresses as $ad)
+                                                 <option data-display="{{$ad->city}}" value="{{$ad->id}}">{{$ad->city}}</option>  
                                             @endforeach
-                                         
+                                          --}}
                                         </select>
                                     </div>
                                     <br>    
@@ -156,7 +142,7 @@
                                         <label>Bukti Pembayaran <span class="required"></span></label>
                                         <input type="file" name="bukti_pembayaran" class="form-control">
                                         @if ($errors->has('bukti_pembayaran'))
-                                            <p class="text-danger">{{ $errors->first('bukti_pembayaran') }}</p>
+                                            <p class="text-danger">{{ $errors->first('coverphoto') }}</p>
                                         @endif
                                     </div>
                                 </div>
@@ -177,11 +163,11 @@
                             <!-- Different Address End -->
                         </div>
                   
-          
+                    <!-- Checkbox Form End -->
 
-                    </div>
+                </div>
 
-                 <div class="col-lg-6 col-12 mb-4">
+                <div class="col-lg-6 col-12 mb-4">
 
                     <!-- Your Order Area Start -->
                     <div class="your-order-area border">
@@ -205,7 +191,7 @@
 
                                 <!-- Table Body Start -->
                                 <tbody>
-                                    @foreach ($cartdetails as $cds)
+                                    @foreach ($orderdetails as $cds)
                                         
                                  
                                 <tr class="cart_item">
@@ -220,11 +206,11 @@
                                 <tfoot>
                                 <tr class="cart-subtotal">
                                     <th class="text-start ps-0">Cart Subtotal</th>
-                                    <td class="text-end pe-0"><span class="amount">{{"Rp. ".$cart->total_price}}</span></td>
+                                    <td class="text-end pe-0"><span class="amount">{{"Rp. ".$order->total_price}}</span></td>
                                 </tr>
                                 <tr class="order-total">
                                     <th class="text-start ps-0">Order Total</th>
-                                    <td class="text-end pe-0"><strong><span class="amount">{{"Rp. ".$cart->total_price}}</span></strong></td>
+                                    <td class="text-end pe-0"><strong><span class="amount">{{"Rp. ".$order->total_price}}</span></strong></td>
                                 </tr>
                                 </tfoot>
                                 <!-- Table Footer End -->
@@ -239,13 +225,12 @@
                                 <div class="single-payment">
                                     <h5 class="panel-title mb-3">
                                         <a class="collapse-off" data-bs-toggle="collapse" href="#collapseExample-3" aria-expanded="false" aria-controls="collapseExample-3">
-                                            Paypal.
+                                            Bukti Pembayaran
                                         </a>
                                     </h5>
                                     <div class="collapse" id="collapseExample-3">
                                         <div class="card card-body rounded-0">
-                                            <p>Make your payment directly into our bank account. Please use your Order ID as the payment reference. Your order won’t be shipped until the funds have cleared in our account.</p>
-                                            <a class="btn btn-hover-primary">QR Code</a>
+                                            <a class="btn btn-hover-primary">Gambar</a>
                                         </div>
                                     </div>
                                 </div>
@@ -259,17 +244,18 @@
                         
                     </div>
                     <!-- Your Order Area End -->
-                  
+                  <h5 class="m-5">  Status Pesanan: {{$order->transaction_status}} </h2>
+                  <button class="btn btn-danger btn-hover-primary rounded-0 w-100"> Selesaikan Pesanan</button>
                 </div>
             </div>
         </div>
     </div>
     <!-- Checkout Section End -->
     <script>
-// $('#adressname').on('change', function(){
-//     const selectedPackage = $('#adressname').val();
-//     $('#adressdescription').text(adressname);
-//   });
+$('#adressname').on('change', function(){
+    const selectedPackage = $('#adressname').val();
+    $('#adressdescription').text(adressname);
+  });
 
     </script>
 @endsection

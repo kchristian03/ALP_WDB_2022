@@ -40,4 +40,10 @@ class Cart extends Model
         // $this->attributes['total_items'] = $itemcart->total_items + $qty;
         self::save();
     }
+
+    public function clear() {
+        $this->attributes['total_price'] =0;
+        // $this->attributes['total_items'] = $itemcart->total_items + $qty;
+        self::save();
+    }
 }

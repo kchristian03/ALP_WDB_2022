@@ -64,8 +64,8 @@ class TransactionResource extends Resource
                 //
             ])
             ->actions([
-                Tables\Actions\EditAction::make(),
-                Tables\Actions\ViewAction::make()->url('/single-product/{1}'),
+                // Tables\Actions\EditAction::make(),
+                // Tables\Actions\ViewAction::make()->url('/single-product/{1}'),
             ])
             ->bulkActions([
                 Tables\Actions\DeleteBulkAction::make(),
@@ -83,7 +83,7 @@ class TransactionResource extends Resource
     public static function getRelations(): array
     {
         return [
-            //
+            RelationManagers\TransactiondetailsRelationManager::class,
         ];
     }
 

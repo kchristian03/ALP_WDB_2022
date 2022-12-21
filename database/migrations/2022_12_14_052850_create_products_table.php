@@ -21,7 +21,7 @@ return new class extends Migration
             $table->double('product_price');
             $table->double('product_stock');
             $table->timestamps();
-     
+            $table->bigInteger("category_id")->unsigned()->nullable();
         });
     }
 

@@ -16,13 +16,6 @@ class CartController extends Controller
      */
     public function index(Request $request)
     {
-        $itemuser = $request->user();//ambil data user
-        $itemcart = Cart::where('user_id', $itemuser->id)
-                        ->where('status_cart', 'cart')
-                        ->first();
-        $data = array('title' => 'Shopping Cart',
-                    'itemcart' => $itemcart);
-        return view('cart.index', $data)->with('no', 1);
     }
 
     /**

@@ -7,8 +7,10 @@ use App\Http\Requests\UpdateTransactionRequest;
 use App\Models\Adress;
 use App\Models\Cart;
 use App\Models\Cart_detail;
+use App\Models\Product;
 use App\Models\Transaction;
 use App\Models\Transaction_Detail;
+use Illuminate\Support\Facades\Auth;
 
 class TransactionController extends Controller
 {
@@ -20,6 +22,19 @@ class TransactionController extends Controller
     public function index()
     {
         //
+    }
+
+     public function showorderdetail(Transaction $transaction)
+    {
+        return view('users.orderdetail', [
+            "pagetitle" => "Order Details",
+            "maintitle" => "Order Details",
+            "order" => $transaction,
+            'products' => Product::all(),
+            'orderdetails' => $transaction->transactiondetails
+         
+            
+        ]);
     }
 
     /**
@@ -40,48 +55,45 @@ class TransactionController extends Controller
      */
     public function store(StoreTransactionRequest $request)
     {
-        $itemuser = $request->user();
-        $itemcart = Cart::where('user_id', $itemuser->id)
-                        ->first();
-       
-         $cartdetails= Cart_detail::where('cart_id', $itemcart->id)->get();  
-            
+        $this->validate($request, [
+            "adressname" => 'required|int',
+            "bukti_pembayaran" => 'required|image',
+        ]);
+        
+       $adressid = $request->adressname;
 
+        $cart = Cart::where('user_id',Auth::user()->id)->first();
+        $cartitems = Cart_detail::where('cart_id',$cart->id)->get();
+        $adress = Adress::where('id',$adressid)->first();
+        $tr = Transaction::create([
+            "user_id" => $cart->user_id,
+            "adress_id" => $adress->id,
+            "no_resi" => "-",
+            "bukti_pembayaran" => $request->file('bukti_pembayaran')->store('paymentphoto','public'),
+            // "bukti_pembayaran" => "",
+            "payment_id" => 1,
+            "total_price" => $cart->total_price,
+        ]);
 
-            
-        // if ($itemcart) {
-            $itemalamatpengiriman = Adress::where('user_id', $itemuser->id)
-                                                    ->first();
-            // if ($itemalamatpengiriman) {
-                // buat variabel inputan order
-                $inputanorder['user_id'] = $itemuser->id;
-                $inputanorder['adress_id'] = 1;
-                // $inputanorder['adress_id'] = $itemalamatpengiriman->alamat;
-                $inputanorder['no_resi'] = "Pending";
-                $inputanorder['bukti_pembayaran'] = "null";
-                $inputanorder['payment_id'] = 1;
-                $inputanorder['total_price'] = $itemcart->total_price;
-                $itemorder = Transaction::create($inputanorder);//simpan order
-                foreach ($cartdetails as $cd){
-                    Transaction_Detail::create([
-                        "price" => $cd->price,
-                        "total_items" => $cd->price,
-                        "total_harga" => $cd->price,
-                        "product_size_id" => $cd->product_size_id,
-                        "transaction_id" => $itemorder->id
-                    ]);
-                }
-               
-                // update status cart
-                // $itemcart->update(['status_cart' => 'checkout']);
-                return redirect('/index')->with('success', 'Produk berhasil ditambahkan ke cart');
-            // } 
-        //     else {
-        //         return back()->with('error', 'Alamat pengiriman belum diisi');
-        //     }
-        // } else {
-        //     return abort('404');//kalo ternyata ga ada shopping cart, maka akan menampilkan error halaman tidak ditemukan
-        // }
+        foreach($cartitems as $ct){
+            Transaction_Detail::create([
+                "transaction_id" => $tr->id,
+                "price" => $ct->price,
+                "total_items" => $ct->total_items,
+                "total_harga" => $ct->total_price,
+                "product_id" => $ct->product_id,
+            ]);
+
+            $items = $ct->total_items;
+
+            $ct->product->minstock($items);
+            Cart_detail::where('id',$ct->id)->first()->delete();
+
+        }
+
+        Cart::where('user_id',Auth::user()->id)->first()->clear();
+        return redirect('/my-account');
+        
     }
 
     /**
@@ -127,5 +139,27 @@ class TransactionController extends Controller
     public function destroy(Transaction $transaction)
     {
         //
+    }
+
+    public function seecheckout()
+    {   
+        $cart= Cart::where('user_id',Auth::user()->id)->first();
+        $cartdetail = Cart_detail::where('cart_id',$cart->id)->get();
+        if($cartdetail->count() >0){
+        $adress = Adress::where('user_id',Auth::user()->id)->get();
+        $products= Product::all();
+       
+     
+         return view('users.checkout', [
+             'cartdetails' => $cartdetail,
+             'cart' => $cart,
+             'products' => $products,
+             'adresses' => $adress,
+         ]);}
+
+         else{
+            return redirect('/products');
+
+         }
     }
 }

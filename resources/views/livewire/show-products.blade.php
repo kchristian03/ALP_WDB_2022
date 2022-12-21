@@ -65,7 +65,7 @@
                         <div class="widget-list mb-10">
                             <h3 class="widget-title mb-4">Search</h3>
                             <div class="search-box">
-                                <input type="text" class="form-control" placeholder="Search Products" wire:model="categories">
+                                <input type="text" class="form-control" placeholder="Search Products" wire:model="search">
                                 <button class="btn btn-dark btn-hover-primary" type="button">
                                     <i class="fa fa-search"></i>
                                 </button>

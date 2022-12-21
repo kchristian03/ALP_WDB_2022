@@ -39,83 +39,78 @@
                 </div>
             </div>
             <div class="row mb-n4">
-                <div class="col-lg-6 col-12 mb-4">
+                <div class="col-lg-12 col-12 mb-4">
 
                     <!-- Checkbox Form Start -->
-                    <form action="#">
+                    <form action="{{ route('adress.store') }}" method="POST" >
+                        @csrf
                         <div class="checkbox-form">
 
                             <!-- Checkbox Form Title Start -->
-                            <h3 class="title">Adress Details</h3>
+                            <h3 class="title">Adress</h3>
                             <!-- Checkbox Form Title End -->
 
                             <div class="row">
 
                                 <!-- Select Country Name Start -->
-                                <div class="col-md-12 mb-6">
-                                    <div class="country-select">
-                                        <label>Country <span class="required">*</span></label>
-                                        <select class="myniceselect nice-select wide rounded-0">
-                                            <option data-display="Bangladesh">Bangladesh</option>
-                                            <option value="uk">London</option>
-                                            <option value="rou">Romania</option>
-                                            <option value="fr">French</option>
-                                            <option value="de">Germany</option>
-                                            <option value="aus">Australia</option>
-                                        </select>
+                                <div class="col-md-12">
+                                    <div class="checkout-form-list">
+                                        <label>Adress Name <span class="required"></span></label>
+                                        <input name="adressname"  placeholder="Address Name" type="text" >
                                     </div>
                                 </div>
                                 <!-- Select Country Name End -->
 
                                 <!-- First Name Input Start -->
-                                <div class="col-md-6">
+                                {{-- <div class="col-md-6">
                                     <div class="checkout-form-list">
-                                        <label>First Name <span class="required">*</span></label>
-                                        <input placeholder="" type="text">
+                                        <label>First Name <span class="required"></span></label>
+                                        <input placeholder="" type="text" >
                                     </div>
-                                </div>
+                                </div> --}}
                                 <!-- First Name Input End -->
 
                                 <!-- Last Name Input Start -->
-                                <div class="col-md-6">
+                                {{-- <div class="col-md-6">
                                     <div class="checkout-form-list">
-                                        <label>Last Name <span class="required">*</span></label>
-                                        <input placeholder="" type="text">
+                                        <label>Last Name <span class="required"></span></label>
+                                        <input placeholder="" type="text" >
+                                    </div>
+                                </div> --}}
+                               
+                                <!-- Last Name Input End -->
+                                <div class="col-md-12">
+                                    <div class="checkout-form-list">
+                                        <label>Full Address <span class="required"></span></label>
+                                        <input name="fulladress" placeholder="Street address" type="text" >
                                     </div>
                                 </div>
-                                <!-- Last Name Input End -->
-
                                 <!-- Company Name Input Start -->
                                 <div class="col-md-12">
                                     <div class="checkout-form-list">
-                                        <label>Company Name</label>
-                                        <input placeholder="" type="text">
+                                        <label>Description</label>
+                                        <input name="adressdesc" placeholder="Description" type="text" >
                                     </div>
                                 </div>
                                 <!-- Company Name Input End -->
 
                                 <!-- Address Input Start -->
-                                <div class="col-md-12">
-                                    <div class="checkout-form-list">
-                                        <label>Address <span class="required">*</span></label>
-                                        <input placeholder="Street address" type="text">
-                                    </div>
-                                </div>
+                              
                                 <!-- Address Input End -->
 
                                 <!-- Optional Text Input Start -->
-                                <div class="col-md-12">
+                                {{-- <div class="col-md-12">
                                     <div class="checkout-form-list">
                                         <input placeholder="Apartment, suite, unit etc. (optional)" type="text">
                                     </div>
-                                </div>
+                                </div> --}}
                                 <!-- Optional Text Input End -->
 
                                 <!-- Town or City Name Input Start -->
                                 <div class="col-md-12">
                                     <div class="checkout-form-list">
-                                        <label>Town / City <span class="required">*</span></label>
-                                        <input type="text">
+                                        <label>Town / City <span class="required"></span></label>
+                                        <input name="adresscity" placeholder="City" type="text" >
                                     </div>
                                 </div>
                                 <!-- Town or City Name Input End -->
@@ -123,8 +118,8 @@
                                 <!-- State or Country Input Start -->
                                 <div class="col-md-6">
                                     <div class="checkout-form-list">
-                                        <label>State / County <span class="required">*</span></label>
-                                        <input placeholder="" type="text">
+                                        <label>Province <span class="required"></span></label>
+                                        <input name="adressprovince" placeholder="Province" type="text">
                                     </div>
                                 </div>
                                 <!-- State or Country Input End -->
@@ -132,24 +127,16 @@
                                 <!-- Postcode or Zip Input Start -->
                                 <div class="col-md-6">
                                     <div class="checkout-form-list">
-                                        <label>Postcode / Zip <span class="required">*</span></label>
-                                        <input placeholder="" type="text">
+                                        <label>Postcode / Zip <span class="required"></span></label>
+                                        <input name="adresszip" placeholder="ZIP Code" type="text">
                                     </div>
                                 </div>
-                                <!-- Postcode or Zip Input End -->
-
-                                <!-- Email Address Input Start -->
-                              
-                                <!-- Phone Number Input End -->
-
-                                <!-- Checkout Form List checkbox Start -->
-                            
-                                <!-- Checkout Form List checkbox End -->
-
+                         
                             </div>
 
-                           
-                            <!-- Different Address End -->
+                        </div>
+                        <div class="d-flex">
+                            <button type="submit" class="btn btn-dark btn-hover-primary rounded-0 w-100 mx-auto">Submit</button>
                         </div>
                     </form>
                     <!-- Checkbox Form End -->

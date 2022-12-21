@@ -142,7 +142,7 @@ return [
             Widgets\AccountWidget::class
         ]
 
-       
+
     ],
 
     /*
@@ -316,7 +316,7 @@ return [
 
     'middleware' => [
         'auth' => [
-            Authenticate::class,
+            \App\Http\Middleware\Admin::class,
         ],
         'base' => [
             EncryptCookies::class,

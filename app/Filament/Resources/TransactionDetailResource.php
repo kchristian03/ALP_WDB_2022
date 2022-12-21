@@ -4,6 +4,7 @@ namespace App\Filament\Resources;
 
 use App\Filament\Resources\TransactionDetailResource\Pages;
 use App\Filament\Resources\TransactionDetailResource\RelationManagers;
+use App\Models\Transaction_Detail;
 use App\Models\TransactionDetail;
 use Filament\Forms;
 use Filament\Resources\Form;
@@ -15,7 +16,7 @@ use Illuminate\Database\Eloquent\SoftDeletingScope;
 
 class TransactionDetailResource extends Resource
 {
-    protected static ?string $model = TransactionDetail::class;
+    protected static ?string $model = Transaction_Detail::class;
 
     protected static ?string $navigationIcon = 'heroicon-o-collection';
 
@@ -43,14 +44,14 @@ class TransactionDetailResource extends Resource
                 Tables\Actions\DeleteBulkAction::make(),
             ]);
     }
-    
+
     public static function getRelations(): array
     {
         return [
             //
         ];
     }
-    
+
     public static function getPages(): array
     {
         return [
@@ -58,5 +59,5 @@ class TransactionDetailResource extends Resource
             'create' => Pages\CreateTransactionDetail::route('/create'),
             'edit' => Pages\EditTransactionDetail::route('/{record}/edit'),
         ];
-    }    
+    }
 }

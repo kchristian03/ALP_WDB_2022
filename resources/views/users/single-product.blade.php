@@ -40,8 +40,8 @@
                         <!-- Single Product Image Start -->
                         <div class="single-product-img swiper-container gallery-top">
                             <div class="swiper-wrapper popup-gallery">
-                                <a class=" w-100" href="../storage/productphoto/{{$product['product_image']}}">
-                                    <img class="w-100" src="../storage/productphoto/{{$product['product_image']}}" alt="Product" />
+                                <a class=" w-100" href="{{url("storage/" . $product->product_image)}}">
+                                    <img class="w-100" src="{{url("storage/" . $product->product_image)}}" alt="Product" />
                                 </a>
                             
                             </div>
@@ -127,7 +127,7 @@
                               
                             <form action="{{route('cartdetail.store') }}" method="POST" enctype="multipart/form-data">
                                 @csrf
-                                <input type="text" name="product_id" value={{$product->id}}>
+                                <input type="hidden" name="product_id" value={{$product->id}}>
                             <div class="cart-plus-minus">
                               
                                 <input class="cart-plus-minus-box" name="product_qty" value="1" type="number" min="1" max="{{$product['product_stock']}}">
@@ -199,9 +199,7 @@
                     <div class="tab-content mb-text" id="myTabContent">
                         <div class="tab-pane fade show active" id="connect-1" role="tabpanel" aria-labelledby="home-tab">
                             <div class="desc-content border p-3">
-                                <p class="mb-3">On the other hand, we denounce with righteous indignation and dislike men who are so beguiled and demoralized by the charms of pleasure of the moment, so blinded by desire, that they cannot foresee the pain and trouble that are bound to ensue; and equal blame belongs to those who fail in their duty through weakness of will, which is the same as saying through shrinking from toil and pain. These cases are perfectly simple and easy to distinguish. In a free hour, when our power of choice is untrammelled and when nothing prevents our being able to do what we like best, every pleasure is to be welcomed and every pain avoided. But in certain circumstances and owing to the claims of duty or the obligations of business it will frequently occur that pleasures have to be repudiated and annoyances accepted. The wise man therefore always holds in these matters to this principle of selection: he rejects pleasures to secure other greater pleasures, or else he endures pains to avoid worse pains.</p>
-                                <p>Et harum quidem rerum facilis est et expedita distinctio. Nam libero tempore, cum soluta nobis est eligendi optio cumque nihil impedit quo minus id quod maxime placeat facere possimus, omnis voluptas assumenda est, omnis dolor repellendus. Temporibus autem quibusdam et aut officiis debitis aut rerum necessitatibus saepe eveniet ut et voluptates repudiandae sint et molestiae non recusandae. Itaque earum rerum hic tenetur a sapiente delectus, ut aut reiciendis voluptatibus maiores alias consequatur aut perferendis doloribus asperiores repellat.</p>
-                            </div>
+                                <p class="mb-3">{{$product['product_description']}}</p></div>
                         </div>
                     
                         <div class="tab-pane fade" id="connect-2" role="tabpanel" aria-labelledby="profile-tab">

@@ -42,9 +42,10 @@ class TransactionResource extends Resource
                     ->required()
                     ->maxLength(255),
                 Forms\Components\TextInput::make('total_price'),
-                Forms\Components\TextInput::make('bukti_pembayaran')
-                    ->required()
-                    ->maxLength(255),
+                Forms\Components\FileUpload::make('bukti_pembayaran')
+                        ->required()
+                        ->directory('paymentphoto')
+                        ->image(),
             ]);
     }
 
@@ -58,7 +59,7 @@ class TransactionResource extends Resource
                 Tables\Columns\TextColumn::make('transaction_status'),
                 Tables\Columns\TextColumn::make('no_resi'),
                 Tables\Columns\TextColumn::make('total_price'),
-                Tables\Columns\TextColumn::make('bukti_pembayaran'),
+                Tables\Columns\ImageColumn::make('bukti_pembayaran'),
                 Tables\Columns\TextColumn::make('created_at')
                     ->dateTime(),
                 Tables\Columns\TextColumn::make('updated_at')

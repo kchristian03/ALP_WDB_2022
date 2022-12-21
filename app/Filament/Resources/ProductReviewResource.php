@@ -24,7 +24,14 @@ class ProductReviewResource extends Resource
     {
         return $form
             ->schema([
-                //
+                Forms\Components\Select::make('status')
+                ->options([
+                    'shown' => 'shown',
+                    'hidden' => 'hidden',
+                
+                ])
+                ->default('shown')
+                ->disablePlaceholderSelection()
             ]);
     }
 
@@ -32,7 +39,11 @@ class ProductReviewResource extends Resource
     {
         return $table
             ->columns([
-                //
+                Tables\Columns\TextColumn::make('user_id'),
+                Tables\Columns\TextColumn::make('product_id'),
+                Tables\Columns\TextColumn::make('rating'),
+                Tables\Columns\TextColumn::make('review'),
+                Tables\Columns\TextColumn::make('status')->sortable(),
             ])
             ->filters([
                 //

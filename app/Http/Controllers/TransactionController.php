@@ -7,6 +7,7 @@ use App\Http\Requests\UpdateTransactionRequest;
 use App\Models\Adress;
 use App\Models\Cart;
 use App\Models\Cart_detail;
+use App\Models\Payment;
 use App\Models\Product;
 use App\Models\Transaction;
 use App\Models\Transaction_Detail;
@@ -159,13 +160,15 @@ class TransactionController extends Controller
         if($cartdetail->count() >0){
         $adress = Adress::where('user_id',Auth::user()->id)->get();
         $products= Product::all();
-       
+       $payments = Payment::all();
      
          return view('users.checkout', [
              'cartdetails' => $cartdetail,
              'cart' => $cart,
              'products' => $products,
              'adresses' => $adress,
+             'payments' => $payments,
+
          ]);}
 
          else{

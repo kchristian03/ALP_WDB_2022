@@ -23,15 +23,52 @@ class UserResource extends Resource
     {
         return $form
             ->schema([
-                //
+        Forms\Components\TextInput::make('name')
+        ->required()
+        ->maxLength(255),
+    Forms\Components\FileUpload::make('profile_pic')
+        ->required()
+        ->directory('users_image')
+        ->image(),
+    Forms\Components\TextInput::make('email')
+        ->required()
+        ->maxLength(255),
+    Forms\Components\TextInput::make('whatasapp_number')
+       ,
+        Forms\Components\TextInput::make('umur')
+       ,
+        Forms\Components\Select::make('status')
+                ->options([
+                    'user' => 'user',
+                    'admin' => 'admin',
+                
+                ])
+                ->default('user')
+                ->disablePlaceholderSelection(),
+        Forms\Components\TextInput::make('username')
+        ->required(),
+
             ]);
+        
+
+            
     }
 
     public static function table(Table $table): Table
     {
         return $table
             ->columns([
-                //
+                Tables\Columns\TextColumn::make('name')->sortable()->searchable(),
+                Tables\Columns\TextColumn::make('username')->sortable()->searchable(),
+                Tables\Columns\ImageColumn::make('profile_pic'),
+                Tables\Columns\TextColumn::make('email'),
+                Tables\Columns\TextColumn::make('whatsapp_number'),
+                Tables\Columns\TextColumn::make('umur'),
+                Tables\Columns\TextColumn::make('status'),
+                Tables\Columns\TextColumn::make('created_at')
+                    ->dateTime(),
+                Tables\Columns\TextColumn::make('updated_at')
+                    ->dateTime(),
             ])
             ->filters([
                 //

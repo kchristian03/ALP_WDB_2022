@@ -72,13 +72,13 @@
                                         <label>Adresses <span class="required"></span></label>
                                         <select name="adressname" id="adressname" class="myniceselect nice-select wide rounded-0">
                                             @foreach ($adresses as $ad)
-                                                 <option value="{{$ad->id}}">{{$ad->city}}</option>  
+                                                 <option value="{{$ad->id}}">{{$ad->adress_name}}</option>  
                                             @endforeach
                                          
                                         </select>
                                     </div>
                                     <br>    
-                                    <a href="#">  See my Adress</a>
+                                    <a style="color:red" href="my-account">  See my Adress</a>
                                 </div>
                                 <!-- Select Country Name End -->
 
@@ -235,17 +235,44 @@
 
                         <!-- Payment Accordion Order Button Start -->
                         <div class="payment-accordion-order-button">
+                            <h5>Metode Pembayaran: </h5>
                             <div class="payment-accordion">
                                 <div class="single-payment">
                                     <h5 class="panel-title mb-3">
+                                        <a class="collapse-off" data-bs-toggle="collapse" href="#collapseExample-1" aria-expanded="false" aria-controls="collapseExample-1">
+                                           BCA
+                                        </a>
+                                    </h5>
+                                    <div class="collapse" id="collapseExample-1">
+                                        <div class="card card-body rounded-0">
+                                            <p>BCA 0181415311 A.N. Felecia Gunawan</p>
+                                            <a href="../storage/productphoto/Jiwon Top.jpg" class="btn btn-hover-primary">QR Code</a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="single-payment">
+                                    <h5 class="panel-title mb-3">
+                                        <a class="collapse-off" data-bs-toggle="collapse" href="#collapseExample-2" aria-expanded="false" aria-controls="collapseExample-2">
+                                           OVO
+                                        </a>
+                                    </h5>
+                                    <div class="collapse" id="collapseExample-2">
+                                        <div class="card card-body rounded-0">
+                                            <p>081235652209 Nama: Felecia Gunawan</p>
+                                            <a href="../storage/productphoto/Jiwon Top.jpg" class="btn btn-hover-primary">QR Code</a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="single-payment">
+                                    <h5 class="panel-title mb-3">
                                         <a class="collapse-off" data-bs-toggle="collapse" href="#collapseExample-3" aria-expanded="false" aria-controls="collapseExample-3">
-                                            Paypal.
+                                           Bank Mandiri
                                         </a>
                                     </h5>
                                     <div class="collapse" id="collapseExample-3">
                                         <div class="card card-body rounded-0">
-                                            <p>Make your payment directly into our bank account. Please use your Order ID as the payment reference. Your order won’t be shipped until the funds have cleared in our account.</p>
-                                            <a class="btn btn-hover-primary">QR Code</a>
+                                            <p>0182151821 A.N Felecia Gunawan</p>
+                                            <a href="../storage/productphoto/Jiwon Top.jpg"class="btn btn-hover-primary">QR Code</a>
                                         </div>
                                     </div>
                                 </div>

@@ -24,7 +24,14 @@ class StoreFeedbackResource extends Resource
     {
         return $form
             ->schema([
-                //
+                Forms\Components\Select::make('feedback_status')
+                ->options([
+                    'seen' => 'seen',
+                    'unseen' => 'unseen',
+                
+                ])
+                ->default('unseen')
+                ->disablePlaceholderSelection()
             ]);
     }
 
@@ -32,7 +39,10 @@ class StoreFeedbackResource extends Resource
     {
         return $table
             ->columns([
-                //
+                Tables\Columns\TextColumn::make('user_id'),
+                Tables\Columns\TextColumn::make('subject'),
+                Tables\Columns\TextColumn::make('feedback_status')->sortable(),
+                Tables\Columns\TextColumn::make('feedback'),
             ])
             ->filters([
                 //

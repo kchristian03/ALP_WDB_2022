@@ -14,15 +14,13 @@ class TransactiondetailsRelationManager extends RelationManager
 {
     protected static string $relationship = 'transactiondetails';
 
-    protected static ?string $recordTitleAttribute = 'total_price';
+    // protected static ?string $recordTitleAttribute = 'total_price';
 
     public static function form(Form $form): Form
     {
         return $form
             ->schema([
-                Forms\Components\TextInput::make('total_price')
-                    ->required()
-                    ->maxLength(255),
+            
             ]);
     }
 
@@ -30,7 +28,10 @@ class TransactiondetailsRelationManager extends RelationManager
     {
         return $table
             ->columns([
-                Tables\Columns\TextColumn::make('total_price'),
+                Tables\Columns\TextColumn::make('product_id'),
+                Tables\Columns\TextColumn::make('price'),                
+                Tables\Columns\TextColumn::make('total_items'),
+                Tables\Columns\TextColumn::make('total_harga'),
             ])
             ->filters([
                 //

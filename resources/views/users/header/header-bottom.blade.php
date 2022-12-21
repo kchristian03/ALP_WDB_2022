@@ -6,7 +6,7 @@
                 <!-- Header Logo Start -->
                 <div class="col-xl-2 col-6">
                     <div class="header-logo">
-                        <a href="/"><img src="{{asset("assets.user/media/images/logo/logo.png")}}" alt="Site Logo"/></a>
+                        <a href="/"><img src="{{asset("assets.user/media/images/brand-logo/IMG_0494.PNG")}}" height="60px" alt="Site Logo"/></a>
                     </div>
                 </div>
                 <!-- Header Logo End -->
@@ -16,10 +16,10 @@
                     <div class="main-menu position-relative">
                         <ul>
                             <li><a href="/"> <span>Home</span></a></li>
-                            <li><a href="/products"> <span>Products</span></a></li>
-                            <li><a href="/categories"> <span>Category</span></a></li>
-                            <li><a href="/about"> <span>About Us</span></a></li>
-                            <li><a href="/contact"> <span>Contact</span></a></li>
+                            <li><a href="/products"> <span>Produk</span></a></li>
+                            <li><a href="/categories"> <span>Kategori</span></a></li>
+                            <li><a href="/about"> <span>Tentang Kami</span></a></li>
+                            <li><a href="/contact"> <span>Kontak</span></a></li>
                         </ul>
                     </div>
                 </div>
@@ -37,7 +37,7 @@
                         <!-- User Account Header Action Button Start -->
                         @if (Auth::check())
                         <a href="/my-account" class="header-action-btn d-none d-md-block"><i class="pe-7s-user"></i></a>
-                        @else   
+                        @else
                          <a href="/login"> <span>Log In</span></a>
                         @endif
                         <!-- User Account Header Action Button End -->

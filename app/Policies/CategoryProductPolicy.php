@@ -5,6 +5,7 @@ namespace App\Policies;
 use App\Models\Category_Product;
 use App\Models\User;
 use Illuminate\Auth\Access\HandlesAuthorization;
+use Illuminate\Support\Facades\Auth;
 
 class CategoryProductPolicy
 {
@@ -18,7 +19,7 @@ class CategoryProductPolicy
      */
     public function viewAny(User $user)
     {
-        return true;
+        return Auth::user()->status == 'admin';
     }
 
     /**
@@ -30,7 +31,7 @@ class CategoryProductPolicy
      */
     public function view(User $user, Category_Product $categoryProduct)
     {
-        return true;
+        return Auth::user()->status == 'admin';
     }
 
     /**
@@ -41,7 +42,7 @@ class CategoryProductPolicy
      */
     public function create(User $user)
     {
-        return true;
+        return Auth::user()->status == 'admin';
     }
 
     /**
@@ -53,7 +54,7 @@ class CategoryProductPolicy
      */
     public function update(User $user, Category_Product $categoryProduct)
     {
-        return true;
+        return Auth::user()->status == 'admin';
     }
 
     /**
@@ -65,7 +66,7 @@ class CategoryProductPolicy
      */
     public function delete(User $user, Category_Product $categoryProduct)
     {
-        return true;
+        return Auth::user()->status == 'admin';
     }
 
     /**
@@ -77,7 +78,7 @@ class CategoryProductPolicy
      */
     public function restore(User $user, Category_Product $categoryProduct)
     {
-        return true;
+        return Auth::user()->status == 'admin';
     }
 
     /**
@@ -89,6 +90,6 @@ class CategoryProductPolicy
      */
     public function forceDelete(User $user, Category_Product $categoryProduct)
     {
-        return true;
+        return Auth::user()->status == 'admin';
     }
 }

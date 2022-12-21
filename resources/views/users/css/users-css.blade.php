@@ -1,5 +1,5 @@
 <!-- Favicons -->
-<link rel="shortcut icon" href="{{asset("assets.user/media/images/favicon.ico")}}">
+<link rel="shortcut icon" href="{{asset("assets.user/media/images/favicon.PNG")}}">
 
 <!-- Vendor CSS (Icon Font) -->
 <link rel="stylesheet" href="{{asset("assets.user/css/vendor/fontawesome.min.css")}}">

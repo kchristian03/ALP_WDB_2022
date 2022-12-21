@@ -5,6 +5,7 @@ namespace App\Policies;
 use App\Models\Adress;
 use App\Models\User;
 use Illuminate\Auth\Access\HandlesAuthorization;
+use Illuminate\Support\Facades\Auth;
 
 class AdressPolicy
 {
@@ -18,7 +19,7 @@ class AdressPolicy
      */
     public function viewAny(User $user)
     {
-        //
+        return Auth::user()->status == 'admin';
     }
 
     /**
@@ -30,7 +31,7 @@ class AdressPolicy
      */
     public function view(User $user, Adress $adress)
     {
-        //
+        return Auth::user()->status == 'admin';
     }
 
     /**
@@ -41,7 +42,7 @@ class AdressPolicy
      */
     public function create(User $user)
     {
-        //
+        return Auth::user()->status == 'admin';
     }
 
     /**
@@ -53,7 +54,7 @@ class AdressPolicy
      */
     public function update(User $user, Adress $adress)
     {
-        //
+        return Auth::user()->status == 'admin';
     }
 
     /**
@@ -65,7 +66,7 @@ class AdressPolicy
      */
     public function delete(User $user, Adress $adress)
     {
-        //
+        return Auth::user()->status == 'admin';
     }
 
     /**
@@ -77,7 +78,7 @@ class AdressPolicy
      */
     public function restore(User $user, Adress $adress)
     {
-        //
+        return Auth::user()->status == 'admin';
     }
 
     /**
@@ -89,6 +90,6 @@ class AdressPolicy
      */
     public function forceDelete(User $user, Adress $adress)
     {
-        //
+        return Auth::user()->status == 'admin';
     }
 }

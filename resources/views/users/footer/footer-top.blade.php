@@ -4,8 +4,7 @@
             <div class="col-12 col-sm-6 col-lg-4 col-xl-4 mb-10" data-aos="fade-up" data-aos-delay="200">
                 <div class="single-footer-widget">
                     <h2 class="widget-title">Contact Us</h2>
-                    <p class="desc-content">Lorem ipsum dolor sit amet, consectetur adipisicing sed do eiusmod
-                        tempor incididun</p>
+                    <p class="desc-content">Funcy Daisy adalah </p>
                     <!-- Contact Address Start -->
                     <ul class="widget-address">
                         <li><span>Address: </span> 123 Main Street, Anytown, CA 12345 - USA.</li>

@@ -5,26 +5,26 @@
             <!-- Header Top Language, Currency & Link Start -->
             <div class="col d-none d-lg-block">
                 <div class="header-top-lan-curr-link">
-                    <div class="header-top-lan dropdown">
-                        <button class="dropdown-toggle" data-bs-toggle="dropdown">English <i
-                                class="fa fa-angle-down"></i></button>
-                        <ul class="dropdown-menu dropdown-menu-right animate slideIndropdown">
-                            <li><a class="dropdown-item" href="#">English</a></li>
-                            <li><a class="dropdown-item" href="#">Japanese</a></li>
-                            <li><a class="dropdown-item" href="#">Arabic</a></li>
-                            <li><a class="dropdown-item" href="#">Romanian</a></li>
-                        </ul>
-                    </div>
-                    <div class="header-top-curr dropdown">
-                        <button class="dropdown-toggle" data-bs-toggle="dropdown">USD <i
-                                class="fa fa-angle-down"></i></button>
-                        <ul class="dropdown-menu dropdown-menu-right animate slideIndropdown">
-                            <li><a class="dropdown-item" href="#">USD</a></li>
-                            <li><a class="dropdown-item" href="#">Pound</a></li>
-                        </ul>
-                    </div>
+{{--                    <div class="header-top-lan dropdown">--}}
+{{--                        <button class="dropdown-toggle" data-bs-toggle="dropdown">English <i--}}
+{{--                                class="fa fa-angle-down"></i></button>--}}
+{{--                        <ul class="dropdown-menu dropdown-menu-right animate slideIndropdown">--}}
+{{--                            <li><a class="dropdown-item" href="#">English</a></li>--}}
+{{--                            <li><a class="dropdown-item" href="#">Japanese</a></li>--}}
+{{--                            <li><a class="dropdown-item" href="#">Arabic</a></li>--}}
+{{--                            <li><a class="dropdown-item" href="#">Romanian</a></li>--}}
+{{--                        </ul>--}}
+{{--                    </div>--}}
+{{--                    <div class="header-top-curr dropdown">--}}
+{{--                        <button class="dropdown-toggle" data-bs-toggle="dropdown">USD <i--}}
+{{--                                class="fa fa-angle-down"></i></button>--}}
+{{--                        <ul class="dropdown-menu dropdown-menu-right animate slideIndropdown">--}}
+{{--                            <li><a class="dropdown-item" href="#">USD</a></li>--}}
+{{--                            <li><a class="dropdown-item" href="#">Pound</a></li>--}}
+{{--                        </ul>--}}
+{{--                    </div>--}}
                     <div class="header-top-links">
-                        <span>Call Us</span><a href="#"> 01234567</a>
+                        <span>Call Us</span><a href="#"> 08</a>
                     </div>
                 </div>
             </div>

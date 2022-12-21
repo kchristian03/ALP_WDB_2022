@@ -5,6 +5,7 @@ namespace App\Policies;
 use App\Models\Cart_detail;
 use App\Models\User;
 use Illuminate\Auth\Access\HandlesAuthorization;
+use Illuminate\Support\Facades\Auth;
 
 class CartDetailPolicy
 {
@@ -18,7 +19,7 @@ class CartDetailPolicy
      */
     public function viewAny(User $user)
     {
-        //
+        return Auth::user()->status == 'admin';
     }
 
     /**
@@ -30,7 +31,7 @@ class CartDetailPolicy
      */
     public function view(User $user, Cart_detail $cartDetail)
     {
-        //
+        return Auth::user()->status == 'admin';
     }
 
     /**
@@ -41,7 +42,7 @@ class CartDetailPolicy
      */
     public function create(User $user)
     {
-        //
+        return Auth::user()->status == 'admin';
     }
 
     /**
@@ -53,7 +54,7 @@ class CartDetailPolicy
      */
     public function update(User $user, Cart_detail $cartDetail)
     {
-        //
+        return Auth::user()->status == 'admin';
     }
 
     /**
@@ -65,7 +66,7 @@ class CartDetailPolicy
      */
     public function delete(User $user, Cart_detail $cartDetail)
     {
-        //
+        return Auth::user()->status == 'admin';
     }
 
     /**
@@ -77,7 +78,7 @@ class CartDetailPolicy
      */
     public function restore(User $user, Cart_detail $cartDetail)
     {
-        //
+        return Auth::user()->status == 'admin';
     }
 
     /**
@@ -89,6 +90,6 @@ class CartDetailPolicy
      */
     public function forceDelete(User $user, Cart_detail $cartDetail)
     {
-        //
+        return Auth::user()->status == 'admin';
     }
 }

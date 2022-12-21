@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
- 
+
 <head>
     <meta charset="utf-8">
     <meta name="viewport"
@@ -14,7 +14,7 @@
     <!-- CSS -->
     @include("users.css.users-css")
     <!-- CSS -->
-    
+
     <!-- Scripts -->
     {{--@vite(['resources/css/app.css', 'resources/js/app.js'])--}}
 </head>
@@ -23,7 +23,7 @@
 <div class="min-h-screen">
     <div class="header section">
         <!-- Header Top Start -->
-        @include("users.header.header-top")
+{{--        @include("users.header.header-top")--}}
         <!-- Header Top End -->
 
         <!-- Header Bottom Start -->

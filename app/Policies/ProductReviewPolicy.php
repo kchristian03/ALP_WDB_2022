@@ -5,6 +5,7 @@ namespace App\Policies;
 use App\Models\Product_Review;
 use App\Models\User;
 use Illuminate\Auth\Access\HandlesAuthorization;
+use Illuminate\Support\Facades\Auth;
 
 class ProductReviewPolicy
 {
@@ -18,7 +19,7 @@ class ProductReviewPolicy
      */
     public function viewAny(User $user)
     {
-        return true;
+        return Auth::user()->status == 'admin';
 
     }
 
@@ -31,7 +32,7 @@ class ProductReviewPolicy
      */
     public function view(User $user, Product_Review $productReview)
     {
-        return true;
+        return Auth::user()->status == 'admin';
 
     }
 
@@ -43,7 +44,7 @@ class ProductReviewPolicy
      */
     public function create(User $user)
     {
-        return true;
+        return Auth::user()->status == 'admin';
 
     }
 
@@ -56,7 +57,7 @@ class ProductReviewPolicy
      */
     public function update(User $user, Product_Review $productReview)
     {
-        return true;
+        return Auth::user()->status == 'admin';
 
     }
 
@@ -69,7 +70,7 @@ class ProductReviewPolicy
      */
     public function delete(User $user, Product_Review $productReview)
     {
-        return true;
+        return Auth::user()->status == 'admin';
 
     }
 
@@ -82,7 +83,7 @@ class ProductReviewPolicy
      */
     public function restore(User $user, Product_Review $productReview)
     {
-        return true;
+        return Auth::user()->status == 'admin';
 
     }
 
@@ -95,7 +96,7 @@ class ProductReviewPolicy
      */
     public function forceDelete(User $user, Product_Review $productReview)
     {
-        return true;
+        return Auth::user()->status == 'admin';
 
     }
 }

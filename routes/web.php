@@ -61,7 +61,7 @@ Route::resource('transactions', TransactionController::class)->middleware('user'
 Route::get('/products', [ProductController::class, 'index']);
 
 Route::get('/laravel', function () {
-    return view('index');
+    return view('welcome');
 });
 
 Route::get('/adress',function(){

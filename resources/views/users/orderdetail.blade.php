@@ -128,14 +128,14 @@
                                 <div class="col-md-12">
                                     <div class="checkout-form-list">
                                         <label>Full Address <span class="required"></span></label>
-                                        <input placeholder="Street address" type="text" disabled>
+                                        <input  value="{{$order->full_street_adress}}" type="text" disabled>
                                     </div>
                                 </div>
                                 <!-- Company Name Input Start -->
                                 <div class="col-md-12">
                                     <div class="checkout-form-list">
                                         <label>Description</label>
-                                        <input name="adressdescription" id="adressdescription" placeholder="" type="text" disabled>
+                                        <input name="adressdescription" id="adressdescription" value="{{$order->description}}" type="text" disabled>
                                     </div>
                                 </div>
                                 <!-- Company Name Input End -->
@@ -156,7 +156,7 @@
                                 <div class="col-md-12">
                                     <div class="checkout-form-list">
                                         <label>Town / City <span class="required"></span></label>
-                                        <input type="text" disabled>
+                                        <input type="text" value="{{$order->city}}" disabled>
                                     </div>
                                 </div>
                                 <!-- Town or City Name Input End -->
@@ -165,7 +165,7 @@
                                 <div class="col-md-6">
                                     <div class="checkout-form-list">
                                         <label>Provinsi <span class="required"></span></label>
-                                        <input placeholder="" type="text" disabled>
+                                        <input value="{{$order->state}}" type="text" disabled>
                                     </div>
                                 </div>
                                 <!-- State or Country Input End -->
@@ -174,7 +174,7 @@
                                 <div class="col-md-6">
                                     <div class="checkout-form-list">
                                         <label>Postcode / Zip <span class="required"></span></label>
-                                        <input placeholder="" type="text" disabled>
+                                        <input value="{{$order->postal_code}}"type="text" disabled>
                                     </div>
                                 </div>
                              

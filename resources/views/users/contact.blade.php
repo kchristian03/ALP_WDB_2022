@@ -101,8 +101,8 @@
 
                             <!-- Single Contact Title Content Start -->
                             <div class="single-contact-title-content">
-                                <h4 class="title">Postal Address</h4>
-                                <p class="desc-content">PO Box 123456, Street/Road <br>Country-State</p>
+                                <h4 class="title">Office Address</h4>
+                                <p class="desc-content">Pondok Mutiara L4, Sidoarjo <br>Jawa Timur</p>
                             </div>
                             <!-- Single Contact Title Content End -->
 
@@ -121,7 +121,7 @@
                             <!-- Single Contact Title Content Start -->
                             <div class="single-contact-title-content">
                                 <h4 class="title">Contact Us Anytime</h4>
-                                <p class="desc-content">Mobile: 012 345 678 <br>Fax: 123 456 789</p>
+                                <p class="desc-content">Mobile: 0812 35652209 <br>Fax: 031 8941704</p>
                             </div>
                             <!-- Single Contact Title Content End -->
 
@@ -140,7 +140,7 @@
                             <!-- Single Contact Title Content Start -->
                             <div class="single-contact-title-content">
                                 <h4 class="title">Support Overall</h4>
-                                <p class="desc-content"><a href="#">Support24/7@example.com</a> <br><a href="#">info@example.com</a> </p>
+                                <p class="desc-content"><a href="#">Customer Service Email</a> <br><a href="#">funcydaisy@gmail.com</a> </p>
                             </div>
                             <!-- Single Contact Title Content End -->
 

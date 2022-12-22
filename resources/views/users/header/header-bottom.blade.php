@@ -18,7 +18,7 @@
                             <li><a href="/"> <span>Home</span></a></li>
                             <li><a href="/products"> <span>Produk</span></a></li>
                             <li><a href="/categories"> <span>Kategori</span></a></li>
-                            <li><a href="/about"> <span>Tentang Kami</span></a></li>
+                            {{-- <li><a href="/about"> <span>Tentang Kami</span></a></li> --}}
                             <li><a href="/contact"> <span>Kontak</span></a></li>
                         </ul>
                     </div>

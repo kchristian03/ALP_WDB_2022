@@ -31,7 +31,7 @@
             <div class="row mb-n6">
                 <div class="col-lg-6 align-self-center mb-6" data-aos="fade-right" data-aos-delay="600">
                     <div class="about_content">
-                        <h2 class="title">About Our Destry Store</h2>
+                        <h2 class="title">Funcy Daisy</h2>
                         <h3 class="sub-title">We believe that every project existing in digital world is a result of an idea and every idea has a cause.</h3>
                         <p>For this reason, our each design serves an idea. Our strength in design is reflected by our name, our care for details. Our specialist won't be afraid to go extra miles just to approach near perfection. We don't require everything to be perfect, but we need them to be perfectly cared for. That's a reason why we are willing to give contributions at best. Not a single detail is missed out under Billey's professional eyes.The amount of dedication and effort equals to the level of passion and by.</p>
                     </div>

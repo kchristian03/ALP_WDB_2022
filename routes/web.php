@@ -49,7 +49,7 @@ require __DIR__.'/auth.php';
 //     return view('users.shop-left-sidebar');
 // });
 
-Route::group(['middleware' => ['user']], function() {
+Route::group(['middleware' => ['auth']], function() {
     Route::resource('adress', AdressController::class);
   });
 Route::resource('cartdetail', CartDetailController::class)->middleware('auth');

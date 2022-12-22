@@ -23,11 +23,11 @@
                             <div class="row">
                                 <div class="hero-slide-content col-lg-8 col-xl-6 col-12 text-lg-center text-left">
                                     <h2 class="title">
-                                        Fashion New <br/>
-                                        Collection
+                                        Funcy Daisy <br/>
+                                     
                                     </h2>
-                                    <p>Up to 70% off selected Product</p>
-                                    <a href="/shop-grid" class="btn btn-lg btn-primary btn-hover-dark">Shop Now</a>
+                                    <p>Bloom With Cuteness</p>
+                                    <a href="/products" class="btn btn-lg btn-primary btn-hover-dark">Shop Now</a>
                                 </div>
                             </div>
 
@@ -54,7 +54,7 @@
                                         Trend Fashion <br/>
                                         Collection
                                     </h2>
-                                    <p>Up to 30% off selected Product</p>
+                                    <p>Best price for quality</p>
                                     <a href="shop-grid.html" class="btn btn-lg btn-primary btn-hover-dark">Shop Now</a>
                                 </div>
                             </div>

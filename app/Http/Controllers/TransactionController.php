@@ -62,15 +62,15 @@ class TransactionController extends Controller
     public function store(StoreTransactionRequest $request)
     {
         $this->validate($request, [
-            "adressname" => 'required|int',
             "bukti_pembayaran" => 'required|image',
+          
         ]);
         
        $adressid = $request->adressname;
 
         $cart = Cart::where('user_id',Auth::user()->id)->first();
         $cartitems = Cart_detail::where('cart_id',$cart->id)->get();
-        $adress = Adress::where('id',$adressid)->first();
+        $adress = Adress::all()->first();
         $tr = Transaction::create([
             "user_id" => $cart->user_id,
             "adress_id" => $adress->id,
@@ -80,6 +80,14 @@ class TransactionController extends Controller
             "payment_id" => 1,
             "total_price" => $cart->total_price,
             "transaction_status" => "Menunggu Konfirmasi",
+            "adress_name" => $request->adressnamee,
+            "postal_code"  => $request->postal_code,
+            "city"  => $request->city,
+            "state"  => $request->state,
+            "description"  => $request->description,
+            "full_street_adress"  => $request->full_street_adress,
+
+            
         ]);
 
         foreach($cartitems as $ct){
@@ -97,10 +105,13 @@ class TransactionController extends Controller
             Cart_detail::where('id',$ct->id)->first()->delete();
 
         }
-
         Cart::where('user_id',Auth::user()->id)->first()->clear();
         return redirect('/my-account');
         
+    }
+
+    public function adressing(){
+
     }
 
     /**
@@ -154,22 +165,54 @@ class TransactionController extends Controller
     }
 
     public function seecheckout()
-    {   
-        $cart= Cart::where('user_id',Auth::user()->id)->first();
+    {      $cart= Cart::where('user_id',Auth::user()->id)->first();
         $cartdetail = Cart_detail::where('cart_id',$cart->id)->get();
-        if($cartdetail->count() >0){
         $adress = Adress::where('user_id',Auth::user()->id)->get();
         $products= Product::all();
        $payments = Payment::all();
-     
-         return view('users.checkout', [
-             'cartdetails' => $cartdetail,
-             'cart' => $cart,
-             'products' => $products,
-             'adresses' => $adress,
-             'payments' => $payments,
+        if($cartdetail->count() >0){
+        
+            $haveaddress = false;
+            $id = 0;
+            if(isset($_GET['adressname'])){
+                $haveaddress = true;
+                $id=$_GET['adressname'];
+                $selectedadress=  Adress::where('id',$id)->first();
+    
+                return view('users.checkout', [
+                    'cartdetails' => $cartdetail,
+                    'cart' => $cart,
+                    'products' => $products,
+                    'adresses' => $adress,
+                    'payments' => $payments,
+                    'selectedadress' => $selectedadress,
+                   
+                ]); 
+            }
+         
+      
+   else{
+    
+    $selectedadress=  $adress->first();
+    
+    return view('users.checkout', [
+    'cartdetails' => $cartdetail,
+    'cart' => $cart,
+    'products' => $products,
+    'adresses' => $adress,
+    'payments' => $payments,
+    'selectedadress' => $selectedadress,
+   
+]);}
+         }
 
-         ]);}
+
+
+
+
+
+
+
 
          else{
             return redirect('/products');

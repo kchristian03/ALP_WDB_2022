@@ -57,20 +57,20 @@
                 <div class="col-lg-6 col-12 mb-4">
 
                     <!-- Checkbox Form Start -->
-                    <form action="{{ route('transactions.store') }}" method="POST" enctype="multipart/form-data">
-                        @csrf
+                    
                         <div class="checkbox-form">
                             <!-- Checkbox Form Title Start -->
                             <h3 class="title">Adress</h3>
                             <!-- Checkbox Form Title End -->
 
                             <div class="row">
-
+                                <form action="/checkout" method="GET" enctype="multipart/form-data">
+                                    
                                 <!-- Select Country Name Start -->
                                 <div class="col-md-12 mb-6">
                                     <div class="country-select">
                                         <label>Adresses <span class="required"></span></label>
-                                        <select name="adressname" id="adressname" class="myniceselect nice-select wide rounded-0">
+                                        <select onchange="this.form.submit()" name="adressname" id="adressname" class="myniceselect nice-select wide rounded-0">
                                             @foreach ($adresses as $ad)
                                                  <option value="{{$ad->id}}">{{$ad->adress_name}}</option>  
                                             @endforeach
@@ -80,36 +80,29 @@
                                     <br>    
                                     <a style="color:red" href="my-account">  See my Adress</a>
                                 </div>
+                                </form>
                                 <!-- Select Country Name End -->
-
+                                <form action="{{ route('transactions.store') }}" method="POST" enctype="multipart/form-data">
+                                    @csrf
+                                    <input placeholder="{{$selectedadress->adress_name}}" value="{{$selectedadress->adress_name}}" type="hidden"  name="adressnamee">
                                 <!-- First Name Input Start -->
-                                <div class="col-md-6">
-                                    <div class="checkout-form-list">
-                                        <label>First Name <span class="required"></span></label>
-                                        <input placeholder="" type="text" disabled>
-                                    </div>
-                                </div>
+                            
                                 <!-- First Name Input End -->
 
                                 <!-- Last Name Input Start -->
-                                <div class="col-md-6">
-                                    <div class="checkout-form-list">
-                                        <label>Last Name <span class="required"></span></label>
-                                        <input placeholder="" type="text" disabled>
-                                    </div>
-                                </div>
+                            
                                 <!-- Last Name Input End -->
                                 <div class="col-md-12">
                                     <div class="checkout-form-list">
                                         <label>Full Address <span class="required"></span></label>
-                                        <input placeholder="Street address" type="text" disabled>
+                                        <input placeholder="{{$selectedadress->full_street_adress}}" value="{{$selectedadress->full_street_adress}}" type="text"  name="full_street_adress">
                                     </div>
                                 </div>
                                 <!-- Company Name Input Start -->
                                 <div class="col-md-12">
                                     <div class="checkout-form-list">
                                         <label>Description</label>
-                                        <input name="adressdescription" id="adressdescription" placeholder="" type="text" disabled>
+                                        <input name="description" id="adressdescription" placeholder="{{$selectedadress->description}}" value="{{$selectedadress->description}}" type="text">
                                     </div>
                                 </div>
                                 <!-- Company Name Input End -->
@@ -130,7 +123,7 @@
                                 <div class="col-md-12">
                                     <div class="checkout-form-list">
                                         <label>Town / City <span class="required"></span></label>
-                                        <input type="text" disabled>
+                                        <input type="text" name="city" value="{{$selectedadress->city}}" placeholder="{{$selectedadress->city}}">
                                     </div>
                                 </div>
                                 <!-- Town or City Name Input End -->
@@ -139,7 +132,7 @@
                                 <div class="col-md-6">
                                     <div class="checkout-form-list">
                                         <label>Province <span class="required"></span></label>
-                                        <input placeholder="" type="text" disabled>
+                                        <input placeholder="{{$selectedadress->state}}" value="{{$selectedadress->state}}" type="text"  name="state">
                                     </div>
                                 </div>
                                 <!-- State or Country Input End -->
@@ -148,7 +141,7 @@
                                 <div class="col-md-6">
                                     <div class="checkout-form-list">
                                         <label>Postcode / Zip <span class="required"></span></label>
-                                        <input placeholder="" type="text" disabled>
+                                        <input placeholder="{{$selectedadress->postal_code}}" value="{{$selectedadress->postal_code}}" type="text"  name="postal_code">
                                     </div>
                                 </div>
                                 <div class="col-md-12">
@@ -293,10 +286,6 @@
     </div>
     <!-- Checkout Section End -->
     <script>
-// $('#adressname').on('change', function(){
-//     const selectedPackage = $('#adressname').val();
-//     $('#adressdescription').text(adressname);
-//   });
 
     </script>
 @endsection

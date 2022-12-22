@@ -21,7 +21,7 @@ class ProductController extends Controller
     {
         return view('users.products' , [
             'pagetitle' => 'Products',
-            'maintitle' => 'Products Page',
+            'maintitle' => 'Semua Produk',
             'products' => Product::all(),
             'category' => Category::all(),
            
@@ -58,13 +58,13 @@ class ProductController extends Controller
         ]);
     }
 
-    public function categorized(Product $product)
+    public function categorized(Category $category)
     {
-        return view('users.single-product', [
-            "pagetitle" => "Product Details",
-            "maintitle" => "Product Details",
-            "product" => $product,
-            'products' => Product::all(),
+        return view('users.categorizedproducts', [
+            "pagetitle" => "Products",
+            "maintitle" => $category->category_name,
+            'products' => Product::where('category_id',$category->id)->get(),
+            'categories' => Category::all()
          
             
         ]);

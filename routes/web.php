@@ -71,6 +71,8 @@ Route::get('/adress',function(){
 
 Route::get('/single-product/{product}', [ProductController::class, 'show']);
 
+Route::get('/categorizedproducts/{category}', [ProductController::class, 'categorized']);
+
 Route::get('/orderdetail/{transaction}', [TransactionController::class, 'showorderdetail']);
 
 Route::get('/single-product/{category}', [ProductController::class, 'categorized']);

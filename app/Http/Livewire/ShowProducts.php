@@ -11,15 +11,15 @@ use Livewire\WithPagination;
 class ShowProducts extends Component
 {
     public $search='';
+    public $category=null;
     use WithPagination; 
     protected $paginationTheme='bootstrap';
 
-    // public function categorize($category)
-    // {
-    //     $category= Category::where('category_id',$category)->first() ;
-    //    $categoried=  Product::where('product_name','like','%'.$this->search.'%')->paginate(6);
-    // }
-
+    public function categorize($ctid)
+    {
+        $category= Category::where('id',$ctid)->first() ;
+       
+    }
 
     public function render()
     {

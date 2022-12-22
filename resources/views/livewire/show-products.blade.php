@@ -25,7 +25,7 @@
                                 <p class="image">
                                     <img class="first-image" src="{{url("storage/" . $pr->product_image)}}" alt="Product" />
                                     <img class="second-image" src="{{url("storage/" . $pr->product_image)}}" alt="Product" />
-                                </p>
+                                </a>
                                 <div class="actions">
                                     {{-- <a href="wishlist.html" title="Wishlist" class="action wishlist"><i class="pe-7s-like"></i></a> --}}
                                 </div>
@@ -77,7 +77,7 @@
                             <nav>
                                 <ul class="category-menu mb-n3">
                                     @foreach($categories as $ct)
-                                    <li class="pb-4"><a wire:click="categorize({{$ct['id']}})" href="#">({{$ct['category_name']}})</a></li>
+                                    <li class="pb-4"><a href="/categories">({{$ct['category_name']}})</a></li>
                                     @endforeach
                                 </ul>
                             </nav>

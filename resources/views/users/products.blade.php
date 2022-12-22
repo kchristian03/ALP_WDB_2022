@@ -15,7 +15,7 @@
                         <li>
                             <a href="index.html">Home </a>
                         </li>
-                        <li class="active"> Shop</li>
+                        <li class="active"> Produk</li>
                     </ul>
                 </div>
             </div>

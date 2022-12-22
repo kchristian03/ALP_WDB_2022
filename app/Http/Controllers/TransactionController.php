@@ -33,14 +33,14 @@ class TransactionController extends Controller
             "order" => $transaction,
             'products' => Product::all(),
             'orderdetails' => $transaction->transactiondetails
-         
-            
+
+
         ]);
     }
 
     public function selesai(StoreTransactionRequest $request)
     {
-       
+
     }
 
     /**
@@ -63,9 +63,9 @@ class TransactionController extends Controller
     {
         $this->validate($request, [
             "bukti_pembayaran" => 'required|image',
-          
+
         ]);
-        
+
        $adressid = $request->adressname;
 
         $cart = Cart::where('user_id',Auth::user()->id)->first();
@@ -87,7 +87,7 @@ class TransactionController extends Controller
             "description"  => $request->description,
             "full_street_adress"  => $request->full_street_adress,
 
-            
+
         ]);
 
         foreach($cartitems as $ct){
@@ -107,7 +107,7 @@ class TransactionController extends Controller
         }
         Cart::where('user_id',Auth::user()->id)->first()->clear();
         return redirect('/my-account');
-        
+
     }
 
     public function adressing(){
@@ -133,7 +133,7 @@ class TransactionController extends Controller
      */
     public function edit(Transaction $transaction)
     {
-        
+
     }
 
     /**
@@ -145,9 +145,9 @@ class TransactionController extends Controller
      */
     public function update(UpdateTransactionRequest $request, Transaction $transaction)
     {
-        $this->validate($request, [
-            "orderid" => 'required|int'
-        ]);
+//        $this->validate($request, [
+//            "orderid" => 'required|int'
+//        ]);
     Transaction::where('id',$request->orderid)->transaction_status = "Selesai";
         // $transaction->transaction_status = "Selesai";
         return redirect('/my-account');
@@ -171,14 +171,14 @@ class TransactionController extends Controller
         $products= Product::all();
        $payments = Payment::all();
         if($cartdetail->count() >0){
-        
+
             $haveaddress = false;
             $id = 0;
             if(isset($_GET['adressname'])){
                 $haveaddress = true;
                 $id=$_GET['adressname'];
                 $selectedadress=  Adress::where('id',$id)->first();
-    
+
                 return view('users.checkout', [
                     'cartdetails' => $cartdetail,
                     'cart' => $cart,
@@ -186,15 +186,15 @@ class TransactionController extends Controller
                     'adresses' => $adress,
                     'payments' => $payments,
                     'selectedadress' => $selectedadress,
-                   
-                ]); 
+
+                ]);
             }
-         
-      
+
+
    else{
-    
+
     $selectedadress=  $adress->first();
-    
+
     return view('users.checkout', [
     'cartdetails' => $cartdetail,
     'cart' => $cart,
@@ -202,7 +202,7 @@ class TransactionController extends Controller
     'adresses' => $adress,
     'payments' => $payments,
     'selectedadress' => $selectedadress,
-   
+
 ]);}
          }
 

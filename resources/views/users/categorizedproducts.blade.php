@@ -30,22 +30,22 @@
         <div class="container">
             <div class="row flex-row-reverse">
                 <div class="col-lg-9 col-12 col-custom">
-    
-    
+
+
                     <div class="shop_toolbar_wrapper flex-column flex-md-row mb-10">
-    
-    
+
+
                         <div class="shop-top-bar-left mb-md-0 mb-2">
                             <div class="shop-top-show">
                                 <span>Menampilkan Produk {{$maintitle}}</span>
                             </div>
                         </div>
-    
-    
+
+
                     </div>
-    
+
                     <div class="row shop_wrapper grid_3">
-    
+
                         @foreach ($products as $pr)
                         <div class="col-lg-4 col-md-4 col-sm-6 product" >
                             <div class="product-inner">
@@ -74,7 +74,7 @@
                                     </span>
                                     <div class="shop-list-btn">
                                         <a title="Wishlist" href="#" class="btn btn-sm btn-outline-dark btn-hover-primary wishlist"><i class="fa fa-heart"></i></a>
-                                      <a href="single-product/{{ $pr['id'] }}" > <button class="btn btn-sm btn-outline-dark btn-hover-primary" title="Add To Cart">See Details</button></a>
+                                        <a href="single-product/{{ $pr['id'] }}"> <button class="btn btn-sm btn-outline-dark btn-hover-primary" title="">See Details</button></a>
                                         <a title="Compare" href="#" class="btn btn-sm btn-outline-dark btn-hover-primary compare"><i class="fa fa-random"></i></a>
                                     </div>
                                 </div>
@@ -82,7 +82,7 @@
                         </div>
                         @endforeach
                     </div>
-    
+
                 </div>
                 <div class="col-lg-3 col-12 col-custom">
                     <!-- Sidebar Widget Start -->
@@ -109,7 +109,7 @@
                                 </nav>
                                 <!-- Widget Menu End -->
                             </div>
-    
+
                                 </div>
                             </div>
                         </div>
@@ -117,16 +117,16 @@
                     <!-- Sidebar Widget End -->
                 </div>
             </div>
-    
+
         </div>
-    
+
     </div>
-    
+
     <!-- Shop Section End -->
 
 
 
 
 
-    
+
 @endsection

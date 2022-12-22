@@ -167,9 +167,9 @@
 
                         <!-- Product Delivery Policy Start -->
                         <ul class="product-delivery-policy border-top pt-4 mt-4 border-bottom pb-4">
-                            <li> <i class="fa fa-check-square"></i> <span>Security Policy: </span></li>
-                            <li><i class="fa fa-truck"></i><span>Delivery Policy: </span></li>
-                            <li><i class="fa fa-refresh"></i><span>Return Policy</span></li>
+                            <li> <i class="fa fa-check-square"></i> <span>Security Policy: Setiap data pembeli tidak akan dibagi oleh penjual</span></li>
+                            <li><i class="fa fa-truck"></i><span>Delivery Policy: Pengiriman akan dolakukan sesuai dengan kurir yang tersedia sesuai dengan ketentuan penjual </span></li>
+                            <li><i class="fa fa-refresh"></i><span>Return Policy: Pengembalian barang dilakukan dengan ketentuan maksimal 3 hari setelah penerimaan barang</span></li>
                         </ul>
                         <!-- Product Delivery Policy End -->
 
@@ -306,18 +306,23 @@
                             <!-- Shipping Policy Start -->
                             <div class="shipping-policy mb-n2">
                                 <h4 class="title-3 mb-4">Shipping policy for our store</h4>
-                                <p class="desc-content mb-2">Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in hendrerit in vulputate</p>
+                                {{-- <p class="desc-content mb-2">Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in hendrerit in vulputate</p> --}}
                                 <ul class="policy-list mb-2">
-                                    <li>1-2 business days (Typically by end of day)</li>
-                                    <li><a href="#">30 days money back guaranty</a></li>
-                                    <li>24/7 live support</li>
-                                    <li>odio dignissim qui blandit praesent</li>
-                                    <li>luptatum zzril delenit augue duis dolore</li>
+                                    <li>Pengembalian dapat diterima maksimal 3 hari setelah barang diterima.</li>
+                                    <li>WAJIB upload bukti video unboxing paket agar dapat melakukan pengembalian.</li>
+                                    <li>Pengembalian berupa produk yang salah, cacat pada produk, warna I ukuran
+                                        produk yang salah.</li>
+                                    <li>Produk yang dikembalikan harus dalam keadaan utuh dimana label masih terpasang,
+                                        belum terpakai, dan belum dicuci.</li>
+                                    <li>Mohon untuk tidak menyelesaikan pesanan atau memberi nilai terlebih dahulu
+                                        sebelum proses pengembalian selesai.</li>
                                     <li>te feugait nulla facilisi.</li>
                                 </ul>
-                                <p class="desc-content mb-2">Nam liber tempor cum soluta nobis eleifend option congue nihil imperdiet doming id quod mazim placerat facer possim assum. Typi non habent claritatem insitam; est usus legentis in iis qui facit eorum</p>
-                                <p class="desc-content mb-2">claritatem. Investigationes demonstraverunt lectores legere me lius quod ii legunt saepius. Claritas est etiam processus dynamicus, qui sequitur mutationem consuetudium lectorum. Mirum est notare quam littera gothica, quam nunc putamus parum claram, anteposuerit litterarum formas humanitatis per</p>
-                                <p class="desc-content mb-2">seacula quarta decima et quinta decima. Eodem modo typi, qui nunc nobis videntur parum clari, fiant sollemnes in futurum.</p>
+                                <p class="desc-content mb-2">
+                                    
+                                    
+                                   
+                                    </p>
                             </div>
                             <!-- Shipping Policy End -->
                         </div>
@@ -388,71 +393,41 @@
                     <!-- Section Title End -->
                 </div>
 
-                <div class="col">
-                    <div class="product-carousel">
-
-                        <div class="swiper-container">
-                            <div class="swiper-wrapper">
-
-                                <!-- Product Start -->
-                                <div class="swiper-slide product-wrapper">
-
-                                    <!-- Single Product Start -->
-                                    <div class="product product-border-left" data-aos="fade-up" data-aos-delay="300">
-                                        <div class="thumb">
-                                            <a href="single-product.html" class="image">
-                                                <img class="first-image" src="../storage/productphoto/Jiwon Top.jpg" alt="Product" />
-                                                <img class="second-image" src="../storage/productphoto/Jiwon Top.jpg" alt="Product" />
-                                            </a>
-                                            <div class="actions">
-                                                <a href="#" class="action wishlist"><i class="pe-7s-like"></i></a>
-                                                <a href="#" class="action quickview" data-bs-toggle="modal" data-bs-target="#exampleModalCenter"><i class="pe-7s-search"></i></a>
-                                                <a href="#" class="action compare"><i class="pe-7s-shuffle"></i></a>
-                                            </div>
-                                        </div>
-                                        <div class="content">
-                                            <h4 class="sub-title"><a href="single-product.html">Studio Design</a></h4>
-                                            <h5 class="title"><a href="single-product.html">Brother Hoddies in Grey</a></h5>
-                                            <span class="ratings">
-                                                    <span class="rating-wrap">
-                                                        <span class="star" style="width: 100%"></span>
-                                            </span>
-                                            <span class="rating-num">(4)</span>
-                                            </span>
-                                            <span class="price">
-                                                    <span class="new">$38.50</span>
-                                            <span class="old">$42.85</span>
-                                            </span>
-                                            <form action="{{route('cartdetail.store') }}" method="POST" enctype="multipart/form-data">
-                                                @csrf <input type="hidden" name="product_id" value={{$product->id}}>
-                                            <button class="btn btn-sm btn-outline-dark btn-hover-primary" type="submit">Add To Cart</button>
-                                            </form>
-                                        </div>
-                                    </div>
-                                    <!-- Single Product End -->
-
+                @foreach ($products as $pr)
+                    <div class="col-lg-4 col-md-4 col-sm-6 product" >
+                        <div class="product-inner">
+                            <div class="thumb">
+                                <p class="image">
+                                    <img class="first-image" src="{{url("storage/" . $pr->product_image)}}" alt="Product" />
+                                    <img class="second-image" src="{{url("storage/" . $pr->product_image)}}" alt="Product" />
+                                </a>
+                                <div class="actions">
+                                    {{-- <a href="wishlist.html" title="Wishlist" class="action wishlist"><i class="pe-7s-like"></i></a> --}}
                                 </div>
-                                <!-- Product End -->
-
-                             
-
-                                </div>
-                                <!-- Product End -->
-
                             </div>
-
-                            <!-- Swiper Pagination Start -->
-                            <div class="swiper-pagination d-md-none"></div>
-                            <!-- Swiper Pagination End -->
-
-                            <!-- Next Previous Button Start -->
-                            <div class="swiper-product-button-next swiper-button-next swiper-button-white d-md-flex d-none"><i class="pe-7s-angle-right"></i></div>
-                            <div class="swiper-product-button-prev swiper-button-prev swiper-button-white d-md-flex d-none"><i class="pe-7s-angle-left"></i></div>
-                            <!-- Next Previous Button End -->
-
+                            <div class="content">
+                                <h4 class="sub-title"><a href="single-product">{{"Avaliable: ".$pr['product_stock']}}</a></h4>
+                                <h5 class="title"><a href="../single-product/{{ $pr['id'] }}">{{$pr['product_name']}}</a></h5>
+                                {{-- <span class="ratings">
+                                        <span class="rating-wrap">
+                                            <span class="star" style="width: 100%"></span>
+                                </span> --}}
+                                {{-- <span class="rating-num">(4)</span> --}}
+{{--                                </span>--}}
+                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce posuere metus vitae arcu imperdiet, id aliquet ante scelerisque. Sed sit amet sem vitae urna fringilla tempus.</p>
+                                <span class="price">
+                                        <span class="new">{{'Rp. ' . $pr['product_price']}}</span>
+                                {{-- <span class="old">$42.85</span> --}}
+                                </span>
+                                <div class="shop-list-btn">
+                                    {{-- <a title="Wishlist" href="#" class="btn btn-sm btn-outline-dark btn-hover-primary wishlist"><i class="fa fa-heart"></i></a> --}}
+                                  <a href="single-product/{{ $pr['id'] }}" > <button class="btn btn-sm btn-outline-dark btn-hover-primary" title="Add To Cart">See Details</button></a>
+                                    {{-- <a title="Compare" href="#" class="btn btn-sm btn-outline-dark btn-hover-primary compare"><i class="fa fa-random"></i></a> --}}
+                                </div>
+                            </div>
                         </div>
-
                     </div>
+                    @endforeach
                 </div>
 
             </div>
@@ -463,190 +438,4 @@
     </div>
     <!-- Single Product Section End -->
 
-
-
-
-
-    <!-- Modal Start  -->
-    <div class="modalquickview modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
-        <div class="modal-dialog modal-dialog-centered" role="document">
-            <div class="modal-content">
-                <button class="btn close" data-bs-dismiss="modal">×</button>
-                <div class="row">
-                    <div class="col-md-6 col-12">
-
-                        <!-- Product Details Image Start -->
-                        <div class="modal-product-carousel">
-
-                            <!-- Single Product Image Start -->
-                            <div class="swiper-container">
-                                <div class="swiper-wrapper">
-                                    <a class="swiper-slide" href="#">
-                                        <img class="w-100" src="assets/images/products/large-size/1.jpg" alt="Product">
-                                    </a>
-                                    <a class="swiper-slide" href="#">
-                                        <img class="w-100" src="assets/images/products/large-size/2.jpg" alt="Product">
-                                    </a>
-                                    <a class="swiper-slide" href="#">
-                                        <img class="w-100" src="assets/images/products/large-size/3.jpg" alt="Product">
-                                    </a>
-                                    <a class="swiper-slide" href="#">
-                                        <img class="w-100" src="assets/images/products/large-size/4.jpg" alt="Product">
-                                    </a>
-                                    <a class="swiper-slide" href="#">
-                                        <img class="w-100" src="assets/images/products/large-size/5.jpg" alt="Product">
-                                    </a>
-                                    <a class="swiper-slide" href="#">
-                                        <img class="w-100" src="assets/images/products/large-size/6.jpg" alt="Product">
-                                    </a>
-                                </div>
-
-                                <!-- Swiper Pagination Start -->
-                                <!-- <div class="swiper-pagination d-md-none"></div> -->
-                                <!-- Swiper Pagination End -->
-
-                                <!-- Next Previous Button Start -->
-                                <div class="swiper-product-button-next swiper-button-next"><i class="pe-7s-angle-right"></i></div>
-                                <div class="swiper-product-button-prev swiper-button-prev"><i class="pe-7s-angle-left"></i></div>
-                                <!-- Next Previous Button End -->
-                            </div>
-                            <!-- Single Product Image End -->
-
-                        </div>
-                        <!-- Product Details Image End -->
-
-                    </div>
-                    <div class="col-md-6 col-12 overflow-hidden position-relative">
-
-                        <!-- Product Summery Start -->
-                        <div class="product-summery">
-
-                            <!-- Product Head Start -->
-                            <div class="product-head mb-3">
-                                <h2 class="product-title">Sample product</h2>
-                            </div>
-                            <!-- Product Head End -->
-
-                            <!-- Price Box Start -->
-                            <div class="price-box mb-2">
-                                <span class="regular-price">$80.00</span>
-                                <span class="old-price"><del>$90.00</del></span>
-                            </div>
-                            <!-- Price Box End -->
-
-                            <!-- Rating Start -->
-                            <span class="ratings justify-content-start">
-                        <span class="rating-wrap">
-                            <span class="star" style="width: 100%"></span>
-                            </span>
-                            <span class="rating-num">(4)</span>
-                            </span>
-                            <!-- Rating End -->
-
-                            <!-- SKU Start -->
-                            <div class="sku mb-3">
-                                <span>SKU: 12345</span>
-                            </div>
-                            <!-- SKU End -->
-
-                            <!-- Description Start -->
-                            <p class="desc-content mb-5">I must explain to you how all this mistaken idea of denouncing pleasure and praising pain was born and I will give you a complete account of the system, and expound the actual teachings of the great explorer of the truth, the master-builder of human happiness.</p>
-                            <!-- Description End -->
-
-                            <!-- Product Meta Start -->
-                            <div class="product-meta mb-3">
-                                <!-- Product Size Start -->
-                                <div class="product-size">
-                                    <span>Size :</span>
-                                    <a href=""><strong>S</strong></a>
-                                    <a href=""><strong>M</strong></a>
-                                    <a href=""><strong>L</strong></a>
-                                    <a href=""><strong>XL</strong></a>
-                                </div>
-                                <!-- Product Size End -->
-                            </div>
-                            <!-- Product Meta End -->
-
-                            <!-- Product Color Variation Start -->
-                            <div class="product-color-variation mb-3">
-                                <button type="button" class="btn bg-danger"></button>
-                                <button type="button" class="btn bg-primary"></button>
-                                <button type="button" class="btn bg-dark"></button>
-                                <button type="button" class="btn bg-success"></button>
-                            </div>
-                            <!-- Product Color Variation End -->
-
-                            <!-- Product Meta Start -->
-                            <div class="product-meta mb-5">
-                                <!-- Product Metarial Start -->
-                                <div class="product-metarial">
-                                    <span>Metarial :</span>
-                                    <a href=""><strong>Metal</strong></a>
-                                    <a href=""><strong>Resin</strong></a>
-                                    <a href=""><strong>Lather</strong></a>
-                                    <a href=""><strong>Polymer</strong></a>
-                                </div>
-                                <!-- Product Metarial End -->
-                            </div>
-                            <!-- Product Meta End -->
-
-                            <!-- Quantity Start -->
-                            <div class="quantity mb-5">
-                                <div class="cart-plus-minus">
-                                    <input class="cart-plus-minus-box" value="0" type="text">
-                                    <div class="dec qtybutton"></div>
-                                    <div class="inc qtybutton"></div>
-                                </div>
-                            </div>
-                            <!-- Quantity End -->
-
-                            <!-- Cart & Wishlist Button Start -->
-                            <div class="cart-wishlist-btn pb-4 mb-n3">
-                                <div class="add-to_cart mb-3">
-                                    <a class="btn btn-outline-dark btn-hover-primary" href="cart.html">Add to cart</a>
-                                </div>
-                                <div class="add-to-wishlist mb-3">
-                                    <a class="btn btn-outline-dark btn-hover-primary" href="wishlist.html">Add to Wishlist</a>
-                                </div>
-                            </div>
-                            <!-- Cart & Wishlist Button End -->
-
-                            <!-- Social Shear Start -->
-                            <div class="social-share">
-                                <span>Share :</span>
-                                <a href="#"><i class="fa fa-facebook-square facebook-color"></i></a>
-                                <a href="#"><i class="fa fa-twitter-square twitter-color"></i></a>
-                                <a href="#"><i class="fa fa-linkedin-square linkedin-color"></i></a>
-                                <a href="#"><i class="fa fa-pinterest-square pinterest-color"></i></a>
-                            </div>
-                            <!-- Social Shear End -->
-
-                            <!-- Product Delivery Policy Start -->
-                            <ul class="product-delivery-policy border-top pt-4 mt-4 border-bottom pb-4">
-                                <li> <i class="fa fa-check-square"></i> <span>Security Policy (Edit With Customer Reassurance Module)</span></li>
-                                <li><i class="fa fa-truck"></i><span>Delivery Policy (Edit With Customer Reassurance Module)</span></li>
-                                <li><i class="fa fa-refresh"></i><span>Return Policy (Edit With Customer Reassurance Module)</span></li>
-                            </ul>
-                            <!-- Product Delivery Policy End -->
-
-                        </div>
-                        <!-- Product Summery End -->
-
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-
-  
-      <script>
-        const slider = document.getElementById('slider');
-        const value = document.getElementById('value');
-      
-        slider.addEventListener('input', function() {
-          value.innerHTML = this.value;
-        });
-      </script>
-      
-    <!-- Modal End  -->
 @endsection

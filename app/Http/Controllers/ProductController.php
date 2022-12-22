@@ -51,7 +51,7 @@ class ProductController extends Controller
             "pagetitle" => "Product Details",
             "maintitle" => "Product Details",
             "product" => $product,
-            'products' => Product::all(),
+            'products' => Product::paginate(3),
             'review' => Product_Review::where('product_id',$product->id)->get()
          
             

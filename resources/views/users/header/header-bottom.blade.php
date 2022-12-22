@@ -49,7 +49,7 @@
                         <!-- Wishlist Header Action Button End -->
 
                         <!-- Shopping Cart Header Action Button Start -->
-                        @if (Auth::check() && Auth::user()->status == 'user')
+                        @if (Auth::check())
                         <a href="/cart" class="header-action-btn">
                             <i class="pe-7s-shopbag"></i>
                             {{-- <span class="header-action-num">3</span> --}}

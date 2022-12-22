@@ -52,13 +52,13 @@ require __DIR__.'/auth.php';
 Route::group(['middleware' => ['user']], function() {
     Route::resource('adress', AdressController::class);
   });
-Route::resource('cartdetail', CartDetailController::class)->middleware('user');
+Route::resource('cartdetail', CartDetailController::class)->middleware('auth');
 
 Route::resource('productreview', ProductReviewController::class)->middleware('auth');
 
-Route::resource('feedbacks', StoreFeedbackController::class)->middleware('user');
+Route::resource('feedbacks', StoreFeedbackController::class)->middleware('auth');
 
-Route::resource('transactions', TransactionController::class)->middleware('user');
+Route::resource('transactions', TransactionController::class)->middleware('auth');
 Route::get('/products', [ProductController::class, 'index']);
 
 Route::get('/laravel', function () {

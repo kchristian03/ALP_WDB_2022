@@ -46,10 +46,10 @@
                                     @endif
                                     <a href="#orders" data-bs-toggle="tab"><i class="fa fa-cart-arrow-down"></i> Orders</a>
                                     @if (Auth::check() && Auth::user()->status == 'admin')
-                                    <a href="#download" data-bs-toggle="tab"><i class="fa fa-cloud-download"></i> Users</a>
+                                    {{-- <a href="#download" data-bs-toggle="tab"><i class="fa fa-cloud-download"></i> Users</a> --}}
                                     @endif
                                     @if (Auth::check() && Auth::user()->status == 'admin')
-                                    <a href="#payment-method" data-bs-toggle="tab"><i class="fa fa-credit-card"></i> Payment Method</a>
+                                    {{-- <a href="#payment-method" data-bs-toggle="tab"><i class="fa fa-credit-card"></i> Payment Method</a> --}}
                                     @else
                                     @endif
                                     <a href="#address-edit" data-bs-toggle="tab"><i class="fa fa-map-marker"></i> address</a>

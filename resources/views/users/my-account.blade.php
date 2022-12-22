@@ -13,7 +13,7 @@
                     <h1 class="title">My Account</h1>
                     <ul>
                         <li>
-                            <a href="index.html">Home </a>
+                            <a href="/">Home </a>
                         </li>
                         <li class="active"> My Account</li>
                     </ul>
@@ -40,6 +40,10 @@
                                 <div class="myaccount-tab-menu nav" role="tablist">
                                     <a href="#dashboard" class="active" data-bs-toggle="tab"><i class="fa fa-dashboard"></i>
                                         Dashboard</a>
+                                    @if(Auth::check() && Auth::user()->status == 'admin')
+                                        <a href="#admin" data-bs-toggle="tab"><i class="fa fa-lock"></i>
+                                            Admin Panel</a>
+                                    @endif
                                     <a href="#orders" data-bs-toggle="tab"><i class="fa fa-cart-arrow-down"></i> Orders</a>
                                     @if (Auth::check() && Auth::user()->status == 'admin')
                                     <a href="#download" data-bs-toggle="tab"><i class="fa fa-cloud-download"></i> Users</a>
@@ -51,7 +55,17 @@
                                     <a href="#address-edit" data-bs-toggle="tab"><i class="fa fa-map-marker"></i> address</a>
                                     {{-- <a href="#feedbacks" data-bs-toggle="tab"><i class="fa fa-chat"></i> Feedbacks</a> --}}
                                     <a href="#account-info" data-bs-toggle="tab"><i class="fa fa-user"></i> Account Details</a>
-                                    <a href="login-register.html"><i class="fa fa-sign-out"></i> Logout</a>
+{{--                                    <a href="login-register.html"><i class="fa fa-sign-out"></i> Logout</a>--}}
+                                    <form method="POST" action="{{ route('logout') }}">
+                                        @csrf
+
+                                        <x-dropdown-link :href="route('logout')"
+                                                         onclick="event.preventDefault();
+                                                this.closest('form').submit();">
+                                            <i class="fa fa-sign-out"></i>
+                                            {{ __('LogOut') }}
+                                        </x-dropdown-link>
+                                    </form>
                                 </div>
                             </div>
                             <!-- My Account Tab Menu End -->
@@ -67,6 +81,16 @@
                                                 <p>Hello, <strong>Alex Aya</strong> (If Not <strong>Aya !</strong><a href="login-register.html" class="logout"> Logout</a>)</p>
                                             </div>
                                             <p class="mb-0">From your account dashboard. you can easily check & view your recent orders, manage your shipping and billing addresses and edit your password and account details.</p>
+                                        </div>
+                                    </div>
+                                    <!-- Single Tab Content End -->
+
+                                    <!-- Single Tab Content Start -->
+                                    <div class="tab-pane fade" id="admin" role="tabpanel">
+                                        <div class="myaccount-content">
+                                            <h3 class="title">Admin Panel</h3>
+                                            <a href="/admin">Go to Admin Panel</a>
+
                                         </div>
                                     </div>
                                     <!-- Single Tab Content End -->
@@ -183,8 +207,8 @@
                                                     </thead>
                                                     <tbody>
                                                         @foreach ($adress as $ad)
-                                                            
-                                                       
+
+
                                                     <tr>
                                                         <td>{{$ad['adress_name']}}</td>
                                                         <td>{{$ad['full_street_adress']}}</td>

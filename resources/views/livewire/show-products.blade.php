@@ -38,7 +38,7 @@
                                             <span class="star" style="width: 100%"></span>
                                 </span> --}}
                                 {{-- <span class="rating-num">(4)</span> --}}
-                                </span>
+{{--                                </span>--}}
                                 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce posuere metus vitae arcu imperdiet, id aliquet ante scelerisque. Sed sit amet sem vitae urna fringilla tempus.</p>
                                 <span class="price">
                                         <span class="new">{{'Rp. ' . $pr['product_price']}}</span>

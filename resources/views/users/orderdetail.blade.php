@@ -24,17 +24,17 @@
 
     </div>
     <!-- Breadcrumb Section End -->
-    
-    <!-- Cart Table End -->
+
+    <!-- Crt Table End -->
     <!-- Checkout Section Start -->
     {{-- <div class="section section-margin"> --}}
         <div class="container">
             <h3 class="title mb-2">Order Details</h3>
             <div class="row mt-3">
                 <div class="col-12">
-                    
+
             <table class="table table-bordered mt-2">
-             
+
                 <!-- Table Head Start -->
                 <thead>
                 <tr>
@@ -47,33 +47,33 @@
                 </tr>
                 </thead>
                 <!-- Table Head End -->
-    
+
                 <!-- Table Body Start -->
                 <tbody>
                     @foreach ($orderdetails as $cds)
                 <tr>
-                  
+
                     <td class="text-center"><img class="img-fluid" style="width:100px" src=  "{{ asset('storage/productphoto/' .$cds->product->product_image) }}" alt="Product" /></td>
                     <td class=""><a href="#">{{$cds->product->product_name}}<br></a></td>
                     <td class=""><span>{{"Rp. ".$cds->product->product_price}}</span></td>
                     <td>
                         <div class="col-md-2 col-4 my-auto">
-        
-                            <div class="input-group">        
+
+                            <div class="input-group">
                                 <span>{{$cds->total_items}}</span>
-                              
+
                             </div>
                             </div>
-                  
-    
-    
+
+
+
                                 {{-- <div class="cart-plus-minus">
-                  
+
                                     <input class="cart-plus-minus-box" name="product_qty" value="1" type="number" min="1">
                                     <div class="dec qtybutton" wire.loading.attr="disabled" wire:click="decrementQuantity({{$cds->id}})"></div>
                                     <div class="inc qtybutton wire.loading.attr="disabled" wire:click="incrementQuantity({{$cds->id}})""></div>
                                 </div> --}}
-                        
+
                     </td>
                     <td class="pro-subtotal"><span>{{"Rp. ".$cds->total_harga}}</span></td>
                     {{-- <td class="pro-remove"><a href="#"><i wire:click="deletecartitem({{$cds->id}})" class="pe-7s-trash"></i></a></td> --}}
@@ -81,7 +81,7 @@
                 @endforeach
                 </tbody>
                 <!-- Table Body End -->
-    
+
             </table>
         {{-- </div> --}}
             </div>
@@ -95,7 +95,7 @@
                     <!-- Coupon Accordion Start -->
                     <div class="coupon-accordion">
 
-                        
+
 
                     </div>
                     <!-- Coupon Accordion End -->
@@ -115,15 +115,15 @@
                             <div class="row">
 
                                 <!-- Select Country Name Start -->
-                            
+
                                 <!-- Select Country Name End -->
 
                                 <!-- First Name Input Start -->
-                             
+
                                 <!-- First Name Input End -->
 
                                 <!-- Last Name Input Start -->
-                             
+
                                 <!-- Last Name Input End -->
                                 <div class="col-md-12">
                                     <div class="checkout-form-list">
@@ -141,7 +141,7 @@
                                 <!-- Company Name Input End -->
 
                                 <!-- Address Input Start -->
-                              
+
                                 <!-- Address Input End -->
 
                                 <!-- Optional Text Input Start -->
@@ -177,24 +177,24 @@
                                         <input value="{{$order->postal_code}}"type="text" disabled>
                                     </div>
                                 </div>
-                             
-                             
+
+
                                 <!-- Postcode or Zip Input End -->
 
                                 <!-- Email Address Input Start -->
-                              
+
                                 <!-- Phone Number Input End -->
 
                                 <!-- Checkout Form List checkbox Start -->
-                            
+
                                 <!-- Checkout Form List checkbox End -->
 
                             </div>
 
-                           
+
                             <!-- Different Address End -->
                         </div>
-                  
+
                     <!-- Checkbox Form End -->
 
                 </div>
@@ -224,13 +224,13 @@
                                 <!-- Table Body Start -->
                                 <tbody>
                                     @foreach ($orderdetails as $cds)
-                                      
-                                 
+
+
                                 <tr class="cart_item">
                                     <td class="cart-product-name text-start ps-0"> {{$cds->product->product_name}}<strong class="product-quantity"> × {{$cds->total_items}}</strong></td>
                                     <td class="cart-product-total text-end pe-0"><span class="amount">{{"Rp. ".$cds->total_harga}}</span></td>
                                 </tr>
-                                @php$cdss= $cds @endphp
+                                @php $cdss = $cds @endphp
                                 @endforeach
                                 </tbody>
                                 <!-- Table Body End -->
@@ -289,15 +289,15 @@
                <button type="submit" class="btn btn-danger btn-hover-primary rounded-4 w-100"> Konfirmasi Penerimaan</button>
                     </form>
                   @elseif($order->transaction_status == "Selesai")
-               <a href="../single-product/{{1}}">   <button class="btn btn-danger btn-hover-primary rounded-4 w-100"> Review Product</button></a>
+               <a href="/products">   <button class="btn btn-danger btn-hover-primary rounded-4 w-100"> Review Product</button></a>
                   @endif
                 </div>
             </div>
         </div>
     </div>
 
-    
-   
+
+
     <!-- Checkout Section End -->
     {{-- <script>
 $('#adressname').on('change', function(){

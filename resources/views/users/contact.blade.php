@@ -13,7 +13,7 @@
                     <h1 class="title">Contact Us</h1>
                     <ul>
                         <li>
-                            <a href="index.html">Home </a>
+                            <a href="/">Home </a>
                         </li>
                         <li class="active"> Contact Us</li>
                     </ul>
@@ -39,7 +39,7 @@
                     <!-- Section Title End -->
                     <!-- Contact Form Wrapper Start -->
                     <div class="contact-form-wrapper contact-form">
-                     
+
                         <form action="{{ route('feedbacks.store') }}" method="POST" enctype="multipart/form-data">
                             @csrf
                             <h4 class="title pb-3" data-aos="fade-up">Store Feedback</h4>

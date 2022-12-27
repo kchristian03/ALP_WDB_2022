@@ -10,6 +10,8 @@ use App\Http\Controllers\ProductReviewController;
 use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\StoreFeedbackController;
 use App\Http\Controllers\TransactionController;
+use App\Models\Category;
+use App\Models\Product;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -24,7 +26,12 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('users.index');
+    return view('users.index',[
+        'pagetitle' => 'Home',
+        'maintitle' => 'Home',
+        'products' => Product::all(),
+        'category' => Category::all()
+    ]);
     // return view('development.development');
 });
 
@@ -33,9 +40,9 @@ Route::get('/dashboard', function () {
 })->middleware(['auth', 'verified'])->name('dashboard');
 
 Route::middleware('auth')->group(function () {
-    Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');
-    Route::patch('/profile', [ProfileController::class, 'update'])->name('profile.update');
-    Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
+    Route::get('/my-account', [ProfileController::class, 'edit'])->name('profile.edit');
+    Route::patch('/my-account', [ProfileController::class, 'update'])->name('profile.update');
+    Route::delete('/my-account', [ProfileController::class, 'destroy'])->name('profile.destroy');
 });
 
 require __DIR__.'/auth.php';

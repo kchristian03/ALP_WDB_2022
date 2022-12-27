@@ -4,12 +4,12 @@
             <div class="col-12 col-sm-6 col-lg-4 col-xl-4 mb-10" data-aos="fade-up" data-aos-delay="200">
                 <div class="single-footer-widget">
                     <h2 class="widget-title">Contact Us</h2>
-                    <p class="desc-content">Funcy Daisy adalah </p>
+                    <p class="desc-content">Funcy Daisy - Bloom with Cuteness</p>
                     <!-- Contact Address Start -->
                     <ul class="widget-address">
-                        <li><span>Address: </span> 123 Main Street, Anytown, CA 12345 - USA.</li>
-                        <li><span>Call to: </span> <a href="#"> (012) 800 456 789-987</a></li>
-                        <li><span>Mail to: </span> <a href="#"> yourmail@example.com</a></li>
+                        <li><span>Address: </span> Pondok Mutiara L4, Sidoarjo, Jawa Timur</li>
+                        <li><span>Call to: </span> <a href="#">0812 35652209</a></li>
+                        <li><span>Mail to: </span> <a href="#"> funcydaisy@gmail.com</a></li>
                     </ul>
                     <!-- Contact Address End -->
 
@@ -24,61 +24,61 @@
                     <!-- Social Link End -->
                 </div>
             </div>
-            <div class="col-12 col-sm-6 col-lg-2 col-xl-2 mb-10" data-aos="fade-up" data-aos-delay="300">
-                <div class="single-footer-widget">
-                    <h2 class="widget-title">Information</h2>
-                    <ul class="widget-list">
-                        <li><a href="/about">About Us</a></li>
-                        <li><a href="/about">Delivery Information</a></li>
-                        <li><a href="/about">Privacy Policy</a></li>
-                        <li><a href="/about">Terms & Conditions</a></li>
-                        <li><a href="/about">Customer Service</a></li>
-                        <li><a href="/about">Return Policy</a></li>
-                    </ul>
-                </div>
-            </div>
-            <div class="col-12 col-sm-6 col-lg-2 col-xl-2 mb-10" data-aos="fade-up" data-aos-delay="400">
-                <div class="single-footer-widget aos-init aos-animate">
-                    <h2 class="widget-title">My Account</h2>
-                    <ul class="widget-list">
-                        <li><a href="/account">My Account</a></li>
-                        <li><a href="/wishlist">Wishlist</a></li>
-                        <li><a href="/contact">Newsletter</a></li>
-                        <li><a href="/contact">Help Center</a></li>
-                        <li><a href="/contact">Conditin</a></li>
-                        <li><a href="/contact">Term Of Use</a></li>
-                    </ul>
-                </div>
-            </div>
-            <div class="col-12 col-sm-6 col-lg-4 col-xl-4 mb-10" data-aos="fade-up" data-aos-delay="500">
-                <div class="single-footer-widget">
-                    <h2 class="widget-title">Newsletter</h2>
-                    <div class="widget-body">
-                        <p class="desc-content mb-0">Get E-mail updates about our latest shop and special
-                            offers.</p>
+{{--            <div class="col-12 col-sm-6 col-lg-2 col-xl-2 mb-10" data-aos="fade-up" data-aos-delay="300">--}}
+{{--                <div class="single-footer-widget">--}}
+{{--                    <h2 class="widget-title">Information</h2>--}}
+{{--                    <ul class="widget-list">--}}
+{{--                        <li><a href="/about">About Us</a></li>--}}
+{{--                        <li><a href="/about">Delivery Information</a></li>--}}
+{{--                        <li><a href="/about">Privacy Policy</a></li>--}}
+{{--                        <li><a href="/about">Terms & Conditions</a></li>--}}
+{{--                        <li><a href="/about">Customer Service</a></li>--}}
+{{--                        <li><a href="/about">Return Policy</a></li>--}}
+{{--                    </ul>--}}
+{{--                </div>--}}
+{{--            </div>--}}
+{{--            <div class="col-12 col-sm-6 col-lg-2 col-xl-2 mb-10" data-aos="fade-up" data-aos-delay="400">--}}
+{{--                <div class="single-footer-widget aos-init aos-animate">--}}
+{{--                    <h2 class="widget-title">My Account</h2>--}}
+{{--                    <ul class="widget-list">--}}
+{{--                        <li><a href="/account">My Account</a></li>--}}
+{{--                        <li><a href="/wishlist">Wishlist</a></li>--}}
+{{--                        <li><a href="/contact">Newsletter</a></li>--}}
+{{--                        <li><a href="/contact">Help Center</a></li>--}}
+{{--                        <li><a href="/contact">Conditin</a></li>--}}
+{{--                        <li><a href="/contact">Term Of Use</a></li>--}}
+{{--                    </ul>--}}
+{{--                </div>--}}
+{{--            </div>--}}
+{{--            <div class="col-12 col-sm-6 col-lg-4 col-xl-4 mb-10" data-aos="fade-up" data-aos-delay="500">--}}
+{{--                <div class="single-footer-widget">--}}
+{{--                    <h2 class="widget-title">Newsletter</h2>--}}
+{{--                    <div class="widget-body">--}}
+{{--                        <p class="desc-content mb-0">Get E-mail updates about our latest shop and special--}}
+{{--                            offers.</p>--}}
 
-                        <!-- Newsletter Form Start -->
-                        <div class="newsletter-form-wrap pt-4">
-                            <form id="mc-form" class="mc-form">
-                                <input type="email" id="mc-email" class="form-control email-box mb-4"
-                                       placeholder="Enter your email here.." name="EMAIL">
-                                <button id="mc-submit" class="newsletter-btn btn btn-primary btn-hover-dark"
-                                        type="submit">Subscribe
-                                </button>
-                            </form>
-                            <!-- mailchimp-alerts Start -->
-                            <div class="mailchimp-alerts text-centre">
-                                <div class="mailchimp-submitting"></div><!-- mailchimp-submitting end -->
-                                <div class="mailchimp-success text-success"></div><!-- mailchimp-success end -->
-                                <div class="mailchimp-error text-danger"></div><!-- mailchimp-error end -->
-                            </div>
-                            <!-- mailchimp-alerts end -->
-                        </div>
-                        <!-- Newsletter Form End -->
+{{--                        <!-- Newsletter Form Start -->--}}
+{{--                        <div class="newsletter-form-wrap pt-4">--}}
+{{--                            <form id="mc-form" class="mc-form">--}}
+{{--                                <input type="email" id="mc-email" class="form-control email-box mb-4"--}}
+{{--                                       placeholder="Enter your email here.." name="EMAIL">--}}
+{{--                                <button id="mc-submit" class="newsletter-btn btn btn-primary btn-hover-dark"--}}
+{{--                                        type="submit">Subscribe--}}
+{{--                                </button>--}}
+{{--                            </form>--}}
+{{--                            <!-- mailchimp-alerts Start -->--}}
+{{--                            <div class="mailchimp-alerts text-centre">--}}
+{{--                                <div class="mailchimp-submitting"></div><!-- mailchimp-submitting end -->--}}
+{{--                                <div class="mailchimp-success text-success"></div><!-- mailchimp-success end -->--}}
+{{--                                <div class="mailchimp-error text-danger"></div><!-- mailchimp-error end -->--}}
+{{--                            </div>--}}
+{{--                            <!-- mailchimp-alerts end -->--}}
+{{--                        </div>--}}
+{{--                        <!-- Newsletter Form End -->--}}
 
-                    </div>
-                </div>
-            </div>
+{{--                    </div>--}}
+{{--                </div>--}}
+{{--            </div>--}}
         </div>
     </div>
 </div>

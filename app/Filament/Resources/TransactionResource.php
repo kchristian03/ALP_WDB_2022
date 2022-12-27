@@ -23,10 +23,6 @@ class TransactionResource extends Resource
     {
         return $form
             ->schema([
-                Forms\Components\TextInput::make('user_id')
-                    ->required(),
-                Forms\Components\TextInput::make('adress_id')
-                    ->required(),
                 Forms\Components\TextInput::make('payment_id')
                     ->required(),
                     Forms\Components\Select::make('transaction_status')
@@ -59,12 +55,17 @@ class TransactionResource extends Resource
                 Tables\Columns\TextColumn::make('transaction_status'),
                 Tables\Columns\TextColumn::make('no_resi'),
                 Tables\Columns\TextColumn::make('total_price'),
-                Tables\Columns\ImageColumn::make('bukti_pembayaran'),
+                Tables\Columns\ImageColumn::make('bukti_pembayaran'), 
+                Tables\Columns\TextColumn::make('full_street_adress'),
+                Tables\Columns\TextColumn::make('postal_code'),
+                Tables\Columns\TextColumn::make('city'),
+                Tables\Columns\TextColumn::make('state'),
+                Tables\Columns\TextColumn::make('description'),
                 Tables\Columns\TextColumn::make('created_at')
                     ->dateTime(),
                 Tables\Columns\TextColumn::make('updated_at')
                     ->dateTime(),
-
+                
             ])
 
             ->filters([

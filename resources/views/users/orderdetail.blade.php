@@ -289,7 +289,7 @@
                <button type="submit" class="btn btn-danger btn-hover-primary rounded-4 w-100"> Konfirmasi Penerimaan</button>
                     </form>
                   @elseif($order->transaction_status == "Selesai")
-               <a href="../single-product/{{ $cdss->product_id }}">   <button class="btn btn-danger btn-hover-primary rounded-4 w-100"> Review Product</button></a>
+               <a href="../single-product/{{1}}">   <button class="btn btn-danger btn-hover-primary rounded-4 w-100"> Review Product</button></a>
                   @endif
                 </div>
             </div>

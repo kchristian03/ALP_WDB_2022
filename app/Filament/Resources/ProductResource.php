@@ -27,6 +27,7 @@ class ProductResource extends Resource
                     ->required()
                     ->maxLength(255),
                 Forms\Components\FileUpload::make('product_image')
+                ->required()
                     ->directory('products_image')
                     ->image(),
                 Forms\Components\TextInput::make('product_description')

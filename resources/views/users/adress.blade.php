@@ -56,7 +56,7 @@
                                 <div class="col-md-12">
                                     <div class="checkout-form-list">
                                         <label>Adress Name <span class="required"></span></label>
-                                        <input name="adressname"  placeholder="Address Name" type="text" >
+                                        <input name="adressname"  placeholder="Address Name" type="text" required>
                                     </div>
                                 </div>
                                 <!-- Select Country Name End -->
@@ -82,14 +82,14 @@
                                 <div class="col-md-12">
                                     <div class="checkout-form-list">
                                         <label>Full Address <span class="required"></span></label>
-                                        <input name="fulladress" placeholder="Street address" type="text" >
+                                        <input name="fulladress" placeholder="Street address" type="text" required>
                                     </div>
                                 </div>
                                 <!-- Company Name Input Start -->
                                 <div class="col-md-12">
                                     <div class="checkout-form-list">
                                         <label>Description</label>
-                                        <input name="adressdesc" placeholder="Description" type="text" >
+                                        <input name="adressdesc" placeholder="Description" type="text" required>
                                     </div>
                                 </div>
                                 <!-- Company Name Input End -->
@@ -110,7 +110,7 @@
                                 <div class="col-md-12">
                                     <div class="checkout-form-list">
                                         <label>Town / City <span class="required"></span></label>
-                                        <input name="adresscity" placeholder="City" type="text" >
+                                        <input name="adresscity" placeholder="City" type="text" required>
                                     </div>
                                 </div>
                                 <!-- Town or City Name Input End -->
@@ -119,7 +119,7 @@
                                 <div class="col-md-6">
                                     <div class="checkout-form-list">
                                         <label>Province <span class="required"></span></label>
-                                        <input name="adressprovince" placeholder="Province" type="text">
+                                        <input name="adressprovince" placeholder="Province" type="text" required>
                                     </div>
                                 </div>
                                 <!-- State or Country Input End -->
@@ -128,7 +128,7 @@
                                 <div class="col-md-6">
                                     <div class="checkout-form-list">
                                         <label>Postcode / Zip <span class="required"></span></label>
-                                        <input name="adresszip" placeholder="ZIP Code" type="text">
+                                        <input name="adresszip" placeholder="ZIP Code" type="text" required>
                                     </div>
                                 </div>
                          

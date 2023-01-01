@@ -78,13 +78,15 @@
                                         </select>
                                     </div>
                                     <br>    
-                                    <a style="color:red" href="my-account">  See my Adress</a>
+                                    <a style="color:red" href="my-account">  Add Adress</a>
                                 </div>
                                 </form>
                                 <!-- Select Country Name End -->
                                 <form action="{{ route('transactions.store') }}" method="POST" enctype="multipart/form-data">
                                     @csrf
+                                    @if($selectedadress)
                                     <input placeholder="{{$selectedadress->adress_name}}" value="{{$selectedadress->adress_name}}" type="hidden"  name="adressnamee">
+                                  
                                 <!-- First Name Input Start -->
                             
                                 <!-- First Name Input End -->
@@ -144,6 +146,7 @@
                                         <input placeholder="{{$selectedadress->postal_code}}" value="{{$selectedadress->postal_code}}" type="text"  name="postal_code">
                                     </div>
                                 </div>
+                                @endif
                                 <div class="col-md-12">
                                     <div class="checkout-form-list">
                                         <label>Bukti Pembayaran <span class="required"></span></label>
@@ -270,8 +273,12 @@
                                     </div>
                                 </div>
                             </div>
+                            @if($selectedadress)
                             <div class="order-button-payment">
                                 <button class="btn btn-dark btn-hover-primary rounded-0 w-100">Place Order</button>
+                                @else
+                                <a href="/my-account"class="btn btn-dark btn-hover-primary">Please add an adress before purchasing</a>
+                                @endif
                             </div>
                         </div>
                     </form>

@@ -20,7 +20,7 @@
 <div class="min-h-screen">
     <div class="header section">
         <!-- Header Top Start -->
-        @include("errors.header.header-top")
+{{--        @include("errors.header.header-top")--}}
         <!-- Header Top End -->
 
         <!-- Header Bottom Start -->

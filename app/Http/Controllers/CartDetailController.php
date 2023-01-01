@@ -5,7 +5,7 @@ namespace App\Http\Controllers;
 use App\Http\Requests\StoreCart_detailRequest;
 use App\Http\Requests\UpdateCart_detailRequest;
 use App\Models\Cart;
-use App\Models\Cart_detail;
+use App\Models\Cart_Detail;
 use App\Models\Product;
 
 class CartDetailController extends Controller
@@ -33,10 +33,10 @@ class CartDetailController extends Controller
     /**
      * Store a newly created resource in storage.
      *
-     * @param  \App\Http\Requests\StoreCart_detailRequest  $request
+     * @param  \App\Http\Requests\StoreCart_DetailRequest  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(StoreCart_detailRequest $request)
+    public function store(StoreCart_DetailRequest $request)
     {
 
         $this->validate($request, [
@@ -48,11 +48,11 @@ class CartDetailController extends Controller
         $itemproduk = Product::findOrFail($request->product_id);
         // cek dulu apakah sudah ada shopping cart untuk user yang sedang login
         $cart = Cart::where('user_id', $itemuser->id)->first();
-        
+
         if ($cart) {
             $itemcart = $cart;
         } else {
-          
+
         }
         // cek dulu apakah sudah ada produk di shopping cart
         $cekdetail = Cart_Detail::where('cart_id', $itemcart->id)
@@ -62,7 +62,7 @@ class CartDetailController extends Controller
         $harga = $itemproduk->product_price;//ambil harga produk
         $subtotal = ($qty * $harga);
         // diskon diambil kalo produk itu ada promo, cek materi sebelumnya
-       
+
         if ($cekdetail) {
             // update detail di table cart_detail
             $cekdetail->updatedetail($cekdetail, $qty, $harga);
@@ -79,17 +79,17 @@ class CartDetailController extends Controller
             // update subtotal dan total di table cart
             $itemdetail->cart->updatetotal($subtotal);
         }
-     
+
         return redirect('/cart');
     }
 
     /**
      * Display the specified resource.
      *
-     * @param  \App\Models\Cart_detail  $cart_detail
+     * @param  \App\Models\Cart_Detail  $cart_detail
      * @return \Illuminate\Http\Response
      */
-    public function show(Cart_detail $cart_detail)
+    public function show(Cart_Detail $cart_detail)
     {
         //
     }
@@ -97,10 +97,10 @@ class CartDetailController extends Controller
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  \App\Models\Cart_detail  $cart_detail
+     * @param  \App\Models\Cart_Detail  $cart_detail
      * @return \Illuminate\Http\Response
      */
-    public function edit(Cart_detail $cart_detail)
+    public function edit(Cart_Detail $cart_detail)
     {
         //
     }
@@ -108,11 +108,11 @@ class CartDetailController extends Controller
     /**
      * Update the specified resource in storage.
      *
-     * @param  \App\Http\Requests\UpdateCart_detailRequest  $request
-     * @param  \App\Models\Cart_detail  $cart_detail
+     * @param  \App\Http\Requests\UpdateCart_DetailRequest  $request
+     * @param  \App\Models\Cart_Detail  $cart_detail
      * @return \Illuminate\Http\Response
      */
-    public function update(UpdateCart_detailRequest $request, Cart_detail $cart_detail)
+    public function update(UpdateCart_DetailRequest $request, Cart_Detail $cart_detail)
     {
         //
     }
@@ -120,10 +120,10 @@ class CartDetailController extends Controller
     /**
      * Remove the specified resource from storage.
      *
-     * @param  \App\Models\Cart_detail  $cart_detail
+     * @param  \App\Models\Cart_Detail  $cart_detail
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Cart_detail $cart_detail)
+    public function destroy(Cart_Detail $cart_detail)
     {
         //
     }

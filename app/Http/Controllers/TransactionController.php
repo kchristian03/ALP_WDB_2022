@@ -6,7 +6,7 @@ use App\Http\Requests\StoreTransactionRequest;
 use App\Http\Requests\UpdateTransactionRequest;
 use App\Models\Adress;
 use App\Models\Cart;
-use App\Models\Cart_detail;
+use App\Models\Cart_Detail;
 use App\Models\Payment;
 use App\Models\Product;
 use App\Models\Transaction;
@@ -69,7 +69,7 @@ class TransactionController extends Controller
        $adressid = $request->adressname;
 
         $cart = Cart::where('user_id',Auth::user()->id)->first();
-        $cartitems = Cart_detail::where('cart_id',$cart->id)->get();
+        $cartitems = Cart_Detail::where('cart_id',$cart->id)->get();
         $adress = Adress::all()->first();
         $tr = Transaction::create([
             "user_id" => $cart->user_id,
@@ -102,7 +102,7 @@ class TransactionController extends Controller
             $items = $ct->total_items;
 
             $ct->product->minstock($items);
-            Cart_detail::where('id',$ct->id)->first()->delete();
+            Cart_Detail::where('id',$ct->id)->first()->delete();
 
         }
         Cart::where('user_id',Auth::user()->id)->first()->clear();
@@ -166,7 +166,7 @@ class TransactionController extends Controller
 
     public function seecheckout()
     {      $cart= Cart::where('user_id',Auth::user()->id)->first();
-        $cartdetail = Cart_detail::where('cart_id',$cart->id)->get();
+        $cartdetail = Cart_Detail::where('cart_id',$cart->id)->get();
         $adress = Adress::where('user_id',Auth::user()->id)->get();
         $products= Product::all();
        $payments = Payment::all();

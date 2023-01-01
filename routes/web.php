@@ -25,7 +25,7 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
+Route::get('/index', function () {
     return view('users.index',[
         'pagetitle' => 'Home',
         'maintitle' => 'Home',
@@ -33,6 +33,16 @@ Route::get('/', function () {
         'category' => Category::all()
     ]);
     // return view('development.development');
+});
+
+Route::get('/', function () {
+//    return view('users.index',[
+//        'pagetitle' => 'Home',
+//        'maintitle' => 'Home',
+//        'products' => Product::all(),
+//        'category' => Category::all()
+//    ]);
+     return view('development.development');
 });
 
 Route::get('/dashboard', function () {

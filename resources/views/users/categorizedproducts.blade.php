@@ -59,8 +59,8 @@
                                     </div>
                                 </div>
                                 <div class="content">
-                                    <h4 class="sub-title"><a href="single-product">{{"Avaliable: ".$pr['product_stock']}}</a></h4>
-                                    <h5 class="title"><a href="single-product/{{ $pr['id'] }}">{{$pr['product_name']}}</a></h5>
+                                    <h4 class="sub-title"><a href="../single-product">{{"Avaliable: ".$pr['product_stock']}}</a></h4>
+                                    <h5 class="title"><a href="../single-product/{{ $pr['id'] }}">{{$pr['product_name']}}</a></h5>
                                     {{-- <span class="ratings">
                                             <span class="rating-wrap">
                                                 <span class="star" style="width: 100%"></span>
@@ -74,7 +74,7 @@
                                     </span>
                                     <div class="shop-list-btn">
                                         <a title="Wishlist" href="#" class="btn btn-sm btn-outline-dark btn-hover-primary wishlist"><i class="fa fa-heart"></i></a>
-                                        <a href="single-product/{{ $pr['id'] }}"> <button class="btn btn-sm btn-outline-dark btn-hover-primary" title="">See Details</button></a>
+                                        <a href="../single-product/{{ $pr['id'] }}"> <button class="btn btn-sm btn-outline-dark btn-hover-primary" title="">See Details</button></a>
                                         <a title="Compare" href="#" class="btn btn-sm btn-outline-dark btn-hover-primary compare"><i class="fa fa-random"></i></a>
                                     </div>
                                 </div>
